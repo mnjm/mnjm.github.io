@@ -1,0 +1,26 @@
++++
+title = 'About me'
+date = 2024-02-19T12:16:43+05:30
+showSocials = 'true'
++++
+
+I'm a **Software Engineer** based in Bengaluru, India, specializing in **Computer Vision and Deep Learning**. My interests extend to AI, Sensor Fusion, Motion Capturing, FOSS, Linux, and Cloud Hosting.
+
+### **Work**
+I take pleasure in being a force multiplier in the teams I join, with core values of sharing, feedback and quick iterations.
+
+
+### **Experience**
+With around 3.5 years of experience, my focus has been primarily on **Computer Vision, Deep Learning, and Software Development**, contributing to areas such as Driver Monitoring, ADAS, and Surveillance Analytics. I hold a **B.E. in Computer Science Engineering** from Visvesvaraya Technological University, India.
+
+
+### **Tech**
+Beyond my primary focus, I enjoy tinkering with various technologies creatively to understand how they work. I've been actively using GNU/Linux, Vim, Cloud Hosting, and exploring the world of FOSS.
+
+
+### **Blog**
+I maintain this blog solely for personal use, capturing information that lacks proper documentation elsewhere. If you encounter any inaccuracies or wish to offer feedback, please open an issue [here](https://github.com/mnjm/mnjm.github.io/issues).
+
+
+### **Contact**
+Find my socials below.
