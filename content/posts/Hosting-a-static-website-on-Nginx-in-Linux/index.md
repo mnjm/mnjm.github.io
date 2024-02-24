@@ -47,7 +47,9 @@ server {
 - Reload nginx if the nginx configuration is valid
     - `sudo nginx -t && sudo systemctl reload nginx`
 
-***Your site should be up my now.***
+{{< admonition success >}}
+Your site should be up my now.
+{{< /admonition >}}
 
 ### 3. Setting up HTTPs
 - Give necessary permissions to allow (both input and output) connections to port `443` (SSL port)
@@ -69,7 +71,9 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 	- Verify that certificate can be renewed `sudo certbot renew --dry-run`
 - Restart nginx service - `sudo nginx -t && sudo systemctl reload nginx`
 
-***Your site should be up with https certification, enjoy!***
+{{< admonition success >}}
+Your site should be up with https certification, enjoy!
+{{< /admonition >}}
 
 ### 4. Final Step - Optional
 - Enable HTTP/2 - HTTP/2 is a major improvement for the web. It can give you a large improvement in client performance. You will need to have enabled HTTS for HTTP/2. 
@@ -80,7 +84,9 @@ listen [::]:443 ssl http2 ipv6only=on; # managed by Certbot
 ```
 - Restart nginx - `sudo nginx -t && sudo systemctl reload nginx`. Thats it
 
-***Now you site should work with http2 enabled.***
+{{< admonition success >}}
+Now you site should work with http2 enabled.
+{{< /admonition >}}
 
 ## References
 - [Running NGINX sample website on Oracle Cloud Ubuntu Instance](/posts/running-nginx-website-on-oracle-cloud-ubuntu-instance/)

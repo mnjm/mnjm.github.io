@@ -18,8 +18,13 @@ With around 3.5 years of experience, my focus has been primarily on **Computer V
 Beyond my primary focus, I enjoy tinkering with various technologies creatively to understand how they work. I've been actively using GNU/Linux, Vim, Cloud Hosting, and exploring the world of FOSS.
 
 
-### **Blog**
-I maintain this blog solely for personal use, capturing information that lacks proper documentation elsewhere. If you encounter any inaccuracies or wish to offer feedback, please open an issue [here](https://github.com/mnjm/mnjm.github.io/issues).
+### **Posts**
+- You have questions and/or feedback regarding the articles
+- You spot outdated information in the articles or errors in the code
+- You would like to contribute
+- (or) Just wanna say hello!👋
+
+You can find me through my email -> [here](mailto:manjunat.mohan@gmail.com)
 
 
 ### **Contact**
