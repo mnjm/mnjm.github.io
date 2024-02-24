@@ -186,7 +186,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # Social config about the author
   [params.social]
     GitHub = "mnjm"
-    Linkedin = ""
+    Linkedin = "manjunath-mohan"
     Twitter = ""
     Instagram = ""
     Facebook = ""
@@ -259,7 +259,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     RootMe= ""
     Phone = ""
     Email = "manjunat.mohan@gmail.com"
-    RSS = true # LoveIt NEW | 0.2.0
+    RSS = false # LoveIt NEW | 0.2.0
 
   # LoveIt CHANGED | 0.2.0 Page global config
   [params.page]
