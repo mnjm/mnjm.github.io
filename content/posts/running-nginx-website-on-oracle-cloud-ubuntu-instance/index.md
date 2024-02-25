@@ -3,33 +3,41 @@ title: "Running NGINX website on Oracle Cloud Ubuntu instance"
 date: 2022-02-17T21:19:02+05:30
 tags: ["nginx", "hosting"]
 ---
-### Prerequisites
+## Prerequisites
 
 - Oracle Cloud account with an Ubuntu instance (Free Instance works)
 - Familiarity with connecting to a remote instance (like VM) using SSH, including SSH key setup.
 
-### Steps
+## Steps
 
-#### Setup a Ubuntu Instance in Oracle Cloud
+### Setup a Ubuntu Instance in Oracle Cloud
 
 1.  Create an Instance with Ubuntu or Debian image
 2.  Update packages
-    - `sudo apt update` and `sudo apt upgrade`
+```bash
+sudo apt update
+sudo apt upgrade
+```
 
-#### Allow connections port 80 in the Virtual Cloud Network (VCN)'s subnet thingy
+### Allow connections port 80 in the Oracle's VCN
+
+By default, Oracle doesn't allow connections to port 80 in its Virtual Cloud Network (VCN), which connects your instance to the Internet. Add port 80 to its ingress list to allow connections.
 
 - Click the subnet link from the instance page  
-    ![Oracle Cloud Ubuntu Instance a.jpg](Oracle%20Cloud%20Ubuntu%20Instance%20a.jpg)
+
+![Oracle Cloud Ubuntu Instance a.jpg](Oracle%20Cloud%20Ubuntu%20Instance%20a.jpg "VCN Subnet")
 - From there, click on the default security list  
-    ![Oracle Cloud Ubuntu Instance a.png](Oracle%20Cloud%20Ubuntu%20Instance%20a.png)
+
+![Oracle Cloud Ubuntu Instance a.png](Oracle%20Cloud%20Ubuntu%20Instance%20a.png "VCN Ingress list")
 - Add a new Ingress Rule
     - with Source CIDR `0.0.0.0/0`
     - IP Protocol `TCP`
     - Destination Port Range `80`
     - And Description `HTTP`  
-        ![1_Oracle Cloud Ubuntu Instance a.png](1_Oracle%20Cloud%20Ubuntu%20Instance%20a.png)
 
-#### Install and Setup Nginx
+![1_Oracle Cloud Ubuntu Instance a.png](1_Oracle%20Cloud%20Ubuntu%20Instance%20a.png "Adding port to Ingress List")
+
+### Install and Setup Nginx
 
 - Install Nginx
     - `sudo apt install nginx`
@@ -50,7 +58,9 @@ sudo iptables -I OUTPUT -p tcp --sport 80 -m conntrack --ctstate ESTABLISHED -j 
 - Check with Curl on another machine
     - `curl <instance-ip-address>`
 
-***Done! Sample site should be up***
+{{< admonition success >}}
+Done! Sample site should be up
+{{< /admonition >}}
 
 ## Reference
 

@@ -47,8 +47,10 @@ https://<bucketnamespace>.compat.objectstorage.<region>.oraclecloud.com
 	- Furnish the details.
     - For OCI (Oracle) S3 Object Storage, enable `Force path style`
 	- Experiment with enabling and disabling Force path style and clicking `Check synchronization` configuration. One of those should work if everything is correct, as shown below.
+
 ![3b5038c6e91aa5d555f9e75254a90da7.png](3b5038c6e91aa5d555f9e75254a90da7.png "Check synchronization")
 - Click `Apply`
+
 {{< admonition success >}}
 Your Joplin sync is set up! Now, save the S3 details somewhere secure and fill in the same details on the machine you want to sync with.
 {{< /admonition >}}
@@ -57,6 +59,7 @@ For those concerned about privecy, enable **Encryption!**. Follow these steps:
 - Go to Tools -> Options -> Encryption
 - Click `Enable Encryption` and enter a touch and secure **Master Password** twice. 
 - Note down the **Master Password**  along with S3 storage details and apply it on other machines you want to sync.
+
 {{< admonition success >}}
 Now, your notes should be end-to-end encrypted before syncing.
 {{< /admonition >}}
