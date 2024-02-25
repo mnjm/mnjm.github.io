@@ -93,7 +93,7 @@ Another solution/workaround for the above problem is disabling (toggling) the `p
 
 Add these lines to your `tmux.conf` file:
 
-```python
+```bash
 bind -T root F12  \
     set prefix None \;\
     set key-table off \;\
@@ -112,7 +112,7 @@ bind -T off F12 \
 The above config changes use `F12` to toggle prefix and key-tables between active and disabled states.  
 The state can be displayed using `off_mode` user-defined config variable in the status bar as shown below:
 
-```python
+```bash
 set -g status-right "#[fg=#000000,bg=#ff0000]#{@off_mode}#[bg=#282828] #[fg=#ffffff,bg=#585858] #(whoami)@#{host_short}
 ```
 

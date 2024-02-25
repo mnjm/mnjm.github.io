@@ -1,7 +1,6 @@
 +++
 title = 'About me'
 date = 2024-02-19T12:16:43+05:30
-showSocials = 'true'
 +++
 
 I'm a **Software Engineer** based in Bengaluru, India, specializing in **Computer Vision and Deep Learning**. My interests extend to AI, Sensor Fusion, Motion Capturing, FOSS, Linux, and Cloud Hosting.

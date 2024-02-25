@@ -48,10 +48,14 @@ Download the installer from [Syncthing's Site](https://syncthing.net/downloads/)
 ### 3.2 Autostart setup
 
 After installation, on Debian/Ubuntu distros, Syncthing usually doesn't get added to autostart by default, so you'd have to do it manually. On Windows, as far as I know, the installer takes care of it.  
-*Note: For Android, check the Syncthing app's optimizations and ensure it has the necessary permissions to autostart.*
+{{< admonition note >}}
+For Android, check the Syncthing app's optimizations and ensure it has the necessary permissions to autostart.
+{{< /admonition >}}
 
 #### Steps to add it to Autostart on Linux Mint
-*Note: I've used Linux Mint for this setup, but these steps shouldn't be much different on other Debian distros like Ubuntu.*
+{{< admonition note >}}
+I've used Linux Mint for this setup, but these steps shouldn't be much different on other Debian distros like Ubuntu.
+{{< /admonition >}}
 
 - Search and open a tool related to auto-start, such as 'Startup Applications,' as shown below.
 - Enable "Start Syncthing" if it is not enabled already.
@@ -90,7 +94,9 @@ After installation, on Debian/Ubuntu distros, Syncthing usually doesn't get adde
 ![932e7ddea222fa8efc6ba3509db7146f.png](932e7ddea222fa8efc6ba3509db7146f.png "Remote devices [Desktop]")
 ![8f1b0f4dd32bb2fad45828dd484457b5.png](8f1b0f4dd32bb2fad45828dd484457b5.png "Remote devices [Android]")
 
-*Note: In the above screenshots, `Linux` and `Windows` represent the labels that I have assigned, not the respective Operating systems*
+{{< admonition note >}}
+In the above screenshots, `Linux` and `Windows` represent the labels that I have assigned, not the respective Operating systems
+{{< /admonition >}}
 - In the Folders section, add a new folder by clicking the  `+Add Folder` button. 
 	- Provide a suitable `Folder Label`
 	- **Note down** the `Folder ID`

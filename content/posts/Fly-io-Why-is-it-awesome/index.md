@@ -4,7 +4,7 @@ title = "Fly.io - Why is it awesome"
 tags = ["hosting"]
 +++
 ## [Fly.io](https://fly.io) - Why is it awesome
-![b8cdf8d8550e5c2c4786ba6e299a4cbf.png](b8cdf8d8550e5c2c4786ba6e299a4cbf.png)
+![b8cdf8d8550e5c2c4786ba6e299a4cbf.png](b8cdf8d8550e5c2c4786ba6e299a4cbf.png "Fly.io")
 Fly.io is a cloud hosting platform, similar to AWS, Google Cloud, and Oracle Cloud. What sets them apart, however, is they are completely built upon Docker. What does this mean for you? If you want to host something — be it a website, an app, or a personal project — all you need to do is Dockerize it and push it to Fly.io for hosting. It's that simple. Just select the VM specs, and Fly.io takes care of the rest.
 
 Think of it as AWS on easy mode, especially if you have a basic understanding of Docker. Moreover, they operate entirely through a [command line tool](https://fly.io/docs/hands-on/install-flyctl/), enabling you to create projects, customize settings, stop, and manage projects effortlessly. This also means you can script it for automation.
@@ -56,7 +56,9 @@ Also, please note that this falls under the hobby plan (Pay as you use), but you
 
 *   To deploy, run  `flyctl deploy`
 
-***Thats it! By now, your app should be hosted by Fly.io***
+{{< admonition success >}}
+Thats it! By now, your app should be hosted by Fly.io
+{{< /admonition >}}
 
 ### Monitoring Logs
 - To view logs from your project root where fly.toml resides, use the following command.
