@@ -1,7 +1,9 @@
 ---
 title: "Running NGINX website on Oracle Cloud Ubuntu instance"
 date: 2022-02-17T21:19:02+05:30
+featuredImage: "final2.jpg"
 tags: ["nginx", "hosting"]
+categories: ["Tech"]
 ---
 ## Prerequisites
 

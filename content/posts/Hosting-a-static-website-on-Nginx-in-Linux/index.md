@@ -1,7 +1,9 @@
 ---
 title: "Hosting a Static Website on Nginx in Linux"
 date: 2022-03-03T13:01:59+05:30
+featuredImage: "final.jpg"
 tags: ["nginx", "hosting"]
+categories: ["Tech"]
 ---
 ## Prerequisites
 

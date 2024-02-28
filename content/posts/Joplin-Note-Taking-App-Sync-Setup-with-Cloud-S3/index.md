@@ -1,10 +1,12 @@
-+++ 
-date = 2023-10-09T23:06:56+05:30
-title = "Joplin Note Taking App - Sync Setup with Cloud S3 Object Storage"
-description = ""
-slug = "joplin-cloud-s3-sync"
-tags = ["foss", "hosting", "workflow", "sync"]
-+++
+--- 
+date: 2023-10-09T23:06:56+05:30
+title: "Joplin Note Taking App - Sync Setup with Cloud S3 Object Storage"
+description: ""
+featuredImage: "final.jpg"
+slug: "joplin-cloud-s3-sync"
+tags: ["hosting", "workflow", "sync"]
+categories: ["Foss"]
+---
 
 ## 1 Joplin
 [Joplin](https://joplinapp.org/) is an awesome note taking app that ticks all the right boxes:

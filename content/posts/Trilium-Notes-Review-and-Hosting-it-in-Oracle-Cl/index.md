@@ -1,8 +1,11 @@
-+++ 
-date = 2023-07-11T17:46:20+05:30
-title = "Trilium Notes - Review and Hosting it in Oracle Cloud"
-tags = ["hosting", "workflow", "nginx", "foss"]
-+++
+--- 
+date: 2023-07-11T17:46:20+05:30
+title: "Trilium Notes - Review and Hosting it in Oracle Cloud"
+featuredImage: "final.jpg"
+tags: ["hosting", "workflow", "nginx"]
+categories: ["Foss"]
+---
+
 Do you often find yourself in a situation where you're taking notes on multiple machines and have to remember or look up every time where the notes are stored? If you're looking for an app to sync and organize everything in a single place, you're not alone. While there are numerous note-taking apps that fulfill this need, such as Microsoft OneNote, Evernote, Notion, Obsidian, and many more, most are closed-source proprietary apps, and none of them offer self-hosting.
 
 Allow me to introduce Trilium Notes—an awesome open-source note-taking/personal knowledge base app that ticks all the right boxes and also has self-hosting capabilities.

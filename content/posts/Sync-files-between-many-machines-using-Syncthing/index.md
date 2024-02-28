@@ -1,8 +1,10 @@
-+++ 
-date = 2022-01-21T14:33:37+05:30
-title = "Sync files between Linux and Android using Syncthing"
-tags = ["foss", "sync"]
-+++
+--- 
+date: 2023-12-21T14:33:37+05:30
+title: "Sync files between Linux and Android using Syncthing"
+tags: ["sync"]
+categories: ["Foss", "Linux"]
+featuredImage: "final.jpg"
+---
 In this blog, I'll guide you through setting up Syncthing on Linux and Android, allowing you to sync files seamlessly between the two machines.
 
 ## 1 What is [Syncthing](https://syncthing.net/)?

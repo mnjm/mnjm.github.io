@@ -1,7 +1,9 @@
 ---
 title: "TMUX - Introduction, Workflow and Tricks"
-date: 2020-10-11T13:08:43+05:30
-tags: ["foss", "linux", "workflow"]
+date: 2021-01-11T13:08:43+05:30
+featuredImage: "Final.jpg"
+tags: ["workflow"]
+categories: ["Foss", "Linux"]
 ---
 ## TMUX - What is it?
 
