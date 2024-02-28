@@ -7,17 +7,19 @@
     {{- if $avatar -}}
         <div class="home-avatar">
             {{- $menus := $.Site.Menus.main | default slice -}}
-            {{- $last := last 1 $menus }}
-            {{- with index $last 0 -}}
+            {{- with index $menus 0 -}}
                 {{- $url := .URL | relLangURL -}}
                 {{- with .Page -}}
                     {{- $url = .RelPermalink -}}
                 {{- end -}}
-                <a href="{{ $url }}"{{ with .Title | default .Name }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
-                    {{- dict "Src" $avatar | partial "plugin/img.html" -}}
+                {{- with $profile.avatarLinkURL -}}
+                    {{- $url = . -}}
+                {{- end -}}
+                <a href="{{ $url }}"{{ with .Title | default .Name }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreferrer" target="_blank"{{ end }}>
+                    {{- dict "Src" $avatar "Height" "100" "Width" "100" "Loading" "eager" | partial "plugin/image.html" -}}
                 </a>
             {{- else -}}
-                {{- dict "Src" $avatar | partial "plugin/img.html" -}}
+                {{- dict "Src" $avatar "Height" "100" "Width" "100" | partial "plugin/image.html" -}}
             {{- end -}}
         </div>
     {{- end -}}
@@ -29,15 +31,15 @@
     {{- end -}}
 
     {{- with $profile.subtitle -}}
-        <div class="home-subtitle">
+        <h2 class="home-subtitle">
             {{- if $profile.typeit -}}
                 {{- $id := dict "Content" . "Scratch" $.Scratch | partial "function/id.html" -}}
                 <div id="{{ $id }}" class="typeit"></div>
                 {{- dict $id (slice $id) | dict "typeitMap" | merge ($.Scratch.Get "this") | $.Scratch.Set "this" -}}
             {{- else -}}
-                {{- . | safeHTML -}}
+                {{- . -}}
             {{- end -}}
-        </div>
+        </h2>
     {{- end -}}
 
     {{- with $profile.disclaimer -}}
