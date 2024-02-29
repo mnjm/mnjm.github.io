@@ -5,25 +5,23 @@ tags: ["sync"]
 categories: ["Foss", "Linux"]
 featuredImage: "final.jpg"
 ---
-In this blog, I'll guide you through setting up Syncthing on Linux and Android, allowing you to sync files seamlessly between the two machines.
+In this blog, I'll guide you through setting up file syncing between Linux and Android using Syncthing. You can also use this pseudo-guide to set up syncing between other types of machines.
 
 ## 1 What is [Syncthing](https://syncthing.net/)?
 
-Syncthing is an open-source decentralized peer-to-peer file synchronization application built using the Go lang. Developed with privacy, security, and user control in mind, Syncthing allows for the synchronization of files across two or more machines using a decentralized approach, eliminating the need for relying on any cloud storage.
+Syncthing is an open-source decentralized peer-to-peer file synchronization app built using Go lang, with privacy, security, and user control in mind. Its decentralized approach removes the need for relying on any cloud storage.
 
-Described on its website as "Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers in real time, safely protected from prying eyes. Your data is your data alone and you deserve to choose where it is stored, whether it is shared with some third party, and how it’s transmitted over the internet". Syncthing employs a well-documented and open-source protocol without any hidden shady magic.
+It relies on top-of-the-line encryption and authentication algorithms to ensure data security. While this may sound complicated, It also comes with very easy-to-use, simple (yet powerful) interface and is supported across various platforms, including Linux, Windows, Mac, and some BSD-based operating systems. Syncthing is also available as an app on Android. However, it's worth noting that iOS is not supported (reason [here](https://docs.syncthing.net/users/faq.html#is-there-an-ios-client)). Additionally, Syncthing can operate both on LAN and over the internet.
 
-It relies on top-of-the-line encryption and authentication algorithms to ensure data security. Sounds complicated right? So it should be hard to setup? Answer is no, It provides a very easy to use simple yet a power and portable interface to do so.  
-Supported across various platforms, including Linux, Windows, Mac, and well-known BSD-based operating systems, Syncthing also extends its compatibility to Android. However, it's worth noting that iOS is not supported (reason [here](https://docs.syncthing.net/users/faq.html#is-there-an-ios-client)). Additionally, Syncthing operates seamlessly on both LAN and over the Internet using 'relay.' More details below.  
 [Here](https://docs.syncthing.net/users/faq.html) is its FAQ that answers many questions that you may have.
 
 ## 2 Some details on inner workings of Syncthing
 
-1. When there is a direct connection between syncing devices, like within a LAN, Syncthing simply connects each with the other and transfers files/info for synchronization. When there's no direct connection, like over the internet, it uses 'Relay servers' to bounce traffic between sync devices. Therefore, transfer rates are much lower compared to LAN. There are many public relay servers available. You can host your own restricted rely servers too for privacy reasons  
+1.When there is a direct connection between syncing devices, like lets say within a LAN, Syncthing simply connects each with the other and synchronizes files. When there's no direct connection, like lets say over the internet, it uses 'Relay servers' to bounce traffic between sync devices. Therefore, transfer rates are much lower compared to LAN setting. There are many public relay servers available and maintained by the community. You can also host your own restricted rely servers too for privacy reasons  
 
-2. So, Syncthing sometimes relies on 'some server' to sync. What about privacy, you ask? Well, Syncthing employs end-to-end encryption. Not to mention, when using relay servers, it utilizes the TLS encryption method to securely transfer data. TL;DR: Fear not, your data is protected through the power of encryption, and it's open source. Many vets the source code for leaks, unlike closed-source solutions.  
+2. So, Syncthing sometimes relies on 'some server' to sync. What about privacy, you ask? Well, Syncthing employs end-to-end encryption to securely transfer data. TL;DR: Fear not, your data is protected through the power of crytography, and it's open source you can vet the source code for leaks, unlike  commercial closed-source solutions.  
 
-3. Each device is identified using Syncthing-specific 'Device IDs,' which are unique to each device. While these IDs are unique, they are not sensitive. Only in limited scenarios can a device's IP be reverse-engineered using its ID (when Global discovery is enabled), but it can't be used to connect to your devices or peek over the curtains.  
+3. Each device is identified using Syncthing-specific 'Device IDs,' which are unique to each device. While these IDs are unique, they are not sensitive. Only in "very" limited scenarios can a device's IP be reverse-engineered using its ID (when Global discovery is enabled), but it can't be used to connect to your devices or peek over the curtains.  
 
 4. Syncthing, similar to many torrenting protocols, divides the files into many chunks called blocks, and each block is synced between devices at a time. So, like torrents, when you have many devices syncing the same files, transfer rates tend to be faster with load sharing.
 
@@ -132,4 +130,3 @@ Thats it! you shoud now have `sync-folder-in-linux` in Linux machine synced with
 ## 5 References
 - [Syncthing Docs](https://docs.syncthing.net/)
 - [Syncthing Review](https://proprivacy.com/cloud/review/syncthing)
-- https://ostechnix.com/synchronize-files-between-multiple-systems-with-syncthing/

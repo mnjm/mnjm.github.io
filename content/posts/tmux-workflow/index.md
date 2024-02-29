@@ -1,32 +1,28 @@
 ---
-title: "TMUX - Introduction, Workflow and Tricks"
+title: "TMUX - My configurations"
 date: 2021-01-11T13:08:43+05:30
 featuredImage: "Final.jpg"
 tags: ["workflow"]
 categories: ["Foss", "Linux"]
 ---
-## TMUX - What is it?
+## What is TMUX?
 
-In simple terms, Tmux is a terminal multiplexer. It allows you to switch easily between several programs in one terminal, detach them (they keep running in the background), and reattach them to a different terminal.
+TMUX is a short form for Terminal MUtipleXer. It allows you to switch simply divide up your terminal real estate into tiny pseudo-terminals running it own independent shells.
 
 ![TMUX Screenshot](tmux-ss-1.png "Tmux screen showcasing its multiplexing")
 
-To explain Tmux and its relevance, I need to describe its features.
+Features:
 
-1.  **Terminal Multiplexing** - At the bottom level, you can create what are called panes. These are single "pseudo-terminals" that can run a single shell (or an app), similar to tabs in modern terminal emulators. Tmux enhances this by allowing you to arrange these panes in different geometrical configurations, creating multiple windows, each made up of multiple panes using screen splits.
+1.  **Terminal Sessions** - When you open/run tmux, a tmux session gets created. Each pane you create in the tmux screen gets added to this session. You can leave this session and return to it later, with its state preserved and all the shells (programs) running in that tmux continuing in the background. This is useful for switching seamlessly between projects, as I have one session per project.
     
-2.  **Terminal Sessions** - When you open/run tmux, a tmux session gets created. Each pane you create in the tmux screen gets added to this session. You can leave this session and return to it later, with its state preserved and all the shells (programs) running in that tmux continuing in the background. This is useful for switching seamlessly between projects, as I have one session per project.
-    
-3.  **Using TMUX on remote machines** - Since TMUX is a shell program, you can use it when SSH'd into a remote machine, allowing you to "multiplex" (open a bunch of shells) from a single SSH connection. If your SSH connection drops, you can SSH back and simply `attach` back to the session you were using before without worrying about your remote apps being stopped.
+2.  **Using TMUX on remote machines** - Since TMUX is a shell program, you can use it when SSH'd into a remote machine, allowing you to "multiplex" (open a bunch of shells) from a single SSH connection. If your SSH connection drops, you can SSH back and simply `attach` back to the session you were using before without worrying about your remote apps being stopped.
     
 
-**Some lesser-known features**
-
-1.  As TMUX is a terminal multiplexer that runs as a shell app, you can use it in any terminal emulator and utilize its keybinds. This is especially useful if you use multiple terminal emulators for work and personal use.
+3.  **Terminal app independent** - As TMUX is a terminal multiplexer that runs as a shell app, you can use it in any terminal emulator and utilize its keybinds. This is especially useful if you use multiple terminal emulators for work and personal use.
     
-2.  Sharing TMUX sessions to collaborate with a colleague in real time - You can share your tmux session with a colleague like sharing the terminal emulator screen. All they have to do is SSH into your machine and connect to your session.
+4.  **Session sharing** - Sharing TMUX sessions to collaborate with a colleague in real time - You can share your tmux session with a colleague like sharing the terminal emulator screen. All they have to do is SSH into your machine and connect to your session.
     
-3.  You can also preconfigure sessions, windows, panes, and apps on the pane to your liking without needing to set it up every time.
+5.  **Configurable** - You can also preconfigure sessions, windows, panes, and apps on the pane to your liking without needing to set it up every time.
     
 
 ## Install and Using TMUX
@@ -37,7 +33,7 @@ To run/start a tmux session, run `tmux`.
 
 Check [this link](https://www.redhat.com/sysadmin/introduction-tmux-linux) as a guide for using tmux.
 
-## Advanced Workflow Changes
+## My changes and additions to TMUX config
 
 [Cheatsheet for Tmux](https://tmuxcheatsheet.com/)
 

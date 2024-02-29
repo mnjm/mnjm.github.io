@@ -6,13 +6,11 @@ tags: ["hosting", "workflow", "nginx"]
 categories: ["Foss"]
 ---
 
-Do you often find yourself in a situation where you're taking notes on multiple machines and have to remember or look up every time where the notes are stored? If you're looking for an app to sync and organize everything in a single place, you're not alone. While there are numerous note-taking apps that fulfill this need, such as Microsoft OneNote, Evernote, Notion, Obsidian, and many more, most are closed-source proprietary apps, and none of them offer self-hosting.
-
-Allow me to introduce Trilium Notes—an awesome open-source note-taking/personal knowledge base app that ticks all the right boxes and also has self-hosting capabilities.
+Are you looking for a note taking app that can be self hosted? Allow me to introduce Trilium Notes
 
 ## 1 Trilium Notes
 
-Trilium Notes is an open-source hierarchical note-taking app designed as a web app using Electron. It is available both as a desktop app (for Windows and Linux) and as a self-hosted web app. As a web app, it is supported on any machine with a modern browser.
+Trilium Notes is an open-source hierarchical note-taking app designed as a web app using Electron. It is available both as a desktop app (for Windows and Linux) and as a self-hosted web app.
 
 Trilium Notes checks all the right boxes in terms of features, including, but not limited to, rich WYSIWYG note editing, support for tables, math, Markdown integration, code highlighting, note link maps, note-level encryption support, versioning, canvas support, Mermaid Diagram, and many more. Sounds awesome, right? 
 ![bfd6a1146fea843206931bd1c797b2e1.png](bfd6a1146fea843206931bd1c797b2e1.png "Trilium Demo View")

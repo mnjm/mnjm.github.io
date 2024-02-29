@@ -9,17 +9,17 @@ categories: ["Foss"]
 ---
 
 ## 1 Joplin
-[Joplin](https://joplinapp.org/) is an awesome note taking app that ticks all the right boxes:
+[Joplin](https://joplinapp.org/) is an awesome note taking app that ticks all the right boxes for me:
 1. **It's FOSS**: Joplin is free and [open source](https://github.com/laurent22/joplin/)
 2. **Markdown Support**: It utilizes markdown for note-taking, providing a clean and efficient writing format.
-3. **Versatile Syncing Options**: Joplin offers multiple ways to sync notes between devices, including official cloud options and self-hosting capabilities.
-4. **Cross-Platform Sync Availability**: It's officially available on all platforms, including Linux, Windows, Mac, iPhone, and Android.
+3. **Versatile Syncing Options**: Joplin offers multiple ways to sync notes between devices, including official cloud options and self-hosting.
+4. **Cross-Platform Sync Availability**: It's officially available on all platforms.
 5. **Minimal Design**: With a minimal design, Joplin minimizes distractions
 ![joplin.webp](joplin.webp "Joplin")
 
 ## 2 Syncing Joplin across devices
 
-There are many ways to sync Joplin; some options include Joplin Cloud (official), Dropbox, OneDrive, Nextcloud, and hosting your own Joplin Cloud instance (for privacy reasons). The one that I prefer is using S3 Object Storage from [Oracle Cloud](https://www.oracle.com/cloud/), as I already have a free account with a 10GB limit.
+There are many ways to sync Joplin; some options include Joplin Cloud (official), Dropbox, OneDrive, Nextcloud, and hosting your own Joplin Cloud instance. The one that I prefer is using S3 Object Storage from [Oracle Cloud](https://www.oracle.com/cloud/), as I already have a free account with a 10Gig limit.
 
 I'm not very picky about privacy since I typically use it to store my personal notes, but for those who are concerned, Joplin has an inbuilt way of encrypting your notes before syncing (Awesome, right?).
 
@@ -67,7 +67,4 @@ Now, your notes should be end-to-end encrypted before syncing.
 {{< /admonition >}}
 
 ## 3 References
-- https://joplinapp.org/help/apps/sync/s3/
-- https://blog.jfx.ac/syncing-joplin-notes-to-aws-s3.html
-- https://maximilian.tech/2022/12/27/sync-joplin-notes-across-devices-for-free-via-oracle-cloud-s3-object-storage/
-
+- [Joplin S3 Sync Documention](https://joplinapp.org/help/apps/sync/s3/)

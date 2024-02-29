@@ -3,6 +3,12 @@ title = ''
 date = 2024-02-18T22:12:36+05:30
 +++
 
-I'm **Manjunath Mohan**,
+I'm **Manjunath Mohan**, You've landed on my site. 
 
-You've landed on my site where I share my insights on things that interest me, mainly related to tech. Feel free to explore my blogs [here](./posts/) or, if you want to learn more about me, check [here](./about/).
+{{< style "border-radius:25px;background:#232D3F;padding:20px;" >}}
+This site is harbors bunch of my notes turned articles and are not good enough to be released to the outsite world (yet). Feel free to explore [them](/posts/) *(but no judging, pls).* 🙈
+{{< /style >}}
+
+{{< style "text-align:right; padding:10px" >}}
+Wanna know more about me, [check here](/about/)
+{{< /style >}}
