@@ -130,7 +130,7 @@ theme = "DoIt"
     mobileMode = "auto"
     #  Theme change mode
     # theme change mode ("switch", "select")
-    themeChangeMode = "select"
+    themeChangeMode = "switch"
     #  Header title config
     [params.header.title]
       # URL of the LOGO
