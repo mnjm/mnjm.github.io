@@ -17,7 +17,7 @@
         <div class="content" id="content">
             {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
         </div>
-        
+
         {{- /* Socials */ -}}
         <div style="text-align:center;vertical-align:middle">
             {{- if (findRE "About" .Title 1) -}}

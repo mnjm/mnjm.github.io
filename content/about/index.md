@@ -3,7 +3,7 @@ title: 'About me'
 date: 2024-02-19T12:16:43+05:30
 ---
 
-I'm a **Software Engineer** based in Bengaluru, India, specializing in **Computer Vision and Deep Learning**. My interests extend to AI, Sensor Fusion, Motion Capturing, FOSS, Linux, and Cloud Hosting.
+I'm a **Software Engineer** based in Bengaluru, India, specializing in **Computer Vision and Deep Learning**. My interests extend to AI, Sensor Fusion, Motion Capturing, FOSS, Linux, and Cloud computing.
 
 ### **Work**
 I take pleasure in being a force multiplier in the teams I join, with core values of sharing, feedback and quick iterations.
@@ -14,7 +14,7 @@ With around 3.5 years of experience, my focus has been primarily on **Computer V
 
 
 ### **Tech**
-Beyond my primary focus, I enjoy tinkering with various technologies creatively to understand how they work. I've been actively using GNU/Linux, Vim, Cloud Hosting, and exploring the world of FOSS.
+Beyond my primary focus, I enjoy tinkering with various technologies creatively to understand how they work. I've been actively exploring the FOSS world and dipping into game mods and what not.
 
 
 ### **Posts**
