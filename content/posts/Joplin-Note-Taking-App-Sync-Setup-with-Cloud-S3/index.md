@@ -8,7 +8,7 @@ tags: ["hosting", "workflow", "sync"]
 categories: ["Foss"]
 ---
 
-## 1 Joplin
+## What's Joplin?
 [Joplin](https://joplinapp.org/) is an awesome note taking app that ticks all the right boxes for me:
 1. **It's FOSS**: Joplin is free and [open source](https://github.com/laurent22/joplin/)
 2. **Markdown Support**: It utilizes markdown for note-taking, providing a clean and efficient writing format.
@@ -17,7 +17,7 @@ categories: ["Foss"]
 5. **Minimal Design**: With a minimal design, Joplin minimizes distractions
 ![joplin.webp](joplin.webp "Joplin")
 
-## 2 Syncing Joplin across devices
+## Syncing Joplin across devices
 
 There are many ways to sync Joplin; some options include Joplin Cloud (official), Dropbox, OneDrive, Nextcloud, and hosting your own Joplin Cloud instance. The one that I prefer is using S3 Object Storage from [Oracle Cloud](https://www.oracle.com/cloud/), as I already have a free account with a 10Gig limit.
 
@@ -25,7 +25,7 @@ I'm not very picky about privacy since I typically use it to store my personal n
 
 Let's get on with setting up sync in Joplin.
 
-### 2.1 Joplin Sync Setup using S3 Object Storage (Cloud)
+### Joplin Sync Setup using S3 Object Storage (Cloud)
 
 - Before setting up syncing, you need to set up an S3 Object Storage bucket and gather a few things:
 	1. S3 bucket name
@@ -56,7 +56,7 @@ https://<bucketnamespace>.compat.objectstorage.<region>.oraclecloud.com
 {{< admonition success >}}
 Your Joplin sync is set up! Now, save the S3 details somewhere secure and fill in the same details on the machine you want to sync with.
 {{< /admonition >}}
-### 2.2 Enable Encrytion - Optional
+### Enable Encrytion - Optional
 For those concerned about privecy, enable **Encryption!**. Follow these steps:
 - Go to Tools -> Options -> Encryption
 - Click `Enable Encryption` and enter a touch and secure **Master Password** twice. 
@@ -66,5 +66,5 @@ For those concerned about privecy, enable **Encryption!**. Follow these steps:
 Now, your notes should be end-to-end encrypted before syncing.
 {{< /admonition >}}
 
-## 3 References
+## References
 - [Joplin S3 Sync Documention](https://joplinapp.org/help/apps/sync/s3/)

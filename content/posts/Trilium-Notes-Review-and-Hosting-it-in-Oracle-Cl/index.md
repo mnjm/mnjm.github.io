@@ -8,7 +8,7 @@ categories: ["Foss"]
 
 Are you looking for a note taking app that can be self hosted? Allow me to introduce Trilium Notes
 
-## 1 Trilium Notes
+## Trilium Notes
 
 Trilium Notes is an open-source hierarchical note-taking app designed as a web app using Electron. It is available both as a desktop app (for Windows and Linux) and as a self-hosted web app.
 
@@ -16,20 +16,20 @@ Trilium Notes checks all the right boxes in terms of features, including, but no
 ![bfd6a1146fea843206931bd1c797b2e1.png](bfd6a1146fea843206931bd1c797b2e1.png "Trilium Demo View")
 So, let's dive into hosting it on Oracle Cloud and setting up sync with a desktop app.
 
-## 2 Hosting Trilium on Oracle's Free Forever VM
-### 2.1 Oracle Account Setup
+## Hosting Trilium on Oracle's Free Forever VM
+### 1 Oracle Account Setup
 At the time of writing this guide, Oracle offers a generous Free Tier cloud service claimed to be 'Free Forever.' There are two different configurations under this tier:
 1. 2 x AMD Single Core Compute VMs with 1 Gig RAM
 2. 1 x ARM Ampere A1 Compute VM with 3000 CPU hours.
 
 For this guide, I'll be using the AMD 1 x Core 1Gig Instance. You can also opt for the latter option for more performance.
 If you don't have a free Oracle "Free Forever" Cloud account, create one from [here](https://www.oracle.com/cloud/free/). You'll need a Credit Card to signup for verification.
-### 2.2 Create VM Instance
+### 2 Create VM Instance
 - Once signed up for Oracle Cloud, create a new Compute Instance with an SSH public key. For more information, check [here](https://docs.oracle.com/iaas/Content/Compute/Tasks/accessinginstance.htm).
 	- Use the Ubuntu 22.04 Image.
     - Choose either AMD or Ampere Instance.
 - Once your VM is up, log in to that VM using either Linux ssh command or Putty on Windows.  For more information, check [here](https://docs.oracle.com/iaas/Content/Compute/Tasks/accessinginstance.htm).
-### 2.3 Pull and Run Trilium Docker Image
+### 3 Pull and Run Trilium Docker Image
 - **Install Docker** -  Run the below commands one by one to install docker.
 ```bash
 sudo apt update
@@ -70,9 +70,9 @@ services:
 ![262b8245720a2148aa877d9f26a50ae3.png](262b8245720a2148aa877d9f26a50ae3.png "Trilium logs")
 - Now, you should be able to use curl to get a response from port 8080 using `curl -L localhost:8080`
 
-### 2.4 Setup a subdomain and Enable HTTPS
+### 4 Setup a subdomain and Enable HTTPS
 Obtain a new subdomain from any of the domains you own and add a DNS record to point that subdomain to the VM's IP. Refer to your domain provider's help section for guidance; it should be free of cost.
-#### 2.4.1 Setup nginx on Ubuntu VM
+#### 4.1 Setup nginx on Ubuntu VM
 - Install `nginx` using `sudo apt install nginx -y`
 - Create a `/etc/nginx/sites-available/trilium` file with `sudo`
 	- `sudo nano /etc/nginx/sites-available/trilium`
@@ -100,7 +100,7 @@ server {
 - Reload nginx if the nginx configuration is valid
     - `sudo nginx -t && sudo systemctl reload nginx`
 - Now, you should be able to use curl to get a response from port `80` using `curl -L localhost`
-#### 2.4.2 Expose HTTP port (80) and SSL port (443)
+#### 4.2 Expose HTTP port (80) and SSL port (443)
 Oracle, by default, creates a Virtual Cloud Network (VCN) with all your instances and machines connected. This VCN is protected by a firewall that doesn't allow traffic to and from unknown ports, including ports 80 and 443. An ingress rule needs to be added to allow traffic on these ports. Follow the below steps:
 1. Go to your Instance page in Oracle Cloud and click on the subnet link under 'Instance Information'.
 
@@ -128,7 +128,7 @@ sudo iptables -I OUTPUT -p tcp --sport 443 -m conntrack --ctstate ESTABLISHED -j
 ```
 Now you should be able to use curl and get a response from your local machine - `curl -L <instance-ip>`
 
-#### 2.4.3 Enabling HTTPs using Certbot
+#### 4.3 Enabling HTTPs using Certbot
 Certbot is a client that fetches and deploys SSL certificates from Let's Encrypt and other ACME-compliant CAs to your web server. It also automatically generates new certificates upon expiration. We will use the default Let's Encrypt CA to generate an SSL certificate.
 - To install Certbot on our Ubuntu instance, run the following commands
 ```bash
@@ -144,7 +144,7 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 Now, the Trilium server should be up and accessible through your browser with HTTPS.
 {{< /admonition >}}
 
-### 2.5 Trilium Account Setup
+### 5 Trilium Account Setup
 - Open the Trilium server in your web browser; you should see the page as shown below.
 
 ![ecdcd27e212f7209681fcc73e3e8cdec.png](ecdcd27e212f7209681fcc73e3e8cdec.png "Trilium account setup")
@@ -162,19 +162,19 @@ Now you take notes using this Trilium server from everywhere!
 
 Now lets install Trilium Desktop and sync it with the server
 
-## 3 Trilium Desktop App
-### 3.1 Installation
+## Trilium Desktop App
+### 1 Installation
 - Trilium Desktop is supported on Linux and Windows machines. An unofficial build is available for Mac available [here](https://github.com/zadam/trilium/releases).
 - Download the [installer](https://github.com/zadam/trilium/releases) for your operating system from the stable release's assets section.
-#### 3.1.1 On Windows
+#### 1.1 On Windows
 - Download the installer and install it like any other app
-#### 3.1.2 On Ubuntu and Debian Distro
+#### 1.2 On Ubuntu and Debian Distro
 - Download `.deb` file from the latest stable release's assets section [here](https://github.com/zadam/trilium/releases)
 - Open the `.deb` file and install it. Alternatively, you can use `sudo deb -i <deb-file-path>` to install it.
-#### 3.1.3 On Non-Debian Distros
+#### 1.3 On Non-Debian Distros
 - Download the `.tar.gz`, extract it, and run the `trilium` executable.
 - You may add it to your `PATH` shell variable to able to access it from anywhere.
-### 3.2 Syncing it with the server
+### 2 Syncing it with the server
 - When you open Trilium for the first time, it will show three options to start with. Select the third option,  *I have a server instance already...* since we already have a server.
 
 ![ad28ae24dc782d01f67f8b82c7a664a5.png](ad28ae24dc782d01f67f8b82c7a664a5.png "Desktop signup")
@@ -189,7 +189,7 @@ That's it! Your Trilium Desktop app should sync up with the server.
 
 ![9eb61aaf7ec03ec7216edabd39a290d8.png](9eb61aaf7ec03ec7216edabd39a290d8.png "Trilium sync indicator")
 
-## 4 References
+## References
 - [Trilium Desktop Installation](https://github.com/zadam/trilium/wiki/Desktop-installation)
 - [Syncing to Trilium Server](https://github.com/zadam/trilium/wiki/Desktop-installation)
 - [Trilium Docker server install](https://github.com/zadam/trilium/wiki/Docker-server-installation)

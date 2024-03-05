@@ -7,7 +7,7 @@ featuredImage: "final.jpg"
 ---
 In this blog, I'll guide you through setting up file syncing between Linux and Android using Syncthing. You can also use this pseudo-guide to set up syncing between other types of machines.
 
-## 1 What is Syncthing?
+## What is Syncthing?
 
 [Syncthing](https://syncthing.net/) is an open-source decentralized peer-to-peer file synchronization app built using Go lang, with privacy, security, and user control in mind. Its decentralized approach removes the need for relying on any cloud storage.
 
@@ -15,7 +15,7 @@ It relies on top-of-the-line encryption and authentication algorithms to ensure 
 
 [Here](https://docs.syncthing.net/users/faq.html) is its FAQ that answers many questions that you may have.
 
-## 2 Some details on inner workings of Syncthing
+## Some details on inner workings of Syncthing
 
 1.When there is a direct connection between syncing devices, like lets say within a LAN, Syncthing simply connects each with the other and synchronizes files. When there's no direct connection, like lets say over the internet, it uses 'Relay servers' to bounce traffic between sync devices. Therefore, transfer rates are much lower compared to LAN setting. There are many public relay servers available and maintained by the community. You can also host your own restricted rely servers too for privacy reasons  
 
@@ -25,9 +25,9 @@ It relies on top-of-the-line encryption and authentication algorithms to ensure 
 
 4. Syncthing, similar to many torrenting protocols, divides the files into many chunks called blocks, and each block is synced between devices at a time. So, like torrents, when you have many devices syncing the same files, transfer rates tend to be faster with load sharing.
 
-## 3 Steps to setting up Syncthing on Linux and Android
+## Steps to setting up Syncthing on Linux and Android
 
-### 3.1 Installation
+### 1 Installation
 
 #### Linux - Ubuntu / Debian based Distributions
 
@@ -45,7 +45,7 @@ Prominent distros like Arch and Fedora typically include Syncthing in their pack
 
 Download the installer from [Syncthing's Site](https://syncthing.net/downloads/) and install it like other apps. Grant necessary permissions when prompted, including firewall permissions.
 
-### 3.2 Autostart setup
+### 2 Autostart setup
 
 After installation, on Debian/Ubuntu distros, Syncthing usually doesn't get added to autostart by default, so you'd have to do it manually. On Windows, as far as I know, the installer takes care of it.  
 {{< admonition note >}}
@@ -66,7 +66,7 @@ I've used Linux Mint for this setup, but these steps shouldn't be much different
 
 - Either re-login or start Syncthing by using the command `syncthing`.
 
-### 3.3 Configure Syncthing to Sync a folder sync
+### 3 Configure Syncthing to Sync a folder sync
 
 **On Linux**
 
@@ -119,7 +119,7 @@ In the above screenshots, `Linux` and `Windows` represent the labels that I have
 Thats it! you shoud now have `sync-folder-in-linux` in Linux machine synced with `sync-folder-in-android` on Android.
 {{< /admonition >}}
 
-## 4 Addendum
+## Addendum
 - **To remove sync**, simply remove the folder from the Syncthing GUI / App on one device, but it's recommended to remove it from both.
 - **Securing Syncthing Web GUI** - By default, you and others on the same network can access the Syncthing Web GUI if left unprotected. To secure it, set up a **Username** and a Strong **Password**
 	- To do that, Go to Actions -> Advanced
@@ -127,6 +127,6 @@ Thats it! you shoud now have `sync-folder-in-linux` in Linux machine synced with
 
 ![96bb3ab42a54f9c181ee2974356cfedd.png](96bb3ab42a54f9c181ee2974356cfedd.png "Securing syncthing")
 
-## 5 References
+## References
 - [Syncthing Docs](https://docs.syncthing.net/)
 - [Syncthing Review](https://proprivacy.com/cloud/review/syncthing)
