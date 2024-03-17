@@ -5,6 +5,7 @@ featuredImage: "final.jpg"
 tags: ["hosting", "workflow", "nginx"]
 categories: ["Foss"]
 ---
+<!--more-->
 
 Are you looking for a note taking app that can be self hosted? Allow me to introduce Trilium Notes
 

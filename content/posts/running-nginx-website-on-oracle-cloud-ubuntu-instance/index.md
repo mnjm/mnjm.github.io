@@ -5,6 +5,7 @@ featuredImage: "final2.webp"
 tags: ["nginx", "hosting"]
 categories: ["Tech"]
 ---
+<!--more-->
 ## Prerequisites
 
 - Oracle Cloud account with an Ubuntu instance (Free Instance works)

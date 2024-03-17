@@ -5,6 +5,7 @@ featuredImage: "b8cdf8d8550e5c2c4786ba6e299a4cbf.png"
 tags: ["hosting"]
 categories: ["Tech"]
 ---
+<!--more-->
 ## [Fly.io](https://fly.io) - Why is it awesome
 Fly.io is a cloud hosting platform, similar to AWS, Google Cloud, and Oracle Cloud. What sets them apart, however, is they are completely built upon Docker. What does this mean for you? If you want to host something — be it a website, an app, or a personal project — all you need to do is Dockerize it and push it to Fly.io for hosting. It's that simple. Just select the VM specs, and Fly.io takes care of the rest.
 

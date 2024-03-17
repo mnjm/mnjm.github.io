@@ -5,6 +5,7 @@ featuredImage: "final.jpg"
 tags: ["nginx", "hosting"]
 categories: ["Tech"]
 ---
+<!--more-->
 ## Prerequisites
 
 - Nginx installed with a sample site up; follow [Running NGINX sample website on Oracle Cloud Ubuntu Instance](/posts/running-nginx-website-on-oracle-cloud-ubuntu-instance/) for instructions (Skip Oracle Cloud setup part if you're not using it)

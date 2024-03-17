@@ -5,6 +5,7 @@ featuredImage: "Final.jpg"
 tags: ["workflow"]
 categories: ["Foss", "Linux"]
 ---
+<!--more-->
 ## What is TMUX?
 
 TMUX is a short form for Terminal MUtipleXer. It allows you to switch simply divide up your terminal real estate into tiny pseudo-terminals running it own independent shells.

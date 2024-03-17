@@ -7,6 +7,8 @@ featuredImage: "final.jpg"
 ---
 In this blog, I'll guide you through setting up file syncing between Linux and Android using Syncthing. You can also use this pseudo-guide to set up syncing between other types of machines.
 
+<!--more-->
+
 ## What is Syncthing?
 
 [Syncthing](https://syncthing.net/) is an open-source decentralized peer-to-peer file synchronization app built using Go lang, with privacy, security, and user control in mind. Its decentralized approach removes the need for relying on any cloud storage.

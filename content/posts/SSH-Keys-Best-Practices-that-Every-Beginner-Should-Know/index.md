@@ -14,6 +14,7 @@ math:
 lightgallery: false
 license: ""
 ---
+<!--more-->
 Today, SSH is everywhere. It is the default way of remotely connecting to any \*nix machines, not to mention many network devices, and even some Windows machines. Also, many sites use it for authentication, like Github, Gitlab...
 SSH allows two methods to authenticate a user: 1. Password 2. Private-public key pairs. The latter is the recommended one and is the default in many systems.
 Before discussing my "best" practices to manage these keys, a small guide on how to generate new SSH keys and register them with a server.
