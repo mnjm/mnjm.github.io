@@ -1,0 +1,9 @@
+{{- $inner := .Inner | .Page.RenderString -}}
+{{- $type := .Get 0 | default 0 }}
+{{ if eq $type 0 }}
+    <div style="border-radius:10px;background:#232D3F;color:#eaeaea;padding:20px;">
+{{ else }}
+    <div style="text-align:right; padding:10px">
+{{ end }}
+        {{- $inner -}}
+    </div>
