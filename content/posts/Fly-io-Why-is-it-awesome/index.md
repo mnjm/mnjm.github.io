@@ -18,7 +18,13 @@ One notable aspect is that, unlike other CI/CD providers, Fly.io doesn't restric
 Additionally, they offer a free tier to help you get started.
 
 ## Free Tier
-However, their free tier is somewhat limited compared to what Google and Oracle Cloud offer. Nonetheless, if you're considering a paid plan, they do provide [pricing](https://fly.io/docs/about/pricing/) that is similar to AWS. As of my last check, the following are the limits for their free offerings. *Note: Activating your account, even for the free tier, requires an International Credit Card, but rest assured, you will not be charged. More details can be found [here](https://fly.io/docs/about/credit-cards/)*
+{{< admonition info >}}
+From 2024, Fly.io has locked the Free tier behind $5 per month Hobby Plan 😔
+{{< /admonition >}}
+However, their free tier is somewhat limited compared to what Google and Oracle Cloud offer. Nonetheless, if you're considering a paid plan, they do provide [pricing](https://fly.io/docs/about/pricing/) that is similar to AWS. As of my last check, the following are the limits for their free offerings. 
+{{< admonition note >}}
+Activating your account, even for the free tier, requires an International Credit Card, but rest assured, you will not be charged. More details can be found [here](https://fly.io/docs/about/credit-cards/)
+{{< /admonition >}}
 *   Up to 3 shared-cpu-1x 256mb VMs
 *   3GB persistent volume storage (total)
 *   160GB outbound data transfer 

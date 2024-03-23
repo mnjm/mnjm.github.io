@@ -42,7 +42,10 @@ https://<bucketnamespace>.compat.objectstorage.<region>.oraclecloud.com
 ```
 - The S3 region id should be available somewhere on the provider's portal; otherwise, reach out to the provider for it.
 - Create access and secret keys to access your S3 storage from the provider's portal.
-	- *Note: The access and secret keys should be kept private. Ensure that you keep them secure and refrain from sharing them with unknown parties.*
+
+{{< admonition note >}}
+The access and secret keys should be kept private. Ensure that you keep them secure and refrain from sharing them with unknown parties.
+{{< /admonition >}}
 	- I created mine from going to Profile settings -> Customer Secret Keys (on left of the settings page).
 - Now, input those details you obtained into Joplin
 	- Go to Tools -> Options -> Syncronization
