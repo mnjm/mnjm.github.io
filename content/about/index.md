@@ -7,16 +7,13 @@ showReadingTime: false
 showWordCount: false
 showZenMode: false
 ---
-
 I'm a **Software Engineer** based in Bengaluru, India, specializing in **Computer Vision and Deep Learning**. My interests extend to AI, Sensor Fusion, Motion Capturing, Linux and FOSS.
 
 ### **Approach**
 I take pleasure in being a force multiplier in the teams I join, with core values of sharing, feedback and quick iterations.
 
-
 ### **Experience**
 With around 3.5 years of experience, my focus has been primarily on **Computer Vision, Deep Learning, and Software Development**, contributing to areas such as Driver Monitoring, ADAS, and Surveillance Analytics. I hold a **B.E. in Computer Science Engineering** from Visvesvaraya Technological University, India.
-
 
 ### **Tech**
 Beyond my primary focus, I enjoy tinkering with various technologies creatively to understand how they work. I've been actively exploring the FOSS world and dipping into game mods and what not.
@@ -29,8 +26,11 @@ Beyond my primary focus, I enjoy tinkering with various technologies creatively 
 
 You can find me through my socials.
 
-
 ### **Contact**
 Find my socials below.
 
-TODO - add socials somehow
+<div style="font-size:35px;text-align:center;">
+
+[{{< icon "envelope" >}}](mailto:manjunat.mohan@gmail.com) &nbsp;&nbsp; [{{< icon "github" >}}](https://github.com/mnjm) &nbsp;&nbsp; [{{< icon "linkedin" >}}](https://linkedin.com/in/mnjm)
+
+</div>
