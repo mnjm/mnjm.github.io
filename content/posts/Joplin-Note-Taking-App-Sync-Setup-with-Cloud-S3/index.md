@@ -2,12 +2,9 @@
 date: 2023-10-09T23:06:56+05:30
 title: "Joplin Note Taking App - Sync Setup with Cloud S3 Object Storage"
 description: ""
-featuredImage: "final.jpg"
-slug: "joplin-cloud-s3-sync"
 tags: ["hosting", "workflow", "sync"]
 categories: ["Foss"]
 ---
-<!--more-->
 
 ## What's Joplin?
 [Joplin](https://joplinapp.org/) is an awesome note taking app that ticks all the right boxes for me:
@@ -43,9 +40,9 @@ https://<bucketnamespace>.compat.objectstorage.<region>.oraclecloud.com
 - The S3 region id should be available somewhere on the provider's portal; otherwise, reach out to the provider for it.
 - Create access and secret keys to access your S3 storage from the provider's portal.
 
-{{< admonition note >}}
+{{< alert edit >}}
 The access and secret keys should be kept private. Ensure that you keep them secure and refrain from sharing them with unknown parties.
-{{< /admonition >}}
+{{< /alert >}}
 	- I created mine from going to Profile settings -> Customer Secret Keys (on left of the settings page).
 - Now, input those details you obtained into Joplin
 	- Go to Tools -> Options -> Syncronization
@@ -57,18 +54,18 @@ The access and secret keys should be kept private. Ensure that you keep them sec
 ![3b5038c6e91aa5d555f9e75254a90da7.png](3b5038c6e91aa5d555f9e75254a90da7.png "Check synchronization")
 - Click `Apply`
 
-{{< admonition success >}}
+{{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
 Your Joplin sync is set up! Now, save the S3 details somewhere secure and fill in the same details on the machine you want to sync with.
-{{< /admonition >}}
+{{< /alert >}}
 ### Enable Encrytion - Optional
 For those concerned about privecy, enable **Encryption!**. Follow these steps:
 - Go to Tools -> Options -> Encryption
 - Click `Enable Encryption` and enter a touch and secure **Master Password** twice. 
 - Note down the **Master Password**  along with S3 storage details and apply it on other machines you want to sync.
 
-{{< admonition success >}}
+{{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
 Now, your notes should be end-to-end encrypted before syncing.
-{{< /admonition >}}
+{{< /alert >}}
 
 ## References
 - [Joplin S3 Sync Documention](https://joplinapp.org/help/apps/sync/s3/)

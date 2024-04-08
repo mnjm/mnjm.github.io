@@ -1,11 +1,9 @@
 ---
 title: "Running NGINX website on Oracle Cloud Ubuntu instance"
 date: 2022-02-17T21:19:02+05:30
-featuredImage: "final2.webp"
 tags: ["nginx", "hosting"]
 categories: ["Tech"]
 ---
-<!--more-->
 ## Prerequisites
 
 - Oracle Cloud account with an Ubuntu instance (Free Instance works)
@@ -61,9 +59,9 @@ sudo iptables -I OUTPUT -p tcp --sport 80 -m conntrack --ctstate ESTABLISHED -j 
 - Check with Curl on another machine
     - `curl <instance-ip-address>`
 
-{{< admonition success >}}
+{{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
 Done! Sample site should be up
-{{< /admonition >}}
+{{< /alert >}}
 
 ## Reference
 

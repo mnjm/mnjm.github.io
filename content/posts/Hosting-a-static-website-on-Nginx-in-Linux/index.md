@@ -1,11 +1,9 @@
 ---
 title: "Hosting a Static Website on Nginx in Linux"
 date: 2022-03-03T13:01:59+05:30
-featuredImage: "final.jpg"
 tags: ["nginx", "hosting"]
 categories: ["Tech"]
 ---
-<!--more-->
 ## Prerequisites
 
 - Nginx installed with a sample site up; follow [Running NGINX sample website on Oracle Cloud Ubuntu Instance](/posts/running-nginx-website-on-oracle-cloud-ubuntu-instance/) for instructions (Skip Oracle Cloud setup part if you're not using it)
@@ -50,9 +48,9 @@ server {
 - Reload nginx if the nginx configuration is valid
     - `sudo nginx -t && sudo systemctl reload nginx`
 
-{{< admonition success >}}
+{{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
 Your site should be up my now.
-{{< /admonition >}}
+{{< /alert >}}
 
 ### 3. Setting up HTTPs
 - Give necessary permissions to allow (both input and output) connections to port `443` (SSL port)
@@ -74,9 +72,9 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 	- Verify that certificate can be renewed `sudo certbot renew --dry-run`
 - Restart nginx service - `sudo nginx -t && sudo systemctl reload nginx`
 
-{{< admonition success >}}
+{{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
 Your site should be up with https certification, enjoy!
-{{< /admonition >}}
+{{< /alert >}}
 
 ### 4. Final Step - Optional
 - Enable HTTP/2 - HTTP/2 is a major improvement for the web. It can give you a large improvement in client performance. You will need to have enabled HTTS for HTTP/2. 
@@ -87,9 +85,9 @@ listen [::]:443 ssl http2 ipv6only=on; # managed by Certbot
 ```
 - Restart nginx - `sudo nginx -t && sudo systemctl reload nginx`. Thats it
 
-{{< admonition success >}}
+{{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
 Now you site should work with http2 enabled.
-{{< /admonition >}}
+{{< /alert >}}
 
 ## References
 - [Running NGINX sample website on Oracle Cloud Ubuntu Instance](/posts/running-nginx-website-on-oracle-cloud-ubuntu-instance/)

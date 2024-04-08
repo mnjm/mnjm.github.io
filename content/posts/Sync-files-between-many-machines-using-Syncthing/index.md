@@ -3,11 +3,8 @@ date: 2023-12-21T14:33:37+05:30
 title: "Sync files between Linux and Android using Syncthing"
 tags: ["sync"]
 categories: ["Foss", "Linux"]
-featuredImage: "final.jpg"
 ---
 In this blog, I'll guide you through setting up file syncing between Linux and Android using Syncthing. You can also use this pseudo-guide to set up syncing between other types of machines.
-
-<!--more-->
 
 ## What is Syncthing?
 
@@ -50,21 +47,21 @@ Download the installer from [Syncthing's Site](https://syncthing.net/downloads/)
 ### 2 Autostart setup
 
 After installation, on Debian/Ubuntu distros, Syncthing usually doesn't get added to autostart by default, so you'd have to do it manually. On Windows, as far as I know, the installer takes care of it.  
-{{< admonition note >}}
+{{< alert edit >}}
 For Android, check the Syncthing app's optimizations and ensure it has the necessary permissions to autostart.
-{{< /admonition >}}
+{{< /alert >}}
 
 #### Steps to add it to Autostart on Linux Mint
-{{< admonition note >}}
+{{< alert edit >}}
 I've used Linux Mint for this setup, but these steps shouldn't be much different on other Debian distros like Ubuntu.
-{{< /admonition >}}
+{{< /alert >}}
 
 - Search and open a tool related to auto-start, such as 'Startup Applications,' as shown below.
 - Enable "Start Syncthing" if it is not enabled already.
     - If you don't see it listed, find Syncthing's `.desktop` file and add it manually. Use the below command to find it
     - `find /usr/share/applications -name syncthing-start.desktop`
 
-![7265a2c89e779b2ef8ae2b2e95f56a18.png](7265a2c89e779b2ef8ae2b2e95f56a18.png "Linux Mint Autostart window")
+![7265a2c89e779b2ef8ae2b2e95f56a18.png](7265a2c89e779b2ef8ae2b2e95f56a18.png)
 
 - Either re-login or start Syncthing by using the command `syncthing`.
 
@@ -74,16 +71,16 @@ I've used Linux Mint for this setup, but these steps shouldn't be much different
 
 - Open up your browser of choice and go to this URL `http://127.0.0.1:8384/`. You should see something similar to the screenshot below:
 
-![c3823e8a6906cc43831ab12a01f7a471.png](c3823e8a6906cc43831ab12a01f7a471.png "Syncthing webview")
+![c3823e8a6906cc43831ab12a01f7a471.png](c3823e8a6906cc43831ab12a01f7a471.png)
 - Go to Actions - > Show ID, Copy the ID and send it over to Android
-![d48be2740265561568be47018c67fa66.png](d48be2740265561568be47018c67fa66.png "Device ID")
+![d48be2740265561568be47018c67fa66.png](d48be2740265561568be47018c67fa66.png)
 
 **On Android**
 
 - Install Syncthing from either [Google Play Store](https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid) or from [F-Droid](https://f-droid.org/packages/com.nutomic.syncthingandroid/), start the app. You should see something similar to the screenshot below:
     - *Also, make sure to turn off battery optimization for Syncthing. As it's a file syncing app, it requires full permission to run in the background. Don't worry; resource usage is minimal unless you're constantly syncing things.*
 
-![Android_SS_Rescaled.jpg](Android_SS_Rescaled.jpg "Android view")
+![Android_SS_Rescaled.png](Android_SS_Rescaled.png)
 - Go to Devices -> Click `+`, enter the Device ID you copied, and give it a suitable device name.
 
 **On Linux**
@@ -93,21 +90,21 @@ I've used Linux Mint for this setup, but these steps shouldn't be much different
 - Click "Add Device" and give it a suitable name. 
 - It should now appear in the Remote Devices Area on both Linux and Android, as shown below.
 
-![932e7ddea222fa8efc6ba3509db7146f.png](932e7ddea222fa8efc6ba3509db7146f.png "Remote devices [Desktop]")
-![8f1b0f4dd32bb2fad45828dd484457b5.png](8f1b0f4dd32bb2fad45828dd484457b5.png "Remote devices [Android]")
+![932e7ddea222fa8efc6ba3509db7146f.png](932e7ddea222fa8efc6ba3509db7146f.png)
+![8f1b0f4dd32bb2fad45828dd484457b5.png](8f1b0f4dd32bb2fad45828dd484457b5.png)
 
-{{< admonition note >}}
+{{< alert edit >}}
 In the above screenshots, `Linux` and `Windows` represent the labels that I have assigned, not the respective Operating systems
-{{< /admonition >}}
+{{< /alert >}}
 - In the Folders section, add a new folder by clicking the  `+Add Folder` button. 
 	- Provide a suitable `Folder Label`
 	- **Note down** the `Folder ID`
 	- Add the path of the folder you want to sync to the `Folder Path`, for example, `/home/manjunath/workspace/test/sync-folder-in-linux`.
 
-![9658d5654d69d857e6d2d3ce1b1c7e1e.png](9658d5654d69d857e6d2d3ce1b1c7e1e.png "New folder to sync")
+![9658d5654d69d857e6d2d3ce1b1c7e1e.png](9658d5654d69d857e6d2d3ce1b1c7e1e.png)
 	- In `Sharing` tab, Enable the device you want to sync with. In our case, it should be the Android's device label that we gave during pairing process and Click `Save`
 
-![51dfe4a8eb0c34f67a9521b5a05d673f.png](51dfe4a8eb0c34f67a9521b5a05d673f.png "Share settings")
+![51dfe4a8eb0c34f67a9521b5a05d673f.png](51dfe4a8eb0c34f67a9521b5a05d673f.png)
 	
 **On Android**
 - Go to Folders section -> Click `+` button
@@ -115,11 +112,11 @@ In the above screenshots, `Linux` and `Windows` represent the labels that I have
 	- Enter the same `Folder ID` from Linux settings that was noted down earlier (In my case its `dr7zy-nauf7`) 
 	- Enable the Device that you want to Sync with (In my case its `Linux`) and click on the `✓` button as shown below 
 
-![411158db5382a7be08fcb468c4c1829a.png](411158db5382a7be08fcb468c4c1829a.png "Create folder and share settings [Android]")
+![411158db5382a7be08fcb468c4c1829a.png](411158db5382a7be08fcb468c4c1829a.png)
 
-{{< admonition success >}}
+{{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
 Thats it! you shoud now have `sync-folder-in-linux` in Linux machine synced with `sync-folder-in-android` on Android.
-{{< /admonition >}}
+{{< /alert >}}
 
 ## Addendum
 - **To remove sync**, simply remove the folder from the Syncthing GUI / App on one device, but it's recommended to remove it from both.
@@ -127,7 +124,7 @@ Thats it! you shoud now have `sync-folder-in-linux` in Linux machine synced with
 	- To do that, Go to Actions -> Advanced
 	- In GUI Section, provide a Username in `User` section and a Strong Password in `Password` section.
 
-![96bb3ab42a54f9c181ee2974356cfedd.png](96bb3ab42a54f9c181ee2974356cfedd.png "Securing syncthing")
+![96bb3ab42a54f9c181ee2974356cfedd.png](96bb3ab42a54f9c181ee2974356cfedd.png)
 
 ## References
 - [Syncthing Docs](https://docs.syncthing.net/)

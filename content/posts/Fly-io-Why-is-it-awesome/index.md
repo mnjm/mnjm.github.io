@@ -18,13 +18,13 @@ One notable aspect is that, unlike other CI/CD providers, Fly.io doesn't restric
 Additionally, they offer a free tier to help you get started.
 
 ## Free Tier
-{{< admonition info >}}
-From 2024, Fly.io has locked the Free tier behind $5 per month Hobby Plan 😔
-{{< /admonition >}}
+{{< alert icon="bell" iconColor="#d0d0d0" cardColor="#d75f00" textColor="#1c1c1c">}}
+Edit: From 2024, Fly.io has locked the Free tier behind $5 per month Hobby Plan 😔
+{{< /alert >}}
 However, their free tier is somewhat limited compared to what Google and Oracle Cloud offer. Nonetheless, if you're considering a paid plan, they do provide [pricing](https://fly.io/docs/about/pricing/) that is similar to AWS. As of my last check, the following are the limits for their free offerings. 
-{{< admonition note >}}
+{{< alert >}}
 Activating your account, even for the free tier, requires an International Credit Card, but rest assured, you will not be charged. More details can be found [here](https://fly.io/docs/about/credit-cards/)
-{{< /admonition >}}
+{{< /alert >}}
 *   Up to 3 shared-cpu-1x 256mb VMs
 *   3GB persistent volume storage (total)
 *   160GB outbound data transfer 
@@ -64,9 +64,9 @@ Also, please note that this falls under the hobby plan (Pay as you use), but you
 
 *   To deploy, run  `flyctl deploy`
 
-{{< admonition success >}}
+{{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
 Thats it! By now, your app should be hosted by Fly.io
-{{< /admonition >}}
+{{< /alert >}}
 
 ### Monitoring Logs
 - To view logs from your project root where fly.toml resides, use the following command.

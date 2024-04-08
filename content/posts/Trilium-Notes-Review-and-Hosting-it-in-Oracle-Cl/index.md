@@ -1,11 +1,9 @@
 --- 
 date: 2023-07-11T17:46:20+05:30
 title: "Trilium Notes - Review and Hosting it in Oracle Cloud"
-featuredImage: "final.jpg"
 tags: ["hosting", "workflow", "nginx"]
 categories: ["Foss"]
 ---
-<!--more-->
 
 Are you looking for a note taking app that can be self hosted? Allow me to introduce Trilium Notes
 
@@ -141,9 +139,9 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 	- Verify that the certificate can be renewed with `sudo certbot renew --dry-run`
 - Restart the nginx service - `sudo nginx -t && sudo systemctl reload nginx`
 
-{{< admonition success >}}
+{{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
 Now, the Trilium server should be up and accessible through your browser with HTTPS.
-{{< /admonition >}}
+{{< /alert >}}
 
 ### 5 Trilium Account Setup
 - Open the Trilium server in your web browser; you should see the page as shown below.
@@ -157,9 +155,9 @@ Now, the Trilium server should be up and accessible through your browser with HT
 
 ![842ec53ba78069dbcaee894ab3cc22b3.png](842ec53ba78069dbcaee894ab3cc22b3.png "Trilium server webview")
 
-{{< admonition success >}}
+{{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
 Now you take notes using this Trilium server from everywhere!
-{{< /admonition >}}
+{{< /alert >}}
 
 Now lets install Trilium Desktop and sync it with the server
 
@@ -183,9 +181,9 @@ Now lets install Trilium Desktop and sync it with the server
 
 ![af6032dc92814b28e67ab0768fea01d5.png](af6032dc92814b28e67ab0768fea01d5.png "Sync configuration")
 
-{{< admonition success >}}
+{{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
 That's it! Your Trilium Desktop app should sync up with the server.
-{{< /admonition >}}
+{{< /alert >}}
 - There should be a sync indicator showing the status of sync on the bottom-left tray
 
 ![9eb61aaf7ec03ec7216edabd39a290d8.png](9eb61aaf7ec03ec7216edabd39a290d8.png "Trilium sync indicator")

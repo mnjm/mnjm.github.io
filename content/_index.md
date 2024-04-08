@@ -1,14 +1,7 @@
-+++
-title = ''
-date = 2024-02-18T22:12:36+05:30
-+++
+I’m a **Software Engineer** specializing in **Computer Vision and Deep Learning**. My other interests extend to AI, Motion Capturing, Sensor Fusion, Linux and FOSS.
 
-I'm **Manjunath Mohan**, You've landed on my site. 
+{{< alert icon="eye" >}}
+This site contains my ongoing work-in-progress notes-turned-articles. Feel free to explore.
+{{< /alert >}}
 
-{{< customdiv 0 >}}
-This site is harbors bunch of my notes turned articles and are not good enough to be released to the outside world (yet). Feel free to explore [them](/posts/) *(but no judging, pls 👀)*
-{{< /customdiv >}}
-
-{{< customdiv 1 >}}
 Wanna know more [about me](/about/)?
-{{< /customdiv >}}

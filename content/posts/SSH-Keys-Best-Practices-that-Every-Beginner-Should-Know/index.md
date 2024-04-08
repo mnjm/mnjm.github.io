@@ -1,20 +1,9 @@
 ---
 title: "SSH Keys - Best Practices that Every Beginner Should Know"
-subtitle: ""
 date: 2021-02-22T21:55:53+05:30
-
 tags: ["ssh"]
 categories: ["Tech", "Linux"]
-series: []
-featuredImage: "ssh-cover.jpg"
-toc:
-  enable: true
-math:
-  enable: false
-lightgallery: false
-license: ""
 ---
-<!--more-->
 Today, SSH is everywhere. It is the default way of remotely connecting to any \*nix machines, not to mention many network devices, and even some Windows machines. Also, many sites use it for authentication, like Github, Gitlab...
 SSH allows two methods to authenticate a user: 1. Password 2. Private-public key pairs. The latter is the recommended one and is the default in many systems.
 Before discussing my "best" practices to manage these keys, a small guide on how to generate new SSH keys and register them with a server.
@@ -38,9 +27,9 @@ To register with some apps like Github, you have to manually copy contents of .p
 Now my recommended practices.
 
 ## My recommended practices for SSH-based key authentication
-{{< admonition info >}}
-This is for someone who has just gotten into using SSH. It is not the best way of maintaining SSH keys, especially in terms of security. Evaluate your threat model; if you have a high regard for security, I pretty much recommend maintaining one for each SSH server you connect to, in different places with a strong unique passphrase for each key. :)
-{{< /admonition >}}
+{{< alert circle-info >}}
+This is for someone who has just gotten into using SSH. It is not the best way of maintaining SSH keys, especially in terms of security. Evaluate your threat model; if you have a high regard for security, I pretty much recommend maintaining one for each SSH server you connect to, in different places with a strong unique passphrase for each.
+{{< /alert >}}
 ### 1. Never copy your privates keys to other machines
 This goes without saying; do not copy SSH keys to a different machine to get away with registering a new set of keys everywhere. It is pretty much frowned upon. It is a bad practice, and there is a reason why you can register as many keys as you want.
 ### 2. Maintain multiple SSH keys
@@ -68,9 +57,9 @@ Host *
 As mentioned earlier, I suggest using `ED25519` keygen type since it is harder to brute force. Also, use `-a 100` for a tad bit 🤏 more security.
 ### 5. Don't shy away from using Passphrases
 SSH uses private/public key pairs to protect your communication with the server. SSH passphrases protect your private key from being used by someone who doesn't know the passphrase. Without a passphrase, anyone who gains access to your computer has the potential to copy your private key. For example, family members, coworkers, system administrators, and hostile actors could gain access. Especially when you are storing private keys in any untrustworthy places.
-{{< admonition tip >}}
+{{< alert search >}}
 You can look at using `ssh-agent` for caching SSH passphrases (and passwords), eliminating the need to re-enter them every time. This is particularly useful for running ssh/scp/rsync without user intervention, especially in cronjobs.
-{{< /admonition >}}
+{{< /alert >}}
 ### 6. Rotate key pairs frequently.
 Rotate (Remove the existing key and Register with a new key) SSH keys in mission-critical servers (like production/database servers) frequently. Depending on your threat model, I would suggest rotating these once or twice a month.
 
