@@ -12,7 +12,7 @@ Are you looking for a note taking app that can be self hosted? Allow me to intro
 Trilium Notes is an open-source hierarchical note-taking app designed as a web app using Electron. It is available both as a desktop app (for Windows and Linux) and as a self-hosted web app.
 
 Trilium Notes checks all the right boxes in terms of features, including, but not limited to, rich WYSIWYG note editing, support for tables, math, Markdown integration, code highlighting, note link maps, note-level encryption support, versioning, canvas support, Mermaid Diagram, and many more. Sounds awesome, right? 
-![bfd6a1146fea843206931bd1c797b2e1.png](bfd6a1146fea843206931bd1c797b2e1.png "Trilium Demo View")
+![bfd6a1146fea843206931bd1c797b2e1.png](bfd6a1146fea843206931bd1c797b2e1.png)
 So, let's dive into hosting it on Oracle Cloud and setting up sync with a desktop app.
 
 ## Hosting Trilium on Oracle's Free Forever VM
@@ -42,7 +42,7 @@ sudo apt install docker-ce -y
 	- Run `sudo systemctl status docker`
 	- If it says that the Docker service is active, then Docker is successfully installed.
 
-![c1304b5f1e93bff466b46d95975d34ab.png](c1304b5f1e93bff466b46d95975d34ab.png "Docker service status")
+![c1304b5f1e93bff466b46d95975d34ab.png](c1304b5f1e93bff466b46d95975d34ab.png)
 - Create a director on your home to store Trilium related files, including notes database.
     - If you want to store Trilium-related files somewhere else, like a separate block volume mounted, you can do that by replacing `~` with the mount path in the below command.
 	- Run `mkdir -p ~/trilium/trilium-data && cd ~/trilium`
@@ -62,11 +62,11 @@ services:
 	- `sudo docker compose up -d`
 	- Now, the Trilium Docker image should be pulled, and a new Docker service called trilium should start.
 
-![d3cd9d5df3853d15ed528476309c8b5b.png](d3cd9d5df3853d15ed528476309c8b5b.png "Trilium compose")
+![d3cd9d5df3853d15ed528476309c8b5b.png](d3cd9d5df3853d15ed528476309c8b5b.png)
 - Check the logs to see if Trilium is running without any errors, as shown below:
     - `sudo docker compose logs -f`
 
-![262b8245720a2148aa877d9f26a50ae3.png](262b8245720a2148aa877d9f26a50ae3.png "Trilium logs")
+![262b8245720a2148aa877d9f26a50ae3.png](262b8245720a2148aa877d9f26a50ae3.png)
 - Now, you should be able to use curl to get a response from port 8080 using `curl -L localhost:8080`
 
 ### 4 Setup a subdomain and Enable HTTPS
@@ -103,10 +103,10 @@ server {
 Oracle, by default, creates a Virtual Cloud Network (VCN) with all your instances and machines connected. This VCN is protected by a firewall that doesn't allow traffic to and from unknown ports, including ports 80 and 443. An ingress rule needs to be added to allow traffic on these ports. Follow the below steps:
 1. Go to your Instance page in Oracle Cloud and click on the subnet link under 'Instance Information'.
 
-![Oracle Cloud Ubuntu Instance a.jpg](Oracle%20Cloud%20Ubuntu%20Instance%20a.jpg "Oracle VCN Subnet")
+![Oracle Cloud Ubuntu Instance a.jpg](Oracle%20Cloud%20Ubuntu%20Instance%20a.jpg)
 2. From there. click on the default security list  
 
-![Oracle Cloud Ubuntu Instance a.png](Oracle%20Cloud%20Ubuntu%20Instance%20a.png "Oracle VCN Ingress List")
+![Oracle Cloud Ubuntu Instance a.png](Oracle%20Cloud%20Ubuntu%20Instance%20a.png)
 
 3. Add a new Ingress Rule
 
@@ -115,7 +115,7 @@ Oracle, by default, creates a Virtual Cloud Network (VCN) with all your instance
     - Destination Port Range `80`
     - And Description `HTTP`  
  
- ![1_Oracle Cloud Ubuntu Instance a.png](1_Oracle%20Cloud%20Ubuntu%20Instance%20a.png "Oracle VCN Ingress")
+![1_Oracle Cloud Ubuntu Instance a.png](1_Oracle%20Cloud%20Ubuntu%20Instance%20a.png)
 4. Add another Ingress Rule with the port range set as `443` and `SSL` as the description by following the step mentioned above. 
 
 Now expose ports `80` and `443` in Ubuntu's firewall by running the following commands:
@@ -146,14 +146,14 @@ Now, the Trilium server should be up and accessible through your browser with HT
 ### 5 Trilium Account Setup
 - Open the Trilium server in your web browser; you should see the page as shown below.
 
-![ecdcd27e212f7209681fcc73e3e8cdec.png](ecdcd27e212f7209681fcc73e3e8cdec.png "Trilium account setup")
+![ecdcd27e212f7209681fcc73e3e8cdec.png](ecdcd27e212f7209681fcc73e3e8cdec.png)
 - Select the first option and proceed to the next step.
 - Sign up with a strong password and log in again.
 
-![22b8358c422d8191ececb36998e95421.png](22b8358c422d8191ececb36998e95421.png "Trilium password setup")
+![22b8358c422d8191ececb36998e95421.png](22b8358c422d8191ececb36998e95421.png)
 - You should see the Trilium Notes web GUI, as shown below:
 
-![842ec53ba78069dbcaee894ab3cc22b3.png](842ec53ba78069dbcaee894ab3cc22b3.png "Trilium server webview")
+![842ec53ba78069dbcaee894ab3cc22b3.png](842ec53ba78069dbcaee894ab3cc22b3.png)
 
 {{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
 Now you take notes using this Trilium server from everywhere!
@@ -176,17 +176,17 @@ Now lets install Trilium Desktop and sync it with the server
 ### 2 Syncing it with the server
 - When you open Trilium for the first time, it will show three options to start with. Select the third option,  *I have a server instance already...* since we already have a server.
 
-![ad28ae24dc782d01f67f8b82c7a664a5.png](ad28ae24dc782d01f67f8b82c7a664a5.png "Desktop signup")
+![ad28ae24dc782d01f67f8b82c7a664a5.png](ad28ae24dc782d01f67f8b82c7a664a5.png)
 - Enter the Trilium server address and Password that you assigned when setting up the server.
 
-![af6032dc92814b28e67ab0768fea01d5.png](af6032dc92814b28e67ab0768fea01d5.png "Sync configuration")
+![af6032dc92814b28e67ab0768fea01d5.png](af6032dc92814b28e67ab0768fea01d5.png)
 
 {{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
 That's it! Your Trilium Desktop app should sync up with the server.
 {{< /alert >}}
 - There should be a sync indicator showing the status of sync on the bottom-left tray
 
-![9eb61aaf7ec03ec7216edabd39a290d8.png](9eb61aaf7ec03ec7216edabd39a290d8.png "Trilium sync indicator")
+![9eb61aaf7ec03ec7216edabd39a290d8.png](9eb61aaf7ec03ec7216edabd39a290d8.png)
 
 ## References
 - [Trilium Desktop Installation](https://github.com/zadam/trilium/wiki/Desktop-installation)

@@ -5,23 +5,20 @@ description: ""
 tags: ["hosting", "workflow", "sync"]
 categories: ["Foss"]
 ---
-
 ## What's Joplin?
-[Joplin](https://joplinapp.org/) is an awesome note taking app that ticks all the right boxes for me:
+[Joplin](https://joplinapp.org/) is an awesome note taking app that ticks all the right boxes:
 1. **It's FOSS**: Joplin is free and [open source](https://github.com/laurent22/joplin/)
 2. **Markdown Support**: It utilizes markdown for note-taking, providing a clean and efficient writing format.
 3. **Versatile Syncing Options**: Joplin offers multiple ways to sync notes between devices, including official cloud options and self-hosting.
 4. **Cross-Platform Sync Availability**: It's officially available on all platforms.
 5. **Minimal Design**: With a minimal design, Joplin minimizes distractions
-![joplin.webp](joplin.webp "Joplin")
+![joplin.webp](joplin.webp)
 
 ## Syncing Joplin across devices
 
 There are many ways to sync Joplin; some options include Joplin Cloud (official), Dropbox, OneDrive, Nextcloud, and hosting your own Joplin Cloud instance. The one that I prefer is using S3 Object Storage from [Oracle Cloud](https://www.oracle.com/cloud/), as I already have a free account with a 10Gig limit.
 
-I'm not very picky about privacy since I typically use it to store my personal notes, but for those who are concerned, Joplin has an inbuilt way of encrypting your notes before syncing (Awesome, right?).
-
-Let's get on with setting up sync in Joplin.
+Joplin also offers the option to encrypt notes before syncing. Please check [here](#enable-encrytion---optional) for more information
 
 ### Joplin Sync Setup using S3 Object Storage (Cloud)
 
@@ -39,19 +36,15 @@ https://<bucketnamespace>.compat.objectstorage.<region>.oraclecloud.com
 ```
 - The S3 region id should be available somewhere on the provider's portal; otherwise, reach out to the provider for it.
 - Create access and secret keys to access your S3 storage from the provider's portal.
-
-{{< alert edit >}}
-The access and secret keys should be kept private. Ensure that you keep them secure and refrain from sharing them with unknown parties.
-{{< /alert >}}
 	- I created mine from going to Profile settings -> Customer Secret Keys (on left of the settings page).
 - Now, input those details you obtained into Joplin
 	- Go to Tools -> Options -> Syncronization
 	- Set the Syncronization Target as `S3 (Beta)`
 	- Furnish the details.
-    - For OCI (Oracle) S3 Object Storage, enable `Force path style`
+- For OCI (Oracle) S3 Object Storage, enable `Force path style`
 	- Experiment with enabling and disabling Force path style and clicking `Check synchronization` configuration. One of those should work if everything is correct, as shown below.
 
-![3b5038c6e91aa5d555f9e75254a90da7.png](3b5038c6e91aa5d555f9e75254a90da7.png "Check synchronization")
+![3b5038c6e91aa5d555f9e75254a90da7.png](3b5038c6e91aa5d555f9e75254a90da7.png)
 - Click `Apply`
 
 {{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}

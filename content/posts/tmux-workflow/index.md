@@ -8,7 +8,7 @@ categories: ["Foss", "Linux"]
 
 TMUX is a short form for Terminal MUtipleXer. It allows you to switch simply divide up your terminal real estate into tiny pseudo-terminals running it own independent shells.
 
-![TMUX Screenshot](tmux-ss-1.png "Tmux screen showcasing its multiplexing")
+![TMUX Screenshot](tmux-ss-1.png)
 
 Features:
 
@@ -37,9 +37,9 @@ Check [this link](https://www.redhat.com/sysadmin/introduction-tmux-linux) as a 
 [Cheatsheet for Tmux](https://tmuxcheatsheet.com/)
 
 While default keybinds work for most, I have configured them to work in tandem with my Vim configuration, making it easier to memorize. Additionally, I've themed them according to my liking.
-![TMUX Screenshot](tmux-ss.jpg "Tmux ss with my custom config")  
+![TMUX Screenshot](tmux-ss.jpg)  
 
-You can find my tmux configuration file [here](https://github.com/mnjm/dotfiles/blob/main/tmux/dot-tmux.conf).
+You can find my tmux configuration file [here](https://github.com/mnjm/dotfiles/blob/main/tmux/.tmux.conf).
 
 Some keybind changes:
 - `<ctrl-a>` - TMUX prefix
@@ -97,7 +97,7 @@ bind -T root F12  \
     set @off_mode "Keybinds:OFF" \;\
     refresh-client -S \;\
     display-message -d 2000 -F "Keybinds are OFF"
-                
+
 bind -T off F12 \
     set -u prefix \;\
     set -u key-table \;\
@@ -113,7 +113,7 @@ The state can be displayed using `off_mode` user-defined config variable in the 
 set -g status-right "#[fg=#000000,bg=#ff0000]#{@off_mode}#[bg=#282828] #[fg=#ffffff,bg=#585858] #(whoami)@#{host_short}
 ```
 
-![tmux-off-mode.png](tmux-off-mode.png "Tmux status base with keybinds off mode")
+![tmux-off-mode.png](tmux-off-mode.png)
 
 ## Resources
 

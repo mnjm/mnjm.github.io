@@ -26,17 +26,17 @@ By default, Oracle doesn't allow connections to port 80 in its Virtual Cloud Net
 
 - Click the subnet link from the instance page  
 
-![Oracle Cloud Ubuntu Instance a.jpg](Oracle%20Cloud%20Ubuntu%20Instance%20a.jpg "VCN Subnet")
+![Oracle Cloud Ubuntu Instance a.jpg](Oracle%20Cloud%20Ubuntu%20Instance%20a.jpg)
 - From there, click on the default security list  
 
-![Oracle Cloud Ubuntu Instance a.png](Oracle%20Cloud%20Ubuntu%20Instance%20a.png "VCN Ingress list")
+![Oracle Cloud Ubuntu Instance a.png](Oracle%20Cloud%20Ubuntu%20Instance%20a.png)
 - Add a new Ingress Rule
     - with Source CIDR `0.0.0.0/0`
     - IP Protocol `TCP`
     - Destination Port Range `80`
     - And Description `HTTP`  
 
-![1_Oracle Cloud Ubuntu Instance a.png](1_Oracle%20Cloud%20Ubuntu%20Instance%20a.png "Adding port to Ingress List")
+![1_Oracle Cloud Ubuntu Instance a.png](1_Oracle%20Cloud%20Ubuntu%20Instance%20a.png)
 
 ### Install and Setup Nginx
 

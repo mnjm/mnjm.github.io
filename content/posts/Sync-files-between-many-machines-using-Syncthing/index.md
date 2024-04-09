@@ -10,19 +10,19 @@ In this blog, I'll guide you through setting up file syncing between Linux and A
 
 [Syncthing](https://syncthing.net/) is an open-source decentralized peer-to-peer file synchronization app built using Go lang, with privacy, security, and user control in mind. Its decentralized approach removes the need for relying on any cloud storage.
 
-It relies on top-of-the-line encryption and authentication algorithms to ensure data security. While this may sound complicated, It also comes with very easy-to-use, simple (yet powerful) interface and is supported across various platforms, including Linux, Windows, Mac, and some BSD-based operating systems. Syncthing is also available as an app on Android. However, it's worth noting that iOS is not supported (reason [here](https://docs.syncthing.net/users/faq.html#is-there-an-ios-client)). Additionally, Syncthing can operate both on LAN and over the internet.
+Syncthing can operate both on LAN and over the internet. It also comes with very easy-to-use, simple (yet powerful) interface and is supported across various platforms. Syncthing is also available as an app on Android. However, it's worth noting that iOS is not supported (reason [here](https://docs.syncthing.net/users/faq.html#is-there-an-ios-client)).
 
 [Here](https://docs.syncthing.net/users/faq.html) is its FAQ that answers many questions that you may have.
 
 ## Some details on inner workings of Syncthing
 
-1.When there is a direct connection between syncing devices, like lets say within a LAN, Syncthing simply connects each with the other and synchronizes files. When there's no direct connection, like lets say over the internet, it uses 'Relay servers' to bounce traffic between sync devices. Therefore, transfer rates are much lower compared to LAN setting. There are many public relay servers available and maintained by the community. You can also host your own restricted rely servers too for privacy reasons  
+1. When there is a direct connection between syncing devices, like lets say within a LAN, Syncthing simply connects each device with the other and synchronizes files. When there's no direct connection, like lets say over the internet, it uses 'Relay servers' to bounce traffic between sync devices. Therefore, transfer rates are much lower compared to LAN setting. There are many public relay servers available and maintained by the community. You can also host your own private rely servers too.
 
-2. So, Syncthing sometimes relies on 'some server' to sync. What about privacy, you ask? Well, Syncthing employs end-to-end encryption to securely transfer data. TL;DR: Fear not, your data is protected through the power of crytography, and it's open source you can vet the source code for leaks, unlike  commercial closed-source solutions.  
+2. So, Syncthing sometimes relies on 'some server' to sync. What about privacy, you ask? Well, Syncthing uses end-to-end encryption to securely transfer data. Fear not, your data is protected through the power of crytography, and it's open source you can vet the source code for leaks, unlike  commercial closed-source solutions.  
 
-3. Each device is identified using Syncthing-specific 'Device IDs,' which are unique to each device. While these IDs are unique, they are not sensitive. Only in "very" limited scenarios can a device's IP be reverse-engineered using its ID (when Global discovery is enabled), but it can't be used to connect to your devices or peek over the curtains.  
+3. Each device is identified using Syncthing-specific 'Device IDs,' which are unique to each device. While these IDs are unique, they are not sensitive. Only in "very" limited scenarios can a device's IP be reverse-engineered using its ID (when Global discovery is enabled), but it can't be used to connect to your devices or peek over the curtain.
 
-4. Syncthing, similar to many torrenting protocols, divides the files into many chunks called blocks, and each block is synced between devices at a time. So, like torrents, when you have many devices syncing the same files, transfer rates tend to be faster with load sharing.
+4. Syncthing, similar to many torrenting protocols, divides the files into many chunks, and each chunk is synced between devices at a time. So, like torrents, when you have many devices syncing the same files, transfer rates tend to be faster with load sharing.
 
 ## Steps to setting up Syncthing on Linux and Android
 
@@ -30,7 +30,7 @@ It relies on top-of-the-line encryption and authentication algorithms to ensure 
 
 #### Linux - Ubuntu / Debian based Distributions
 
-Many Debian-based distributions include Syncthing in their `apt` repositories. To install, simply run `sudo apt install syncthing -y`. If it's not available in apt, follow the instructions provided [here](https://apt.syncthing.net/)
+Debian-based distributions typically include Syncthing in their `apt` repositories. To install, simply run `sudo apt install syncthing -y`. If it's not available in apt, follow the instructions provided [here](https://apt.syncthing.net/)
 
 #### Android
 
@@ -38,11 +38,11 @@ Syncthing is available both on [Google Play Store](https://play.google.com/store
 
 #### Non Debian Distros
 
-Prominent distros like Arch and Fedora typically include Syncthing in their package managers, providing an easy installation. In case it's not available, you can download the binary from [Syncthing's Site](https://syncthing.net/downloads/), extract it, and manually add it to your `PATH`.
+Prominent distros like Arch and Fedora include Syncthing in their package managers, providing an easy installation. In case it's not available, you can download the binary from [Syncthing's Site](https://syncthing.net/downloads/), extract it, and manually add it to your `PATH`.
 
 #### Windows
 
-Download the installer from [Syncthing's Site](https://syncthing.net/downloads/) and install it like other apps. Grant necessary permissions when prompted, including firewall permissions.
+Download the installer from [Syncthing's Site](https://syncthing.net/downloads/) and install it like other apps. Grant necessary permissions when prompted, especially firewall permissions.
 
 ### 2 Autostart setup
 
@@ -52,7 +52,7 @@ For Android, check the Syncthing app's optimizations and ensure it has the neces
 {{< /alert >}}
 
 #### Steps to add it to Autostart on Linux Mint
-{{< alert edit >}}
+{{< alert circle-info >}}
 I've used Linux Mint for this setup, but these steps shouldn't be much different on other Debian distros like Ubuntu.
 {{< /alert >}}
 
@@ -78,7 +78,10 @@ I've used Linux Mint for this setup, but these steps shouldn't be much different
 **On Android**
 
 - Install Syncthing from either [Google Play Store](https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid) or from [F-Droid](https://f-droid.org/packages/com.nutomic.syncthingandroid/), start the app. You should see something similar to the screenshot below:
-    - *Also, make sure to turn off battery optimization for Syncthing. As it's a file syncing app, it requires full permission to run in the background. Don't worry; resource usage is minimal unless you're constantly syncing things.*
+
+{{< alert circle-info >}}
+Also, make sure to turn off battery optimization for Syncthing. As it's a file syncing app, it requires full permission to run in the background. Don't worry; resource usage is minimal unless you're constantly syncing things.
+{{< /alert >}}
 
 ![Android_SS_Rescaled.png](Android_SS_Rescaled.png)
 - Go to Devices -> Click `+`, enter the Device ID you copied, and give it a suitable device name.
@@ -86,7 +89,7 @@ I've used Linux Mint for this setup, but these steps shouldn't be much different
 **On Linux**
 - You should see a new message pop up at the top of your browser window, as shown below, displaying the Device ID of the Android device (You can find the Android's Device ID on the Android App by going to its Menu ☰ -> Show Device ID).
 
-![Screenshot from 2024-02-21 12-43-37.png](Screenshot%20from%202024-02-21%2012-43-37.png "Pair request")
+![Screenshot from 2024-02-21 12-43-37.png](Screenshot%20from%202024-02-21%2012-43-37.png)
 - Click "Add Device" and give it a suitable name. 
 - It should now appear in the Remote Devices Area on both Linux and Android, as shown below.
 
@@ -102,7 +105,8 @@ In the above screenshots, `Linux` and `Windows` represent the labels that I have
 	- Add the path of the folder you want to sync to the `Folder Path`, for example, `/home/manjunath/workspace/test/sync-folder-in-linux`.
 
 ![9658d5654d69d857e6d2d3ce1b1c7e1e.png](9658d5654d69d857e6d2d3ce1b1c7e1e.png)
-	- In `Sharing` tab, Enable the device you want to sync with. In our case, it should be the Android's device label that we gave during pairing process and Click `Save`
+
+- In `Sharing` tab, Enable the device you want to sync with. In our case, it should be the Android's device label that we gave during pairing process and Click `Save`
 
 ![51dfe4a8eb0c34f67a9521b5a05d673f.png](51dfe4a8eb0c34f67a9521b5a05d673f.png)
 	

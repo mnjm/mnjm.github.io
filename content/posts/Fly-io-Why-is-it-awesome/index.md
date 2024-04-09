@@ -5,7 +5,6 @@ featuredImage: "b8cdf8d8550e5c2c4786ba6e299a4cbf.png"
 tags: ["hosting"]
 categories: ["Tech"]
 ---
-<!--more-->
 ## [Fly.io](https://fly.io) - Why is it awesome
 Fly.io is a cloud hosting platform, similar to AWS, Google Cloud, and Oracle Cloud. What sets them apart, however, is they are completely built upon Docker. What does this mean for you? If you want to host something — be it a website, an app, or a personal project — all you need to do is Dockerize it and push it to Fly.io for hosting. It's that simple. Just select the VM specs, and Fly.io takes care of the rest.
 
@@ -18,23 +17,28 @@ One notable aspect is that, unlike other CI/CD providers, Fly.io doesn't restric
 Additionally, they offer a free tier to help you get started.
 
 ## Free Tier
+
 {{< alert icon="bell" iconColor="#d0d0d0" cardColor="#d75f00" textColor="#1c1c1c">}}
 Edit: From 2024, Fly.io has locked the Free tier behind $5 per month Hobby Plan 😔
 {{< /alert >}}
+
 However, their free tier is somewhat limited compared to what Google and Oracle Cloud offer. Nonetheless, if you're considering a paid plan, they do provide [pricing](https://fly.io/docs/about/pricing/) that is similar to AWS. As of my last check, the following are the limits for their free offerings. 
+
 {{< alert >}}
 Activating your account, even for the free tier, requires an International Credit Card, but rest assured, you will not be charged. More details can be found [here](https://fly.io/docs/about/credit-cards/)
 {{< /alert >}}
+
 *   Up to 3 shared-cpu-1x 256mb VMs
 *   3GB persistent volume storage (total)
 *   160GB outbound data transfer 
+
 Also, please note that this falls under the hobby plan (Pay as you use), but you have to enable it to incur charges. Make sure to set up monitoring limits to ensure you won't get charged unexpectedly.
 
 ## Steps to host:
 
 ### Install Fly command line and signin
 
-1.  Install flyctl command like tool on local machine
+1.  Install flyctl command line tool on local machine
     *   [https://fly.io/docs/hands-on/install-flyctl/](https://fly.io/docs/hands-on/install-flyctl/)
 2.  Signup - Not required if your machine is already linked to your account
     *  Run  `flyctl auth signin` or Go to [https://fly.io/docs/hands-on/sign-up/](https://fly.io/docs/hands-on/sign-up/)

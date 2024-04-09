@@ -65,14 +65,14 @@ disableTextInHeader = false
   seriesOpened = false
   showHeadingAnchors = true
   showPagination = true
-  invertPagination = false
+  invertPagination = true
   showReadingTime = true
   showTableOfContents = true
   # showRelatedContent = false
   # relatedContentLimit = 3
-  showTaxonomies = false
-  showAuthorsBadges = false
-  showWordCount = true
+  showTaxonomies = true
+  showAuthorsBadges = true
+  showWordCount = false
   # sharingLinks = [ "linkedin", "twitter", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram"]
   showZenMode = true
 
@@ -141,7 +141,7 @@ disableTextInHeader = false
   # globalWidgetPosition = "Right"
 
 [verification]
-  # google = ""
+  google = "tg4s29_RJlz4L2i-vH0EGalnz5Y8Y2pMlKiMIxLd-YU"
   # bing = ""
   # pinterest = ""
   # yandex = ""
