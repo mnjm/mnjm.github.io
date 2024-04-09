@@ -1,10 +1,14 @@
 ---
 title: 'About me'
 date: 2024-02-19T12:16:43+05:30
+showHero: false
 showDate: false
 showPagination: false
 showReadingTime: false
+showTaxonomies: false
+showTableOfContents: false
 showWordCount: false
+showSummary: false
 showZenMode: false
 ---
 I'm a **Software Engineer** based in Bengaluru, India, specializing in **Computer Vision and Deep Learning**. My interests extend to AI, Sensor Fusion, Motion Capturing, Linux and FOSS.
