@@ -70,8 +70,8 @@ disableTextInHeader = false
   showTableOfContents = true
   # showRelatedContent = false
   # relatedContentLimit = 3
-  showTaxonomies = true
-  showAuthorsBadges = true
+  showTaxonomies = false
+  showAuthorsBadges = false
   showWordCount = false
   # sharingLinks = [ "linkedin", "twitter", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram"]
   showZenMode = true
@@ -87,7 +87,7 @@ disableTextInHeader = false
   showLikes = false
   showTableOfContents = false
   showCards = false
-  groupByYear = true
+  groupByYear = false
   cardView = true
   cardViewScreenWidth = false
   constrainItemsWidth = false
@@ -96,13 +96,13 @@ disableTextInHeader = false
   excludedKinds = ["taxonomy", "term"]
 
 [taxonomy]
-  showTermCount = true
+  showTermCount = false
   showHero = false
   # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = false
   showViews = false
   showLikes = false
-  showTableOfContents = false
+  showTableOfContents = true
   cardView = true
 
 [term]

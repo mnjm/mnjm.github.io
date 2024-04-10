@@ -32,7 +32,7 @@ Now my recommended practices.
 ## My recommended practices for SSH-based key authentication
 
 {{< alert circle-info >}}
-This is for someone who has just gotten into using SSH. It is not the best way of maintaining SSH keys, especially in terms of security. Evaluate your threat model; if you have a high regard for security, I pretty much recommend maintaining one for each SSH server you connect to, in different places with a strong unique passphrase for each.
+Assessing your threat model is crucial. If security is a top priority, it's strongly advised to maintain separate SSH keys for each server you connect to, storing them in different places and ensuring each key is secured with a strong and unique passphrase.
 {{< /alert >}}
 
 ### 1. Never copy your privates keys to other machines

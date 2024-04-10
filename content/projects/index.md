@@ -1,7 +1,7 @@
 ---
 title: "Projects"
 date: 2024-04-09T20:21:32+05:30
-categories: ["Projects"]
+categories: []
 showHero: false
 showDate: false
 showPagination: false
@@ -12,9 +12,6 @@ showWordCount: false
 showSummary: false
 showZenMode: false
 ---
-
-These pet projects may not always see the light of day, but they have been invaluable learning experiences.
-
 ## ComputerVision / DeepLearning Projects
 
 | Title | Description | Link |
