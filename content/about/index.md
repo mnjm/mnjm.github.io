@@ -22,7 +22,7 @@ With around 3.5 years of experience, my focus has been primarily on **Computer V
 ### **Tech**
 Beyond my primary focus, I enjoy tinkering with various technologies creatively to understand how they work. I've been actively exploring the FOSS world and dipping into game mods and what not.
 
-### **Posts**
+### **Regarding Posts**
 - You have questions and/or feedback regarding the content here.
 - You spot outdated information in the articles or errors in the code.
 - You would like to contribute.
