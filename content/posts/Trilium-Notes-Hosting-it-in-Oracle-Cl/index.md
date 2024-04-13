@@ -1,6 +1,6 @@
 --- 
 date: 2023-07-11T17:46:20+05:30
-title: "Trilium Notes - Review and Hosting it in Oracle Cloud"
+title: "Trilium Notes - Hosting it in Oracle Cloud"
 tags: ["hosting", "workflow", "nginx"]
 categories: ["Foss"]
 ---
