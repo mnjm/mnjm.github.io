@@ -80,41 +80,6 @@ To use it, save it somewhere accessible to tmux with exec permissions and bind i
 ```bash
 bind <key> display-popup -h 90% -w 90% -E '<script location>'
 ```
-### Remote Session Keybind Fix
-
-If you use tmux a lot, you'll find yourself in a situation where your tmux sessions are nested. For example, you open a tmux session on the local machine, SSH into a remote machine, and attach/create another tmux session on the remote. In this situation, you cannot send keybinds to the remote machine as they will be intercepted by your local tmux instance.
-
-To fix it, you can press `prefix` (tmux prefix C-b if unchanged) twice and press the key binded with the prefix to send it to the remote session. This only works if you don't have any keys that are globally bounded, that is not bounded with the `prefix` key.
-
-Another solution/workaround for the above problem is disabling (toggling) the `prefix` and root `key-table` on the local machine, so that keybinds will be sent to the remote without getting intercepted by the local tmux instance. How?
-
-Add these lines to your `tmux.conf` file:
-
-```bash
-bind -T root F12  \
-    set prefix None \;\
-    set key-table off \;\
-    set @off_mode "Keybinds:OFF" \;\
-    refresh-client -S \;\
-    display-message -d 2000 -F "Keybinds are OFF"
-
-bind -T off F12 \
-    set -u prefix \;\
-    set -u key-table \;\
-    set @off_mode "" \;\
-    refresh-client -S \;\
-    display-message -d 2000 "Keybinds are ON"
-```
-
-The above config changes use `F12` to toggle prefix and key-tables between active and disabled states.  
-The state can be displayed using `off_mode` user-defined config variable in the status bar as shown below:
-
-```bash
-set -g status-right "#[fg=#000000,bg=#ff0000]#{@off_mode}#[bg=#282828] #[fg=#ffffff,bg=#585858] #(whoami)@#{host_short}
-```
-
-![tmux-off-mode.png](tmux-off-mode.png)
-
 ## Resources
 
 - [TMUX github](https://github.com/tmux/tmux)
