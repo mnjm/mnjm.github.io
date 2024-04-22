@@ -51,4 +51,4 @@ set -g status-right "#[fg=#1c1c1c,bg=#d70000]#{@off_mode}#[bg=#000000]" ....
 ### References
 
 - [Fix 3 credits](https://www.freecodecamp.org/news/tmux-in-practice-local-and-nested-remote-tmux-sessions-4f7ba5db8795/)
-- My [tmuxrc](https://github.com/mnjm/dotfiles/blob/main/tmux/.tmux.conf)
+- [My tmux.conf](https://github.com/mnjm/dotfiles/blob/main/tmux/.tmux.conf)

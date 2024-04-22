@@ -85,6 +85,6 @@ bind <key> display-popup -h 90% -w 90% -E '<script location>'
 - [TMUX github](https://github.com/tmux/tmux)
 - [Man page](https://www.man7.org/linux/man-pages/man1/tmux.1.html)
 - [Guide](https://www.redhat.com/sysadmin/introduction-tmux-linux)
-- [My config](https://github.com/mnjm/dotfiles/blob/main/tmux/dot-tmux.conf)
+- [My config](https://github.com/mnjm/dotfiles/blob/main/tmux/.tmux.conf)
 - [Cheatsheet](https://tmuxcheatsheet.com/)
 - [Status bar modifications](https://arcolinux.com/everything-you-need-to-know-about-tmux-status-bar/)

@@ -32,7 +32,7 @@ Now my recommended practices.
 ## My recommended practices for SSH-based key authentication
 
 {{< alert circle-info >}}
-Assessing your threat model is crucial. If security is a top priority, it's strongly advised to maintain separate SSH keys for each server you connect to, storing them in different places and ensuring each key is secured with a strong and unique passphrase.
+Assess your threat model carefully. For top-notch security, maintain separate SSH keys for each server, store them in diverse locations, and secure each key with a strong, unique passphrase.
 {{< /alert >}}
 
 ### 1. Never copy your privates keys to other machines
