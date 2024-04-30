@@ -60,6 +60,7 @@ smartTOC = true
   showBreadcrumbs = false
   showDraftLabel = false
   showEdit = false
+  showComments = true
   # editURL = "https://github.com/username/repo/"
   editAppendPath = true
   seriesOpened = false
