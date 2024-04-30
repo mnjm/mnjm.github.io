@@ -17,10 +17,6 @@ buildFuture = false
 
 googleAnalytics = "G-KLX71X3EKM"
 
-[services]
-  [services.disqus]
-    shortname = 'mnjm-github-io'
-
 [imaging]
   anchor = 'Center'
 
