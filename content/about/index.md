@@ -30,11 +30,5 @@ Beyond my primary focus, I enjoy tinkering with various technologies creatively 
 
 You can find me through my socials.
 
-### **Contact**
-Find my socials below.
-
-<div style="font-size:35px;text-align:center;">
-
-[{{< icon "envelope" >}}](mailto:manjunat.mohan@gmail.com) &nbsp;&nbsp; [{{< icon "github" >}}](https://github.com/mnjm) &nbsp;&nbsp; [{{< icon "linkedin" >}}](https://linkedin.com/in/mnjm)
-
-</div>
+### **Socials**
+{{< custom-contact-links >}}
