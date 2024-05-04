@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Projects"
 date: 2024-04-09T20:21:32+05:30
 categories: []
 showHero: false
