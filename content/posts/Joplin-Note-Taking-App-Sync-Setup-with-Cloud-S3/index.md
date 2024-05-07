@@ -18,7 +18,7 @@ categories: ["Foss"]
 
 There are many ways to sync Joplin; some options include Joplin Cloud (official), Dropbox, OneDrive, Nextcloud, and hosting your own Joplin Cloud instance. The one that I prefer is using S3 Object Storage from [Oracle Cloud](https://www.oracle.com/cloud/), as I already have a free account with a 10Gig limit.
 
-Joplin also offers the option to encrypt notes before syncing. Please check [here](#enable-encrytion---optional) for more information
+Joplin also offers the option to encrypt notes before syncing. Please check [here](#enable-encryption---optional) for more information
 
 ### Joplin Sync Setup using S3 Object Storage (Cloud)
 
@@ -29,8 +29,8 @@ Joplin also offers the option to encrypt notes before syncing. Please check [her
 	4. Access and secret keys to access your S3 bucket
 - Go to your S3 Object Storage provider, in my case, Oracle, and create an S3 bucket. Note down the bucket name/id. Alternatively, you can host your own [S3 Object Storage](https://min.io/)
 	- In Oracle, go to Object Storage and Create Bucket.
-- Some providers offer an S3 Object Storage URL directly from their portal. However, in my case, I had to manually obtain the bucketnamespace and region and fill them into the following URL:
-	- I got my `<bucketnamespace>` from Tenancy details and `<region>` from accout details.
+- Some providers offer an S3 Object Storage URL directly from their portal. However, in my case, I had to manually obtain the bucket namespace and region and fill them into the following URL:
+	- I got my `<bucketnamespace>` from Tenancy details and `<region>` from account details.
 ```nginx
 https://<bucketnamespace>.compat.objectstorage.<region>.oraclecloud.com
 ```
@@ -38,8 +38,8 @@ https://<bucketnamespace>.compat.objectstorage.<region>.oraclecloud.com
 - Create access and secret keys to access your S3 storage from the provider's portal.
 	- I created mine from going to Profile settings -> Customer Secret Keys (on left of the settings page).
 - Now, input those details you obtained into Joplin
-	- Go to Tools -> Options -> Syncronization
-	- Set the Syncronization Target as `S3 (Beta)`
+	- Go to Tools -> Options -> Synchronization
+	- Set the Synchronization Target as `S3 (Beta)`
 	- Furnish the details.
 - For OCI (Oracle) S3 Object Storage, enable `Force path style`
 	- Experiment with enabling and disabling Force path style and clicking `Check synchronization` configuration. One of those should work if everything is correct, as shown below.
@@ -50,8 +50,8 @@ https://<bucketnamespace>.compat.objectstorage.<region>.oraclecloud.com
 {{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
 Your Joplin sync is set up! Now, save the S3 details somewhere secure and fill in the same details on the machine you want to sync with.
 {{< /alert >}}
-### Enable Encrytion - Optional
-For those concerned about privecy, enable **Encryption!**. Follow these steps:
+### Enable Encryption - Optional
+For those concerned about privacy, enable **Encryption!**. Follow these steps:
 - Go to Tools -> Options -> Encryption
 - Click `Enable Encryption` and enter a touch and secure **Master Password** twice. 
 - Note down the **Master Password**  along with S3 storage details and apply it on other machines you want to sync.
