@@ -123,7 +123,7 @@ bindkey '^\' __cdprev
 ```
 I have chosen `<CTRL-\>` (`^\`) keystroke for `cdprev`. You can choose the one that suits you.
 
-[Here](https://github.com/mnjm/dotfiles/blob/main/zsh/.config/zsh/widgets.zsh) you can find [lf](https://github.com/gokcehan/lf) cd and file picker widgets I wrote using ZLE.
+[Here](https://github.com/mnjm/dotfiles/blob/main/.config/zsh/widgets.zsh) you can find [lf](https://github.com/gokcehan/lf) cd and file picker widgets I wrote using ZLE.
 
 ## References
 
