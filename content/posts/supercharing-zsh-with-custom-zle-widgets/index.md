@@ -10,7 +10,7 @@ If you've clicked on this, you probably work with the command-line sometimes and
 
 One such mundane task is the vanilla way of navigating directories (using `cd`), which can be tedious and boring. In the pursuit of finding a better way to navigate, I discovered FZF, more specifically `fzf-cd-widget`, which is added as a keybinding (Alt+C) to zsh when the FZF zsh plugin is installed. This was nice as it provided the ability to navigate different levels of child directories with a few keystrokes.
 
-After integrating `fzf-cd-widget` into my workflow, one thing that was lacking was the ability to `cd` to previously visited directories. For that, I added a function named `cdprev()` that uses FZF to search through the `pushd` directory stack and `cd` to the selected entry.
+After integrating `fzf-cd-widget` into my workflow, one thing that was lacking was the ability to `cd` to previously visited directories. For that, I had a function named `cdprev()` that uses FZF to search through the `pushd` directory stack and `cd` to the selected entry.
 
 ```bash
 cdprev() {
@@ -26,7 +26,7 @@ setopt auto_pushd               # Use pushd and popd instead of cd
 setopt pushd_ignore_dups        # Ignore duplicates in the pushd stack
 ```
 
-The FZF `cd` widget had a couple of more perks though:
+The`fzf-cd-widget` widget had a couple of more perks though:
 
 1. It's bound to a keystroke (Alt-C).
 2. It can restore the prompt/command-line after switching directories.
@@ -41,7 +41,7 @@ Zsh Line Editor (ZLE) is what you use to enter commands when using the zsh shell
 
 One thing about ZLE is that it can execute commands (referred to as widgets) when a specific keystroke is registered. The FZF plugin uses this (ZLE) to bind `fzf-cd-widget`. This means that I can bind `cdprev` to a specific keystroke too.
 
-Note that ZLE uses keymaps, a specific set of keystrokes that can mimic vim and emacs modes. This is outside of this article's scope. The one that we will be focusing on is the global/default keymap.
+ZLE uses keymaps with some mimicking Vim and Emacs modes, but I'll focus on the global/default keymap as I prefer the [edit-command-line](https://unix.stackexchange.com/a/34251) widget for opening the command line in an actual editor.
 
 ## Binding Keystroke to a Widget
 
@@ -123,7 +123,7 @@ bindkey '^\' __cdprev
 ```
 I have chosen `<CTRL-\>` (`^\`) keystroke for `cdprev`. You can choose the one that suits you.
 
-[Here](https://github.com/mnjm/dotfiles/blob/main/zsh/.config/zsh/widgets.zsh) you can find [lf](https://github.com/gokcehan/lf) cd and file picker widgets.
+[Here](https://github.com/mnjm/dotfiles/blob/main/zsh/.config/zsh/widgets.zsh) you can find [lf](https://github.com/gokcehan/lf) cd and file picker widgets I wrote using ZLE.
 
 ## References
 

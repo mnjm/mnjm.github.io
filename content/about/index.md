@@ -14,7 +14,7 @@ showZenMode: false
 I'm a **Software Engineer** based in Bengaluru, India, specializing in **Computer Vision and Deep Learning**. My interests extend to AI, Sensor Fusion, Motion Capturing, Linux and FOSS.
 
 ### **Approach**
-I find great satisfaction in serving as a force multiplier within the teams I collaborate with. Central to my approach are core values such as sharing knowledge, providing constructive feedback, and embracing rapid iterations. By embodying these principles, I aim to amplify the collective efforts of the team, fostering an environment where everyone can contribute effectively and excel together.
+I find great satisfaction in serving as a force multiplier within the teams I collaborate with. Central to my approach are core values such as sharing knowledge, providing constructive feedback, and embracing rapid iterations.
 
 ### **Coding**
 I'm passionate about coding, finding beauty in well-crafted code. While not every codebase ignites joy, finely crafted, well-engineered software certainly does. This drives my motivation – well-crafted code. And a big believer in Code Review and Open Source
