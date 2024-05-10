@@ -42,40 +42,28 @@ While default keybinds work for most, I have configured them to work in tandem w
 You can find my tmux configuration file [here](https://github.com/mnjm/dotfiles/blob/main/.tmux.conf).
 
 Some keybind changes:
-- `<ctrl-a>` - TMUX prefix
-- `<ctrl-a>c` - Clock mode
-- `<ctrl-a>|` - Horizontal split window
-- `<ctrl-a>-` - Vertical split window
-- `<ctrl-a>t` - Creates new window
-- `<alt><Left>` - Go to Left window
-- `<alt><Right>` - Go to Right window
-- `<ALT>h`  `<ALT>j` `<ALT>k` and `<ALT>l` - Move between panes
-- `<ctrl-a>s` - Custom FZF based session selector
-- `<ctrl-a>S` - Inbuilt session selector
+- `<CTRL-a>` - TMUX prefix
+- `<CTRL-a>c` - Clock mode
+- `<CTRL-a>|` - Horizontal split window
+- `<CTRL-a>-` - Vertical split window
+- `<CTRL-a>t` - Creates new window
+- `<ALT><Left>` - Go to Left window
+- `<ALT><Right>` - Go to Right window
+- `<CTRL><Left>`  `<CTRL><Right>` `<CTRL><Up>` and `<CTRL><Down>` - Move between panes (Check [here](https://github.com/christoomey/vim-tmux-navigator))
+- `<CTRL-a>s` - Custom FZF based session selector
+- `<CTRL-a>S` - Inbuilt session selector
 - Copy mode `y` (yank) - Copy to clipboard
 - Copy mode mouse selection - Copy to selection clipboard
-- `<ctrl-C>` - reload config
+- `<CTRL-a>C` - reload config
 - `F12` - Toggle keybinds - For nested tmux usecase.
 
 You can sideload config file using `tmux -f <config file> ....`
 
 ### Custom Session Create / Select using FZF
 I find the built-in session selector rather limiting in terms of functionality. Therefore, I've wrote my own session selector based on Fzf. It enables easy switching between TMUX sessions within a few keystrokes and can also spin up a new session if one is not found.
-```bash
-#!/usr/bin/env zsh
-sessions=$(tmux ls 2>/dev/null)
-selected=$(echo $sessions | cut -d: -f1 | ~/.fzf/bin/fzf --reverse --no-multi --print-query \
-    --preview "tmux capture-pane -pt {}" --preview-window right,90% | tail -n1)
-if [ -z "$TMUX" ]; then
-    tmux new -As $selected
-else
-    if  ! tmux has-session -t $selected 2>/dev/null; then
-        tmux new -ds $selected
-    fi
-    tmux switch-client -t $selected
-fi
-unset sessions selected
-```
+
+{{< codeimporter url="https://github.com/mnjm/dotfiles/blob/main/.local/bin/tmuxn?raw=true" type="bash" >}}
+
 To use it, save it somewhere accessible to tmux with exec permissions and bind it to a key (with prefix) using
 ```bash
 bind <key> display-popup -h 90% -w 90% -E '<script location>'
