@@ -62,7 +62,7 @@ You can sideload config file using `tmux -f <config file> ....`
 ### Custom Session Create / Select using FZF
 I find the built-in session selector rather limiting in terms of functionality. Therefore, I've wrote my own session selector based on Fzf. It enables easy switching between TMUX sessions within a few keystrokes and can also spin up a new session if one is not found.
 
-{{< codeimporter url="https://github.com/mnjm/dotfiles/blob/main/.local/bin/tmuxn?raw=true" type="bash" >}}
+{{< codeimporter url="https://raw.githubusercontent.com/mnjm/dotfiles/dda98c9178d59f49c8b26fcd39227f6691b1b50d/.local/bin/tmuxn" type="bash" >}}
 
 To use it, save it somewhere accessible to tmux with exec permissions and bind it to a key (with prefix) using
 ```bash

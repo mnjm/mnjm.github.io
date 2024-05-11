@@ -1,6 +1,6 @@
 ---
 title: "Registering AppImage as Desktop App in Ubuntu / Mint"
-date: 2024-04-04T18:00:32+05:30
+date: 2024-03-21T20:56:54+05:30
 tags: []
 categories: ["Foss"]
 series: []
