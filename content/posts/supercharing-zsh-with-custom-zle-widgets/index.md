@@ -1,6 +1,6 @@
 ---
 title: "Supercharing Zsh With Custom Zle Widgets"
-date: 2024-05-03T21:50:44+05:30
+date: 2024-03-13T21:50:44+05:30
 tags: []
 categories: []
 series: []

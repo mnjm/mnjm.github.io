@@ -1,6 +1,6 @@
 ---
 title: "Alacritty and TMUX: Preventing Duplicate Instances"
-date: 2024-05-05T19:58:09+05:30
+date: 2024-03-15T19:58:09+05:30
 tags: []
 categories: []
 series: []
