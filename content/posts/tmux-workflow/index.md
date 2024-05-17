@@ -39,7 +39,7 @@ Check [this link](https://www.redhat.com/sysadmin/introduction-tmux-linux) as a 
 While default keybinds work for most, I have configured them to work in tandem with my Vim configuration, making it easier to memorize. Additionally, I've themed them according to my liking.
 ![TMUX Screenshot](https://github.com/mnjm/github-media-repo/blob/main/dotfiles/tmux.jpg?raw=true)  
 
-You can find my tmux configuration file [here](https://github.com/mnjm/dotfiles/blob/main/.tmux.conf).
+You can find my tmux configuration file [here](https://github.com/mnjm/dotfiles/blob/main/.config/tmux/tmux.conf).
 
 Some keybind changes:
 - `<CTRL-a>` - TMUX prefix
@@ -73,6 +73,6 @@ bind <key> display-popup -h 90% -w 90% -E '<script location>'
 - [TMUX github](https://github.com/tmux/tmux)
 - [Man page](https://www.man7.org/linux/man-pages/man1/tmux.1.html)
 - [Guide](https://www.redhat.com/sysadmin/introduction-tmux-linux)
-- [My config](https://github.com/mnjm/dotfiles/blob/main/.tmux.conf)
+- [My config](https://github.com/mnjm/dotfiles/blob/main/.config/tmux/tmux.conf)
 - [Cheatsheet](https://tmuxcheatsheet.com/)
 - [Status bar modifications](https://arcolinux.com/everything-you-need-to-know-about-tmux-status-bar/)
