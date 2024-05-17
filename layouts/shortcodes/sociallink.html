@@ -4,11 +4,9 @@
 {{ with .Site.Author.links }}
     {{ range $links := . }}
         {{ range $s_name, $s_url := $links }}
-            {{ if eq $s_name $name }}
-                {{ $url = $s_url }}
-                {{ break }}
-            {{ end }}
+            {{ if eq $s_name $name }} {{ $url = $s_url }} {{ end }}
         {{ end }}
+        {{ if $url }} {{ break }} {{ end }}
     {{ end }}
 {{ end }}
 {{ if $url }}
