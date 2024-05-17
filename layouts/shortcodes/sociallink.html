@@ -1,0 +1,26 @@
+{{ $name := .Get "name" }}
+{{ if not $name }} {{ errorf "Social-link shortcode: name param not found" }} {{ end }}
+{{ $url := false }}
+{{ with .Site.Author.links }}
+    {{ range $links := . }}
+        {{ range $s_name, $s_url := $links }}
+            {{ if eq $s_name $name }}
+                {{ $url = $s_url }}
+                {{ break }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+{{ if $url }}
+    <a
+        href="{{ $url | safeURL }}"
+        target="_blank"
+        aria-label="{{ $name | title }}"
+        rel="me noopener noreferrer"
+    > 
+    {{ if .Get "showIcon" }}<span class="inline-block" style="vertical-align:text-top;" >{{ partial "icon.html" $name }} </span>{{ end }}
+    {{ .Inner | markdownify }}
+    </a>
+{{ else }}
+    {{ errorf "Error: Social link not found" $name }}
+{{ end }}

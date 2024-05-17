@@ -34,4 +34,7 @@ Beyond my primary focus, I enjoy tinkering with various technologies creatively 
 You can find me through my socials.
 
 ### **Socials**
-{{< custom-contact-links >}}
+
+<div style="text-align: center; font-size:2.0rem;">
+{{< sociallink name="email" showIcon=true />}} &nbsp;&nbsp; {{< sociallink name="github" showIcon=true />}} &nbsp;&nbsp; {{< sociallink name="linkedin" showIcon=true />}}
+</div>
