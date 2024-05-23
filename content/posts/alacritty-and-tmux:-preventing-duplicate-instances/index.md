@@ -35,26 +35,6 @@ For some reason, I faced difficulties adding this command as a Cinnamon keybinds
 
 ### Script Version
 
-```bash
-#!/usr/bin/env zsh
-
-local alacritty_class_name="Alacritty"
-
-fail() {
-    notify-send --urgency=normal $1
-}
-
-alacritty_one_instance() {
-    # get window id, if more than 1 window found, select the last one
-    local window_id=$(xdotool search --classname $alacritty_class_name | tail -n1)
-    if [[ -n $window_id ]]; then
-        # focus window
-        xdotool windowactivate $window_id || fail "Error: couldnt focus on alacritty window"
-    else
-        alacritty --class $alacritty_class_name || fail "Error: Alacritty instance creation"
-    fi
-}
-alacritty_one_instance
-```
+{{< codeimporter url="https://raw.githubusercontent.com/mnjm/dotfiles/main/.local/bin/alacritty-one-instance" type="bash" >}}
 
 All that's needed is to place this script in a directory listed in `$PATH`, such as `~/.local/bin`, grant it execution permissions, and bind it to a key (e.g., `Super-Enter`) in the Desktop Manager (like Cinnamon).
