@@ -17,12 +17,12 @@ showZenMode: false
 
 | Title | Description | Link |
 | --- | --- | --- |
-| **Mammogram Classication** |  Deep Learning based Mammogram Classification using Tenorflow | [Github Repo](https://github.com/mnjm/mammogram-classification) |
-| **Mammogram Classification ImgProc** |  Matlab - Image processing based Mammogram Image Classificaiton | [Github Repo](https://github.com/mnjm/mammogram-classification-imgproc) |
+| **Mammogram Classication** | Deep Learning based Mammogram Classification using Tenorflow | [Github Repo](https://github.com/mnjm/mammogram-classification) |
+| **Mammogram Classification ImgProc** | Matlab - Image processing based Mammogram Image Classificaiton | [Github Repo](https://github.com/mnjm/mammogram-classification-imgproc) |
 | **GAN Experiments** | Experiments in learning how GAN works and how to train them (effectively) | [Github Repo](https://github.com/mnjm/gan-keras) [Just Code] |
-| **Landmarks Posit** |  Dlib Landmarks based Head Pose Estimation | [Github Repo](https://github.com/mnjm/landmarks-posit) |
+| **Landmarks Posit** | Dlib Landmarks based Head Pose Estimation | [Github Repo](https://github.com/mnjm/landmarks-posit) |
 
-## Websites 
+## Websites
 
 | Link | Description |
 | --- | --- |
@@ -40,13 +40,13 @@ showZenMode: false
 ## Misc
 | Title | Description | Link |
 | --- | --- | --- |
-| **NightKin** |  Discord webhook to display real-time updates of players on V Rising servers. | [Github Repo](https://github.com/mnjm/NightKin) |
+| **NightKin** | Discord webhook to display real-time updates of players on V Rising servers. | [Github Repo](https://github.com/mnjm/NightKin) |
 | **Dotfiles** | My configs for NeoVim, Zsh, TMUX, alacritty and tmux | [Github Repo](https://github.com/mnjm/dotfiles) |
-| **Joplin2Hugo** |  A script to convert Joplin Markdown exports to Hugo content | [Github Repo](https://github.com/mnjm/joplin2hugo) |
+| **Joplin2Hugo** | A script to convert Joplin Markdown exports to Hugo content | [Github Repo](https://github.com/mnjm/joplin2hugo) |
 
 ## Fun Projects
 
 | Title | Description | Link |
 | --- | --- | --- |
 | **Squash Pong** | A simple squash pong game built using pygame. | [Github Repo](https://github.com/mnjm/squash-pong-python) |
-| **Checkers Game** |  Academic Project - Checkers Game Implemented using OpenGL | [Github Repo](https://github.com/mnjm/checkers-game) |
+| **Checkers Game** | Academic Project - Checkers Game Implemented using OpenGL | [Github Repo](https://github.com/mnjm/checkers-game) |
