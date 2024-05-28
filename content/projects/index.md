@@ -40,10 +40,9 @@ showZenMode: false
 ## Misc
 | Title | Description | Link |
 | --- | --- | --- |
-| **NightKin** | Discord webhook to display real-time updates of players on V Rising servers. | [Github Repo](https://github.com/mnjm/NightKin) |
+| **NightKin** | Discord webhook to display of players in V Rising server. | [Github Repo](https://github.com/mnjm/NightKin) |
 | **Dotfiles** | My configs for NeoVim, Zsh, TMUX, alacritty and tmux | [Github Repo](https://github.com/mnjm/dotfiles) |
-| **tmux-sessionizer** | Fzf-based Tmux session manager for projects | [Git Repo](https://github.com/mnjm/tmux-sessionizer) |
-| **Joplin2Hugo** | A script to convert Joplin Markdown exports to Hugo content | [Github Repo](https://github.com/mnjm/joplin2hugo) |
+| **tmux-sessionizer** | Fzf-based Tmux session manager for projects | [Github Repo](https://github.com/mnjm/tmux-sessionizer) |
 
 ## Fun Projects
 
