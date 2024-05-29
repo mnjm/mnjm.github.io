@@ -16,7 +16,7 @@ A bit of Googling led me to a solution [here](https://dev.to/thammachart/css-sys
 
 ## GTK 3.0 Config for reference
 
-```toml
+```bash
 [Settings]
 gtk-theme-name=Mint-L-Dark-Teal
 gtk-icon-theme-name=Mint-Y-Yaru
