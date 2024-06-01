@@ -15,7 +15,7 @@ title = "mnjm.github.io"
 
 [author]
   name = "Manjunath Mohan"
-  image = "imgs/portrait.png"
+  image = "imgs/portrait.webp"
   headline = "Hi! Welcome to my site"
   bio = "I’m a Software Engineer based in Bengaluru, India, specializing in Computer Vision and Deep Learning. My interests extend to AI, Sensor Fusion, Motion Capturing, Linux and FOSS"
   links = [
