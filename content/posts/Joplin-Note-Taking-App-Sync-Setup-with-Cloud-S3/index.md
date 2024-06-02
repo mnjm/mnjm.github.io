@@ -2,8 +2,8 @@
 date: 2023-10-09T23:06:56+05:30
 title: "Joplin Note Taking App - Sync Setup with Cloud S3 Object Storage"
 description: ""
-tags: ["hosting", "workflow", "sync"]
-categories: ["Foss"]
+tags: ["hosting", "notesapp", "sync"]
+categories: ["Tech"]
 ---
 ## What's Joplin?
 [Joplin](https://joplinapp.org/) is an awesome note taking app that ticks all the right boxes:

@@ -12,18 +12,29 @@
 
 [[main]]
  name = "Posts"
+ pageRef = "categories"
+ weight = 1
+
+[[main]]
+ name = "List all"
  pageRef = "posts"
- weight = 10
+ parent = "Posts"
+
+[[main]]
+ name = "Tags"
+ pageRef = "tags"
+ parent = "Posts"
+
 
 [[main]]
  name = "Projects"
  pageRef = "projects"
- weight = 30
+ weight = 2
 
 [[main]]
  name = "About me"
  pageRef = "about"
- weight = 50
+ weight = 3
 
 #[[main]]
 #  name = "example sub-menu 1"

@@ -1,8 +1,8 @@
 ---
 title: "TMUX - My configurations"
 date: 2021-01-11T13:08:43+05:30
-tags: ["workflow"]
-categories: ["Foss", "Linux"]
+tags: ["tmux"]
+categories: ["Linux"]
 ---
 ## What is TMUX?
 

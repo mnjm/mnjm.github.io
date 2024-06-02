@@ -1,8 +1,8 @@
 ---
 title: "SimGAN Paper Notes: Better way to learning from Simulated images"
 date: 2024-04-11T15:49:29+05:30
-tags: []
-categories: []
+tags: ["simgan", "gan", "paper"]
+categories: ["AI"]
 series: []
 ---
 Paper [Link](https://arxiv.org/pdf/1612.07828v1.pdf)

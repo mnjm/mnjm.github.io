@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Posts"
 date: 2024-04-10T13:02:40+05:30
 tags: []
 categories: []
@@ -14,5 +14,3 @@ showWordCount: false
 showSummary: false
 showZenMode: false
 ---
-
-[Categories](/categories/)

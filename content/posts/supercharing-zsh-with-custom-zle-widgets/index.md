@@ -1,8 +1,8 @@
 ---
 title: "Supercharing Zsh With Custom Zle Widgets"
 date: 2024-04-01T20:56:54+05:30
-tags: []
-categories: []
+tags: ["zsh", "zle"]
+categories: ["Linux"]
 series: []
 ---
 

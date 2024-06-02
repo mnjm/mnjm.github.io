@@ -1,8 +1,8 @@
 --- 
 date: 2023-07-11T17:46:20+05:30
 title: "Trilium Notes - Hosting it in Oracle Cloud"
-tags: ["hosting", "workflow", "nginx"]
-categories: ["Foss"]
+tags: ["hosting", "nginx"]
+categories: ["Linux"]
 ---
 
 Are you looking for a note taking app that can be self hosted? Allow me to introduce Trilium Notes
