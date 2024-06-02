@@ -1,8 +1,8 @@
 ---
 title: "Grep Cheatsheet - Notes from Linuxize"
 date: 2021-01-09T15:48:24+05:30
-tags: []
-categories: []
+tags: ["grep"]
+categories: ["Linux"]
 series: []
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "TMUX - Keybind fix for nested local and remote sessions"
 date: 2022-12-15T14:09:39+05:30
-tags: []
-categories: ["Foss"]
+tags: ["tmux"]
+categories: ["Linux"]
 series: []
 ---
 If you use tmux a lot especially for remote work, you can find yourself in a situation where your tmux sessions are nested. For example, you open a tmux session on the local machine, SSH into a remote machine, and attach/create another tmux session on the remote. In this scenario, you cannot send keybindings to the remote machine as they will be intercepted by your local tmux instance.

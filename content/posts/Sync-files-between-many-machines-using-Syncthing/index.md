@@ -1,8 +1,8 @@
 --- 
 date: 2023-12-21T14:33:37+05:30
 title: "Sync files between Linux and Android using Syncthing"
-tags: ["sync"]
-categories: ["Foss", "Linux"]
+tags: ["sync", "syncthing"]
+categories: ["Linux"]
 ---
 In this blog, I'll guide you through setting up file syncing between Linux and Android using Syncthing. You can also use this pseudo-guide to set up syncing between other types of machines.
 

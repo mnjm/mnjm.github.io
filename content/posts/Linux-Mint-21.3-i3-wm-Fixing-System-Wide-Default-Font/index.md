@@ -1,8 +1,8 @@
 ---
 title: "i3-wm on Linux Mint 21.3 + Fixing System Wide Default Font"
 date: 2023-12-21T21:17:01+05:30
-tags: []
-categories: []
+tags: ["i3wm", "mint"]
+categories: ["Linux"]
 series: []
 ---
 

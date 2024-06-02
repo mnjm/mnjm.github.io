@@ -1,8 +1,8 @@
 ---
 title: "Alacritty and TMUX: Preventing Duplicate Instances"
 date: 2024-04-04T18:00:32+05:30
-tags: []
-categories: []
+tags: ["alacritty", "tmux"]
+categories: ["Linux"]
 series: []
 ---
 
