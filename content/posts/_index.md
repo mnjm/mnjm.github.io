@@ -1,5 +1,5 @@
 ---
-title: "Posts"
+title: "All"
 date: 2024-04-10T13:02:40+05:30
 tags: []
 categories: []
