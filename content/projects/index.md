@@ -17,10 +17,11 @@ showZenMode: false
 
 | Title | Description | GitHub |
 | --- | --- | --- |
+| **Facial Landmarks Detection** | Facial Landmark Detection using CNN | [Link](https://github.com/mnjm/facial-landmarks-cnn) |
 | **Mammogram Classication** | Deep Learning based Mammogram Classification using Tenorflow | [Link](https://github.com/mnjm/mammogram-classification) |
 | **Mammogram Classification ImgProc** | Matlab - Image processing based Mammogram Image Classificaiton | [Link](https://github.com/mnjm/mammogram-classification-imgproc) |
 | **GAN Experiments** | Experiments in learning how GAN works and how to train them (effectively) | [Link](https://github.com/mnjm/gan-keras) (Code) |
-| **Landmarks Posit** | Dlib Landmarks based Head Pose Estimation | [Link](https://github.com/mnjm/landmarks-posit) |
+| **Head Pose Posit** | Dlib Landmarks based Head Pose Estimation | [Link](https://github.com/mnjm/headpose-posit) |
 
 ## Websites
 
