@@ -42,14 +42,14 @@ For the Refiner, the loss function here is made up of two parts:
 
 ## Training Algorithm
 ![Pasted-image-20240531144456.png](Pasted-image-20240531144456.png)
-Training Loop
+**Training Loop**
 - Train refiner
-    - Sample mini batch of synthetic images, pass through the refiner.
+    - Sample a batch of synthetic images and pass through the refiner.
     - Calculate the refiner loss and update refiner params using SGD on calculated refiner loss.
 - Train discriminator
-    - Sample mini batch of refined synthetic images (using refiner) and real images, pass through the discriminator.
+    - Sample a batch of refined synthetic images (using refiner) and real images, then pass them through the discriminator.
     - Assign negative label to refined images and positive label to real images.
-    - Calculate the discriminator loss and update discriminator params usig SGD on calculated loss.
+    - Calculate the discriminator loss and update discriminator params usig SGD on the calculated loss.
 - Repeat for T steps
 
 ## Suggested improvements
@@ -69,12 +69,11 @@ Training Loop
 ![Result](Result.png)
 - **Visual Turing Test**
 ![Pasted-image-20240531145028.png](Pasted-image-20240531145028.png)
-A set of randomly shuffled real and refined images where shown to people to differentiate. Above is the confusion matrix of the experiment. This proves that samples where hard to differentiate
+A set of randomly shuffled real and refined images was shown to people to differentiate. Above is the confusion matrix of the experiment. This proves that the samples were hard to differentiate.
 
 - **Stability**
 ![Pasted-image-20240531145043.png](Pasted-image-20240531145043.png)
 
 - **Mean Error**
 ![Pasted-image-20240531145137.png](Pasted-image-20240531145137.png)
-
-From training a simple CNN on these refined images also proved that training from refined images leads to better results.
+A simple CNN model was trained on these refined synthetic images, showcasing better results compared to other models trained using real images
