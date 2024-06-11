@@ -13,7 +13,7 @@
 [[main]]
  name = "Posts"
  weight = 1
- pageRef = "categories/ai/"
+ pageRef = "posts"
 
 # [[main]]
 #  name = "AI / Deep Learning"
