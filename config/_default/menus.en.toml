@@ -13,30 +13,31 @@
 [[main]]
  name = "Posts"
  weight = 1
-
-[[main]]
- name = "AI / Deep Learning"
  pageRef = "categories/ai/"
- parent = "Posts"
- weight = 1
 
-[[main]]
- name = "Linux"
- pageRef = "categories/linux/"
- parent = "Posts"
- weight = 2
-
-[[main]]
- name = "Tech"
- pageRef = "categories/tech/"
- parent = "Posts"
- weight = 3
-
-[[main]]
- name = "All"
- pageRef = "posts/"
- parent = "Posts"
- weight = 4
+# [[main]]
+#  name = "AI / Deep Learning"
+#  pageRef = "categories/ai/"
+#  parent = "Posts"
+#  weight = 1
+#
+# [[main]]
+#  name = "Linux"
+#  pageRef = "categories/linux/"
+#  parent = "Posts"
+#  weight = 2
+#
+# [[main]]
+#  name = "Tech"
+#  pageRef = "categories/tech/"
+#  parent = "Posts"
+#  weight = 3
+#
+# [[main]]
+#  name = "All"
+#  pageRef = "posts/"
+#  parent = "Posts"
+#  weight = 4
 
 [[main]]
  name = "Projects"

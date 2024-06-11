@@ -1,6 +1,6 @@
 ---
 title: "Stochastic Augmentation in Deep Learning"
-date: 2024-04-11T16:30:51+05:30
+date: 2021-04-11T16:30:51+05:30
 tags: ["Data Augmentation", "Tensorflow"]
 categories: ["AI"]
 series: []

@@ -18,7 +18,7 @@ enableCodeCopy = true
 disableImageOptimization = false
 disableTextInHeader = false
 
-# defaultBackgroundImage = "IMAGE.jpg" # used as default for background images
+# defaultBackgroundImage = "IMAGE.jpg"
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
 
 highlightCurrentMenuArea = true
@@ -36,9 +36,9 @@ smartTOC = true
   showScrollToTop = true
 
 [homepage]
-  layout = "hero" # valid options: page, profile, hero, card, background, custom
-  homepageImage = "imgs/bg.webp" # used in: hero, and card
-  showRecent = true
+  layout = "profile" # valid options: page, profile, hero, card, background, custom
+  homepageImage = "" # used in: hero, and card
+  showRecent = false
   showRecentItems = 2
   showMoreLink = true
   showMoreLinkDest = "/categories/"
@@ -86,7 +86,7 @@ smartTOC = true
   showViews = false
   showLikes = false
   showTableOfContents = false
-  showCards = true
+  showCards = false
   groupByYear = true
   cardView = false
   cardViewScreenWidth = false
