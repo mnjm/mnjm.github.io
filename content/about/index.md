@@ -14,7 +14,7 @@ showZenMode: false
 I'm a **Software Engineer** based in Bengaluru, India, specializing in **Computer Vision and Deep Learning**. My interests extend to AI, Sensor Fusion, Motion Capturing, Linux and FOSS.
 
 ### **Experience**
-With approximately 3.5 years of experience, my focus has primarily been on Computer Vision, Deep Learning, and Software Development, contributing to areas such as Driver Monitoring, ADAS, and Surveillance Analytics. I hold a B.E. in Computer Science Engineering from Visvesvaraya Technological University, India.
+My focus has primarily been on Computer Vision, Deep Learning, and Software Development, contributing to areas such as Driver Monitoring, ADAS, and Surveillance Analytics. I hold a B.E. in Computer Science Engineering from Visvesvaraya Technological University, India.
 
 ### **Coding**
 I'm passionate about coding, finding beauty in well-crafted code. While not every codebase ignites joy, finely crafted, well-engineered software certainly does. This drives my motivation – well-crafted code. And a big believer in Code Review and Open Source
