@@ -12,7 +12,7 @@ Paper [Link](https://arxiv.org/pdf/1612.07828v1.pdf)
 - But there is a problem with using synthetic images, a model trained using synthetic images may learn patterns persent only in synthetic images, not in real images as there can be a distribution gap between them.
 - To reduce this gap, a GAN-based technique is proposed to "refine" the synthetic samples while retaining their visual features (annotations).
 - Collection of synthetic training data is relatively inexpensive compared to obtaining real data with quality annotation.
-![Pasted-image-20240531143535.png](Pasted-image-20240531143535.png)
+![Pasted-image-20240531143535.png](./featured.png)
 
 ## Proposed Approach
 - GANs are used to fit/transform a known distribution to a dataset. This is achieved by using two networks, namely Generator and Discriminator, in an adversarial training cycle.
