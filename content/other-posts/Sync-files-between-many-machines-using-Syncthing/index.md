@@ -1,5 +1,5 @@
---- 
-date: 2023-12-21T14:33:37+05:30
+---
+date: 2022-12-21T14:33:37+05:30
 title: "Sync files between Linux and Android using Syncthing"
 tags: ["sync", "syncthing"]
 categories: ["Linux"]
@@ -18,7 +18,7 @@ Syncthing can operate both on LAN and over the internet. It also comes with very
 
 1. When there is a direct connection between syncing devices, like lets say within a LAN, Syncthing simply connects each device with the other and synchronizes files. When there's no direct connection, like lets say over the internet, it uses 'Relay servers' to bounce traffic between sync devices. Therefore, transfer rates are much lower compared to LAN setting. There are many public relay servers available and maintained by the community. You can also host your own private rely servers too.
 
-2. So, Syncthing sometimes relies on 'some server' to sync. What about privacy, you ask? Well, Syncthing uses end-to-end encryption to securely transfer data. Fear not, your data is protected through the power of crytography, and it's open source you can vet the source code for leaks, unlike  commercial closed-source solutions.  
+2. So, Syncthing sometimes relies on 'some server' to sync. What about privacy, you ask? Well, Syncthing uses end-to-end encryption to securely transfer data. Fear not, your data is protected through the power of crytography, and it's open source you can vet the source code for leaks, unlike  commercial closed-source solutions.
 
 3. Each device is identified using Syncthing-specific 'Device IDs,' which are unique to each device. While these IDs are unique, they are not sensitive. Only in "very" limited scenarios can a device's IP be reverse-engineered using its ID (when Global discovery is enabled), but it can't be used to connect to your devices or peek over the curtain.
 
@@ -46,7 +46,7 @@ Download the installer from [Syncthing's Site](https://syncthing.net/downloads/)
 
 ### 2 Autostart setup
 
-After installation, on Debian/Ubuntu distros, Syncthing usually doesn't get added to autostart by default, so you'd have to do it manually. On Windows, as far as I know, the installer takes care of it.  
+After installation, on Debian/Ubuntu distros, Syncthing usually doesn't get added to autostart by default, so you'd have to do it manually. On Windows, as far as I know, the installer takes care of it.
 {{< alert edit >}}
 For Android, check the Syncthing app's optimizations and ensure it has the necessary permissions to autostart.
 {{< /alert >}}
@@ -90,7 +90,7 @@ Also, make sure to turn off battery optimization for Syncthing. As it's a file s
 - You should see a new message pop up at the top of your browser window, as shown below, displaying the Device ID of the Android device (You can find the Android's Device ID on the Android App by going to its Menu ☰ -> Show Device ID).
 
 ![Screenshot from 2024-02-21 12-43-37.png](Screenshot%20from%202024-02-21%2012-43-37.png)
-- Click "Add Device" and give it a suitable name. 
+- Click "Add Device" and give it a suitable name.
 - It should now appear in the Remote Devices Area on both Linux and Android, as shown below.
 
 ![932e7ddea222fa8efc6ba3509db7146f.png](932e7ddea222fa8efc6ba3509db7146f.png)
@@ -99,7 +99,7 @@ Also, make sure to turn off battery optimization for Syncthing. As it's a file s
 {{< alert edit >}}
 In the above screenshots, `Linux` and `Windows` represent the labels that I have assigned, not the respective Operating systems
 {{< /alert >}}
-- In the Folders section, add a new folder by clicking the  `+Add Folder` button. 
+- In the Folders section, add a new folder by clicking the  `+Add Folder` button.
 	- Provide a suitable `Folder Label`
 	- **Note down** the `Folder ID`
 	- Add the path of the folder you want to sync to the `Folder Path`, for example, `/home/manjunath/workspace/test/sync-folder-in-linux`.
@@ -109,12 +109,12 @@ In the above screenshots, `Linux` and `Windows` represent the labels that I have
 - In `Sharing` tab, Enable the device you want to sync with. In our case, it should be the Android's device label that we gave during pairing process and Click `Save`
 
 ![51dfe4a8eb0c34f67a9521b5a05d673f.png](51dfe4a8eb0c34f67a9521b5a05d673f.png)
-	
+
 **On Android**
 - Go to Folders section -> Click `+` button
 	- Provide a suitable `Folder Label`
-	- Enter the same `Folder ID` from Linux settings that was noted down earlier (In my case its `dr7zy-nauf7`) 
-	- Enable the Device that you want to Sync with (In my case its `Linux`) and click on the `✓` button as shown below 
+	- Enter the same `Folder ID` from Linux settings that was noted down earlier (In my case its `dr7zy-nauf7`)
+	- Enable the Device that you want to Sync with (In my case its `Linux`) and click on the `✓` button as shown below
 
 ![411158db5382a7be08fcb468c4c1829a.png](411158db5382a7be08fcb468c4c1829a.png)
 

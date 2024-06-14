@@ -1,5 +1,5 @@
---- 
-date: 2023-10-09T23:06:56+05:30
+---
+date: 2023-06-09T23:06:56+05:30
 title: "Joplin Note Taking App - Sync Setup with Cloud S3 Object Storage"
 description: ""
 tags: ["hosting", "notesapp", "sync"]
@@ -53,7 +53,7 @@ Your Joplin sync is set up! Now, save the S3 details somewhere secure and fill i
 ### Enable Encryption - Optional
 For those concerned about privacy, enable **Encryption!**. Follow these steps:
 - Go to Tools -> Options -> Encryption
-- Click `Enable Encryption` and enter a touch and secure **Master Password** twice. 
+- Click `Enable Encryption` and enter a touch and secure **Master Password** twice.
 - Note down the **Master Password**  along with S3 storage details and apply it on other machines you want to sync.
 
 {{< alert icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}

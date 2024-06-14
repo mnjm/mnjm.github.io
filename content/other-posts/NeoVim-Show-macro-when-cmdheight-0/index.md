@@ -1,6 +1,6 @@
 ---
 title: "NeoVim - Show macro recording when cmdheight is set to 0"
-date: 2024-03-15T19:58:09+05:30
+date: 2023-03-15T19:58:09+05:30
 tags: ["(neo)vim"]
 categories: ["Linux"]
 series: []

@@ -1,5 +1,5 @@
---- 
-date: 2023-07-11T17:46:20+05:30
+---
+date: 2022-07-11T17:46:20+05:30
 title: "Trilium Notes - Hosting it in Oracle Cloud"
 tags: ["hosting", "nginx"]
 categories: ["Linux"]
@@ -11,7 +11,7 @@ Are you looking for a note taking app that can be self hosted? Allow me to intro
 
 Trilium Notes is an open-source hierarchical note-taking app designed as a web app using Electron. It is available both as a desktop app (for Windows and Linux) and as a self-hosted web app.
 
-Trilium Notes checks all the right boxes in terms of features, including, but not limited to, rich WYSIWYG note editing, support for tables, math, Markdown integration, code highlighting, note link maps, note-level encryption support, versioning, canvas support, Mermaid Diagram, and many more. Sounds awesome, right? 
+Trilium Notes checks all the right boxes in terms of features, including, but not limited to, rich WYSIWYG note editing, support for tables, math, Markdown integration, code highlighting, note link maps, note-level encryption support, versioning, canvas support, Mermaid Diagram, and many more. Sounds awesome, right?
 ![bfd6a1146fea843206931bd1c797b2e1.png](bfd6a1146fea843206931bd1c797b2e1.png)
 So, let's dive into hosting it on Oracle Cloud and setting up sync with a desktop app.
 
@@ -104,7 +104,7 @@ Oracle, by default, creates a Virtual Cloud Network (VCN) with all your instance
 1. Go to your Instance page in Oracle Cloud and click on the subnet link under 'Instance Information'.
 
 ![Oracle Cloud Ubuntu Instance a.jpg](Oracle%20Cloud%20Ubuntu%20Instance%20a.jpg)
-2. From there. click on the default security list  
+2. From there. click on the default security list
 
 ![Oracle Cloud Ubuntu Instance a.png](Oracle%20Cloud%20Ubuntu%20Instance%20a.png)
 
@@ -113,10 +113,10 @@ Oracle, by default, creates a Virtual Cloud Network (VCN) with all your instance
     - with Source CIDR `0.0.0.0/0`
     - IP Protocol `TCP`
     - Destination Port Range `80`
-    - And Description `HTTP`  
- 
+    - And Description `HTTP`
+
 ![1_Oracle Cloud Ubuntu Instance a.png](1_Oracle%20Cloud%20Ubuntu%20Instance%20a.png)
-4. Add another Ingress Rule with the port range set as `443` and `SSL` as the description by following the step mentioned above. 
+4. Add another Ingress Rule with the port range set as `443` and `SSL` as the description by following the step mentioned above.
 
 Now expose ports `80` and `443` in Ubuntu's firewall by running the following commands:
 ```shell
