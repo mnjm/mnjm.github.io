@@ -11,21 +11,21 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
- name = "Posts"
+ name = "Blog"
  weight = 1
  pageRef = "posts"
 
-# [[main]]
-#  name = "AI / Deep Learning"
-#  pageRef = "categories/ai/"
-#  parent = "Posts"
-#  weight = 1
-#
-# [[main]]
-#  name = "Linux"
-#  pageRef = "categories/linux/"
-#  parent = "Posts"
-#  weight = 2
+[[main]]
+ name = "ML Related"
+ pageRef = "/ml-posts/"
+ parent = "Blog"
+ weight = 1
+
+[[main]]
+ name = "Other Posts"
+ pageRef = "/other-posts/"
+ parent = "Blog"
+ weight = 2
 #
 # [[main]]
 #  name = "Tech"
