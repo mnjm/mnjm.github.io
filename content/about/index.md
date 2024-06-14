@@ -1,7 +1,7 @@
 ---
 title: 'About me'
 date: 2024-02-19T12:16:43+05:30
-showHero: false
+showHero: true
 showDate: false
 showPagination: false
 showReadingTime: false
