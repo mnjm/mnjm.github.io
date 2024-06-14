@@ -37,7 +37,7 @@ smartTOC = true
 
 [homepage]
   layout = "background" # valid options: page, profile, hero, card, background, custom
-  homepageImage = "" # used in: hero, and card
+  # homepageImage = "/imgs/background.svg" # used in: hero, and card
   showRecent = false
   showRecentItems = 2
   showMoreLink = true
