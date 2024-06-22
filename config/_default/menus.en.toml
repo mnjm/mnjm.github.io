@@ -13,19 +13,19 @@
 [[main]]
  name = "Blog"
  weight = 1
- pageRef = "posts"
-
-[[main]]
- name = "ML Related"
  pageRef = "/ml-posts/"
- parent = "Blog"
- weight = 1
 
-[[main]]
- name = "Other Posts"
- pageRef = "/other-posts/"
- parent = "Blog"
- weight = 2
+# [[main]]
+#  name = "ML Related"
+#  pageRef = "/ml-posts/"
+#  parent = "Blog"
+#  weight = 1
+#
+# [[main]]
+#  name = "Other Posts"
+#  pageRef = "/other-posts/"
+#  parent = "Blog"
+#  weight = 2
 #
 # [[main]]
 #  name = "Tech"
