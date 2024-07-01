@@ -1,5 +1,5 @@
 ---
-title: "SimGAN Paper Notes: Better way to learning from Simulated images"
+title: "SimGAN Paper Notes: Better way to learn from Simulated images"
 date: 2022-04-11T15:49:29+05:30
 tags: ["simgan", "gan", "paper"]
 categories: ["AI"]
