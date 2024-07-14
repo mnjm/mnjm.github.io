@@ -1,0 +1,5 @@
+[submodule "themes/archie"]
+	path = themes/archie
+	url = git@github.com:mnjm/archie.git
+	branch = mnjm-main
+	shallow = true
