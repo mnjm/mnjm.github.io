@@ -14,10 +14,6 @@ paginate=9 # articles per page
 tag = "tags"
 category = "categories"
 
-[services]
-  [services.googleAnalytics]
-    ID = 'G-KLX71X3EKM'
-
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]
