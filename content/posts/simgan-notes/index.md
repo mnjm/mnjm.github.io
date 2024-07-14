@@ -54,7 +54,7 @@ $$
 - So the complete loss for the Refiner is
 
 $$
-\mathcal{L}_R(\theta) = -\sum_i\log{(1-D_{\phi}(R_{\theta}(x_i)))} \quad +\lambda||R_{\theta}(x_i)-x_i||_1
+\mathcal{L}_R(\theta) = -\sum_i\log{(1-D_{\phi}(R_{\theta}(x_i)))}\ \ +\ \ \lambda||R_{\theta}(x_i)-x_i||_1
 $$
 
 - where $\lambda$ is one more hyper parameter to tune.
