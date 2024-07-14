@@ -14,6 +14,10 @@ paginate=9 # articles per page
 tag = "tags"
 category = "categories"
 
+[services]
+  [services.googleAnalytics]
+    ID = 'G-KLX71X3EKM'
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]
@@ -31,6 +35,7 @@ subtitle = "Hey, I'm Manjunath Mohan, and this is my personal site where I share
 mathjax = false # enable MathJax support
 katex = true # enable KaTeX support
 mainSections = ["posts"]
+googleSiteVerification = "tg4s29_RJlz4L2i-vH0EGalnz5Y8Y2pMlKiMIxLd-YU"
 
 # Social Tags
 [[params.social]]
