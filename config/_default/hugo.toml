@@ -36,7 +36,7 @@ googleSiteVerification = "tg4s29_RJlz4L2i-vH0EGalnz5Y8Y2pMlKiMIxLd-YU"
 # Social Tags
 [[params.social]]
 name = "Email"
-icon = "mail"
+icon = "email"
 url = "mailto:manjunat.mohan@gmail.com"
 
 [[params.social]]

@@ -147,7 +147,7 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 	- Verify that the certificate can be renewed with `sudo certbot renew --dry-run`
 - Restart the nginx service - `sudo nginx -t && sudo systemctl reload nginx`
 
-{{< callout icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
+{{< callout check >}}
 Now, the Trilium server should be up and accessible through your browser with HTTPS.
 {{< /callout >}}
 
@@ -165,7 +165,7 @@ Now, the Trilium server should be up and accessible through your browser with HT
 
 ![842ec53ba78069dbcaee894ab3cc22b3.png](842ec53ba78069dbcaee894ab3cc22b3.png)
 
-{{< callout icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
+{{< callout check >}}
 Now you take notes using this Trilium server from everywhere!
 {{< /callout >}}
 
@@ -192,7 +192,7 @@ Now lets install Trilium Desktop and sync it with the server
 
 ![af6032dc92814b28e67ab0768fea01d5.png](af6032dc92814b28e67ab0768fea01d5.png)
 
-{{< callout icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
+{{< callout check >}}
 That's it! Your Trilium Desktop app should sync up with the server.
 {{< /callout >}}
 - There should be a sync indicator showing the status of sync on the bottom-left tray

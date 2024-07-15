@@ -62,7 +62,7 @@ sudo iptables -I OUTPUT -p tcp --sport 80 -m conntrack --ctstate ESTABLISHED -j 
 - Check with Curl on another machine
     - `curl <instance-ip-address>`
 
-{{< callout icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
+{{< callout check >}}
 Done! Sample site should be up
 {{< /callout >}}
 

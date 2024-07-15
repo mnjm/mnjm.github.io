@@ -2,7 +2,7 @@
 date: 2022-01-12T18:23:25+05:30
 title: "Fly.io - Why is it awesome"
 tags: ["hosting"]
-type: "Misc"
+posttype: "Misc"
 hidden: true
 ---
 ## [Fly.io](https://fly.io) - Why is it awesome

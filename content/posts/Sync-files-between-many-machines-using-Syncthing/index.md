@@ -124,7 +124,7 @@ In the above screenshots, `Linux` and `Windows` represent the labels that I have
 
 ![411158db5382a7be08fcb468c4c1829a.png](411158db5382a7be08fcb468c4c1829a.png)
 
-{{< callout icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
+{{< callout "bell" >}}
 Thats it! you shoud now have `sync-folder-in-linux` in Linux machine synced with `sync-folder-in-android` on Android.
 {{< /callout >}}
 

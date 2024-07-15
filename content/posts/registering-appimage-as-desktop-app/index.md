@@ -12,7 +12,7 @@ AppImage is not exactly an install package; it's the app itself bundled together
 
 But there is one slight inconvenience with AppImage packages: they don't work with desktop app launchers. To run the app, you have to remember where you have the AppImage file stored, navigate to it, and run it from there.
 
-### "Installation" - Registering the desktop entry
+## "Installation" - Registering the desktop entry
 Here's a way to manually add a desktop entry for these AppImages so that they can be launched from the app launcher:
 
 1. Download the AppImage file, if you haven't already.
@@ -29,16 +29,16 @@ Make sure to retain all trailing flags. For example, Obsidian's desktop file had
 6. Save the file and move it to `~/.local/share/applications/`
 7. Remove the `squashfs-root` folder
 
-{{< callout check-square >}}
+{{< callout check >}}
 Thats it. Now, App launcher will recognize and list the app. And AppImage should get run when started from the launcher
 {{< /callout >}}
 
-### "Uninstallation" - Removing the App.
+## "Uninstallation" - Removing the App.
 
 1. Navigate to `~/.local/share/applications/` and remove the `.desktop` file.
 2. Remove the AppImage file from where it was stored.
 
-### Optional - Add icons to the desktop entry.
+## Optional - Add icons to the desktop entry.
 
 1. After extracting the AppImage, navigate to `usr/share/icons` inside the `squashfs-root` folder
 2. Copy the icons to `~/.local/share/icons/` folder using

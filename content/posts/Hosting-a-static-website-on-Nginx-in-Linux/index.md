@@ -49,7 +49,7 @@ server {
 - Reload nginx if the nginx configuration is valid
     - `sudo nginx -t && sudo systemctl reload nginx`
 
-{{< callout icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
+{{< callout check >}}
 Your site should be up my now.
 {{< /callout >}}
 
@@ -73,7 +73,7 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 	- Verify that certificate can be renewed `sudo certbot renew --dry-run`
 - Restart nginx service - `sudo nginx -t && sudo systemctl reload nginx`
 
-{{< callout icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
+{{< callout check >}}
 Your site should be up with https certification, enjoy!
 {{< /callout >}}
 
@@ -86,7 +86,7 @@ listen [::]:443 ssl http2 ipv6only=on; # managed by Certbot
 ```
 - Restart nginx - `sudo nginx -t && sudo systemctl reload nginx`. Thats it
 
-{{< callout icon="check-square" iconColor="#008700" cardColor="#5faf5f" textColor="#eeeeee"  >}}
+{{< callout check >}}
 Now you site should work with http2 enabled.
 {{< /callout >}}
 

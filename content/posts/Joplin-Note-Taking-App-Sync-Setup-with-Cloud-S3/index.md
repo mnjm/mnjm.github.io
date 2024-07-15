@@ -50,7 +50,7 @@ https://<bucketnamespace>.compat.objectstorage.<region>.oraclecloud.com
 
 - Click `Apply`
 
-{{< callout "check-square" >}}
+{{< callout check >}}
 Your Joplin sync is set up! Now, save the S3 details somewhere secure and fill in the same details on the machine you want to sync with.
 {{< /callout >}}
 ### Enable Encryption - Optional
@@ -59,7 +59,7 @@ For those concerned about privacy, enable **Encryption!**. Follow these steps:
 - Click `Enable Encryption` and enter a touch and secure **Master Password** twice.
 - Note down the **Master Password**  along with S3 storage details and apply it on other machines you want to sync.
 
-{{< callout "check-square" >}}
+{{< callout check >}}
 Now, your notes should be end-to-end encrypted before syncing.
 {{< /callout >}}
 
