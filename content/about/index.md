@@ -4,7 +4,9 @@ date: 2024-02-19T12:16:43+05:30
 showHero: true
 showDate: false
 ---
-Hey, I'm **Manjunath Mohan**, a **Software Engineer** based in Bengaluru, India, specializing in **Computer Vision and Deep Learning**. My interests extend to AI, Machine Learning, 3D Vision, Motion Capturing, Linux and FOSS.
+Hey👋, I'm **Manjunath Mohan**, a **Software Engineer** based in Bengaluru, India, specializing in **Computer Vision and Deep Learning**. My interests extend to AI, Machine Learning, 3D Vision, Motion Capturing, Linux and FOSS.
+
+This is my personal site where I share insights and how-tos, mostly centered around the tech/dev world, which continually piques my curiosity.
 
 ### **Experience**
 My focus has primarily been on Computer Vision, Deep Learning, and Software Development, contributing to areas such as Driver Monitoring, ADAS, and Surveillance Analytics. I hold a B.E. in Computer Science Engineering from Visvesvaraya Technological University, India.
@@ -22,7 +24,7 @@ When I'm able to contribute to making my team better, it brings me joy. I think 
 - You have questions and/or feedback regarding the content here.
 - You spot outdated information in the articles or errors in the code.
 - You would like to contribute.
-- (or) Just wanna say hello!👋
+- (or) Just wanna say hello!
 
 You can find me through my socials.
 
