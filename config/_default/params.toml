@@ -29,6 +29,7 @@ showPagination = true
 invertPagination = true
 showToC = true
 openToC = false
+showComments = true
 
 [taxonomy]
 showCount = true

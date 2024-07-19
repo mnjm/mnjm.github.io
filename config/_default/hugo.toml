@@ -6,4 +6,8 @@ paginate = 10
 
 # [services]
 #   [services.googleAnalytics]
-#     ID = 'G-MEASUREMENT_ID'p
+#     ID = 'G-MEASUREMENT_ID'
+
+[services]
+  [services.disqus]
+    shortname = 'kayaltest'
