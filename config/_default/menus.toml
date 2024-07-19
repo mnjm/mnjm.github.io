@@ -1,6 +1,6 @@
 [[main]]
 name = "Posts"
-url = "/posts/"
+url = "/all-posts/"
 weight = 1
 
 [[main]]
