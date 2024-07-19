@@ -1,70 +1,9 @@
-baseURL = "https://mnjm.github.io/"
-languageCode = "en-us"
-title = "mnjm"
-theme="archie"
-copyright = "© Manjunath Mohan"
-# Code Highlight
-pygmentsstyle = "monokai"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+baseURL = 'https://example.org'
+languageCode = 'en-us'
+title = 'Mnjm'
+theme = "kayal"
+paginate = 10
 
-paginate=9 # articles per page
-
-[taxonomies]
-tag = "tags"
-category = "categories"
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['$$', '$$']]
-          inline = [['$', '$']]
-
-[params]
-math = true
-mode="toggle" # color-mode → light,dark,toggle or auto
-useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
-subtitle = "Hey, I'm Manjunath Mohan, and this is my personal site where I share insights and how-tos, mostly centered around the tech/dev world, which continually piques my curiosity."
-mathjax = false # enable MathJax support
-katex = true # enable KaTeX support
-mainSections = ["posts"]
-googleSiteVerification = "tg4s29_RJlz4L2i-vH0EGalnz5Y8Y2pMlKiMIxLd-YU"
-
-# Social Tags
-[[params.social]]
-name = "Email"
-icon = "email"
-url = "mailto:manjunat.mohan@gmail.com"
-
-[[params.social]]
-name = "GitHub"
-icon = "github"
-url = "https://github.com/mnjm"
-
-[[params.social]]
-name = "LinkedIn"
-icon = "linkedin"
-url = "https://linkedin.com/in/mnjm"
-
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
-
-[[menu.main]]
-name = "Posts"
-url = "/posts"
-weight = 2
-
-[[menu.main]]
-name = "Projects"
-url = "/projects"
-weight = 3
-
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 4
+# [services]
+#   [services.googleAnalytics]
+#     ID = 'G-MEASUREMENT_ID'p

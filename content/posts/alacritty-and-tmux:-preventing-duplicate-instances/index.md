@@ -35,6 +35,6 @@ For some reason, I faced difficulties adding this command as a Cinnamon keybinds
 
 ### Script Version
 
-{{< codeimporter url="https://raw.githubusercontent.com/mnjm/dotfiles/main/.local/bin/alacritty-one-instance" type="bash" >}}
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/dotfiles/main/.local/bin/alacritty-one-instance" type="bash" >}}
 
 All that's needed is to place this script in a directory listed in `$PATH`, such as `~/.local/bin`, grant it execution permissions, and bind it to a key (e.g., `Super-Enter`) in the Desktop Manager (like Cinnamon).

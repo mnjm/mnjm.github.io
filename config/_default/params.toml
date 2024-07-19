@@ -1,0 +1,53 @@
+copyright = "Manjunath Mohan"
+enableCodeCopy = true
+removeAttribution = false
+showThemeSwitcher = true
+defaultTheme = "auto" # light, dark, auto
+highlightCurrentMenu = true
+
+[homepage]
+headline = "Hi👋, Welcome to my site"
+image = "imgs/profile.jpg"
+where = "right" # right, left, top
+showRecent = true
+showRecentLabel = "Featured"
+showRecentItems = 4
+showMore = true
+showMoreDest = "/posts"
+
+[list]
+groupByYear = true
+showDate = true
+
+[article]
+hidden = false
+showDate = true
+showModDate = true
+showReadingTime = true
+showPagination = true
+invertPagination = true
+showToC = true
+openToC = false
+
+[taxonomy]
+showCount = true
+cardView = true
+
+[term]
+groupByYear = true
+showDate = true
+
+[[social]]
+name = "Email"
+icon = "email"
+url = "mailto:manjunat.mohan@gmail.com"
+
+[[social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/mnjm"
+
+[[social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://linkedin.com/in/mnjm"
