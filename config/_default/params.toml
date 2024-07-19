@@ -4,10 +4,11 @@ removeAttribution = false
 showThemeSwitcher = true
 defaultTheme = "auto" # light, dark, auto
 highlightCurrentMenu = true
+mainSections = ["ml-posts"]
 
 [homepage]
 headline = "Hi👋, Welcome to my site"
-image = "imgs/profile.jpg"
+image = "imgs/profile.png"
 where = "right" # right, left, top
 showRecent = true
 showRecentLabel = "Featured"

@@ -1,8 +1,10 @@
 ---
 title: 'About me'
 date: 2024-02-19T12:16:43+05:30
-showHero: true
 showDate: false
+showReadingTime: false
+showToC: false
+showPagination: false
 ---
 Hey👋, I'm **Manjunath Mohan**, a **Software Engineer** based in Bengaluru, India, specializing in **Computer Vision and Deep Learning**. My interests extend to AI, Machine Learning, 3D Vision, Motion Capturing, Linux and FOSS.
 
