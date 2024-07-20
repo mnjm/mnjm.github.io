@@ -14,7 +14,7 @@ showRecent = true
 showRecentLabel = "Featured"
 showRecentItems = 4
 showMore = true
-showMoreDest = "/posts"
+showMoreDest = "/all-posts"
 
 [list]
 groupByYear = true

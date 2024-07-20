@@ -25,7 +25,7 @@ Replace `/usr/bin/zsh` with the path to your preferred shell.
 
 Although this setup works well, there are times where I unintentionally create multiple Alacritty instances connected to the same TMUX session, which can get annoying. To address this, I came up with a command that checks for any active Alacritty windows, If one's found, it will focus on that; otherwise it will create a new instance.
 
-### Command
+## Command
 ```bash
 xdotool windowactivate $(xdotool search --classname Alacritty) || alacritty
 ```
@@ -33,7 +33,7 @@ This command uses `xdotool` to check and focus on windows, which can be installe
 
 For some reason, I faced difficulties adding this command as a Cinnamon keybinds. Consequently, I opted to create a script with added nicities.
 
-### Script Version
+## Script Version
 
 {{< codeimport url="https://raw.githubusercontent.com/mnjm/dotfiles/main/.local/bin/alacritty-one-instance" type="bash" >}}
 
