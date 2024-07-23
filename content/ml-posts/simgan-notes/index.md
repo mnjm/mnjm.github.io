@@ -5,6 +5,7 @@ lastmod: 2024-07-03T11:44:08+04:00
 tags: ["simgan", "gan", "paper"]
 posttype: "AI-ML"
 showLastMod: true
+summary: "The post is my notes on exploration of SimGAN, a technique using Generative Adversarial Networks (GANs) to refine synthetic images while preserving annotations. I have also included link to my implementation of SimGAN in TensorFlow"
 ---
 
 - Paper on SimGAN ([Link](https://arxiv.org/pdf/1612.07828v1.pdf))

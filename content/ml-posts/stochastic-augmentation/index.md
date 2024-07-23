@@ -3,6 +3,7 @@ title: "Stochastic Augmentation in Deep Learning"
 date: 2021-04-11T16:30:51+05:30
 tags: ["Data Augmentation", "Tensorflow"]
 posttype: "AI-ML"
+summary: "This post describes stochastic augmentation, a technique that introduces randomness into datasets. This approach has proven effective in improving the generalization"
 ---
 
 In the ever-evolving landscape that is deep learning, innovations and breakthroughs are commonplace. However, there is always one little crutch, ie training data. Unbiased Datasets with good size and quality annotations are either expensive or hard obtain, especially for application specific needs.
