@@ -9,9 +9,7 @@ mainSections = ["ml-posts"]
 
 [homepage]
 headline = "Hi👋, Welcome to my site"
-image = "imgs/profile.png"
-where = "right" # right, left, top
-showRecent = true
+showRecent = false
 showRecentLabel = "Featured"
 showRecentItems = 4
 showMore = true

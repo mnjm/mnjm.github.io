@@ -1,8 +1,8 @@
-[[main]]
-name = "Posts"
-title = "Posts"
-url = "/all-posts/"
-weight = 1
+# [[main]]
+# name = "Posts"
+# title = "Posts"
+# url = "/all-posts/"
+# weight = 1
 
 [[main]]
 name = "Projects"
