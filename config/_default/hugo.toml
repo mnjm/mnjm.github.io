@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'mnjm'
 theme = "kayal"
 paginate = 10
-
+enableEmoji = true
 # [services]
 #   [services.googleAnalytics]
 #     ID = 'G-MEASUREMENT_ID'

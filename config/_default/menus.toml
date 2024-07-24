@@ -10,8 +10,8 @@ title = "Projects"
 url = "/projects/"
 weight = 2
 
-[[main]]
-name = "About"
-title = "About"
-url = "/about/"
-weight = 3
+# [[main]]
+# name = "About"
+# title = "About"
+# url = "/about/"
+# weight = 3

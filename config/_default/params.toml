@@ -1,7 +1,7 @@
 logo = "/imgs/logo.png"
 copyright = "Manjunath Mohan"
 enableCodeCopy = true
-removeAttribution = false
+removeAttribution = true
 showThemeSwitcher = true
 defaultTheme = "auto" # light, dark, auto
 highlightCurrentMenu = true
