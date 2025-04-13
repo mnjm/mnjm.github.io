@@ -1,0 +1,71 @@
+---
+import { siteConfig } from "../config/siteConfig.ts";
+import Icon from "../components/Icon.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Font } from "astro:assets";
+
+const accentColor = "text-red-700";
+const author = siteConfig.author + ".";
+const highlightedAuthor = author.replace(/([A-Z]|\.)/g, (match) => {
+  return `<span class="${accentColor}">${match}</span>`;
+});
+const socials = siteConfig.social;
+const menus = siteConfig.menu;
+---
+
+<Font cssVariable="--font-eb-garamond" preload />
+
+<style>
+  h1.author {
+    font-family: var(--font-eb-garamond);
+  }
+</style>
+
+<BaseLayout pageTitle={siteConfig.author}>
+  <div class="flex h-screen items-center justify-center">
+    <div class="text-center">
+      <h1
+        class="author mb-3 text-4xl font-bold text-neutral-100 md:text-5xl"
+        set:html={highlightedAuthor}
+      />
+      <p class="mb-3 text-neutral-400 md:text-[1.25rem]">
+        Escaping Local Minima
+      </p>
+      <ul class="mb-3">
+        {
+          socials.map((item) => (
+            <a href={item.href} class="mx-2 text-neutral-400 hover:text-blue-400 inline-block">
+              <Icon name={item.name} class="h-8 w-8 md:h-10 md:w-10" />
+            </a>
+          ))
+        }
+      </ul>
+      <ul class="flex items-center justify-center gap-4 text-neutral-400 md:text-xl">
+        {
+          menus?.flatMap((item, index) => {
+            const elements = [
+              <li class="flex items-center">
+                <a
+                  href={item.href}
+                  class="transition-colors hover:text-blue-400 focus:outline-none focus-visible:text-blue-400"
+                >
+                  {item.title}
+                </a>
+              </li>,
+            ];
+
+            if (index < menus.length - 1) {
+              elements.push(
+                <li aria-hidden="true" class="text-red-500 select-none px-2">
+                  |
+                </li>
+              );
+            }
+
+            return elements;
+          })
+        }
+      </ul>
+    </div>
+  </div>
+</BaseLayout>

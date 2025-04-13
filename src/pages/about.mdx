@@ -1,0 +1,82 @@
+---
+title: "About"
+layout: "../layouts/MarkdownLayout.astro"
+showMeta: false
+---
+
+import { siteConfig } from "../config/siteConfig";
+import RepoCard from "../components/RepoCard.astro";
+export const emailLink = siteConfig.social.find((s) => s.name === "email")?.href;
+
+
+Hey, I'm **Manjunath Mohan**, an **Engineer** based in Bengaluru, India. I work on **Machine Learning** systems with an emphasis on **Computer Vision, Natural Language Processing and Gen AI** with applications in **Robotics and Automation**.
+
+- I am currently working in [Nosh](https://www.letsnosh.io/), building cooking automation robot.
+- Previously worked on
+  - Autmotive In Cabin Sensing / Driver Monitoring
+  - CCTV Surveillance Analytics
+  - Camera Calibration and Color Tuning
+  - Motion Capture, Stereo Vision
+  - Data Collection and Annotation Pipelines
+
+## Resume
+
+For my full resume, drop a <a href={emailLink}>mail</a>.
+
+<h2 id="projects">Personal Projects</h2>
+
+"What I cannot create, I do not understand." - Richard Feynman
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+  <RepoCard
+    title="vit"
+    description="From-scratch reproduction of ViT, DeiT, and Swin Transformers"
+    github="https://github.com/mnjm/vit"
+  />
+  <RepoCard
+    title="yolo11.cpp"
+    description="Optimized YOLOv11 wrapper using OpenCV DNN with efficient class filtering NMS"
+    github="https://github.com/mnjm/yolo11.cpp"
+  />
+  <RepoCard
+    title="gpt2"
+    description="Reproduction and attempt at pretraining GPT-2"
+    github="https://github.com/mnjm/gpt2"
+  />
+  <RepoCard
+    title="diffusion"
+    description="Reproduction of Denoising Diffusion Probabilistic Model"
+    github="https://github.com/mnjm/diffusion"
+  />
+  <RepoCard
+    title="facial-landmarks-cnn"
+    description="Facial Landmark Detection using CNN with Face Pose Estimation"
+    demo="https://www.youtube.com/watch?v=7FxMkt5QZUs"
+    github="https://github.com/mnjm/facial-landmarks-cnn"
+  />
+  <RepoCard
+    title="SimGAN"
+    description="Reproduction of SimGAN in TensorFlow 2"
+    github="https://github.com/mnjm/SimGAN"
+  />
+  <RepoCard
+    title="micrograd-tensor"
+    description="Tiny Autograd engine similar to PyTorch with tensor and NN api"
+    github="https://github.com/mnjm/micrograd-tensor"
+  />
+  <RepoCard
+    title="mammogram-classification"
+    description="Deep Learning based Mammogram Classification using Tenorflow"
+    github="https://github.com/mnjm/mammogram-classification"
+  />
+  <RepoCard
+    title="afcfruits.com"
+    description="Friend's business site that I built and manage"
+    demo="https://www.afcfruits.com/"
+  />
+  <RepoCard
+    title="kayal"
+    description="Minimal and lightweight Hugo theme with markdown-ish aesthetics"
+    github="https://github.com/mnjm/kayal"
+  />
+</div>

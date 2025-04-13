@@ -1,0 +1,6 @@
+---
+import Code from "./Code.tsx";
+const props = Astro.props;
+---
+
+<Code client:load {...props}><slot /></Code>

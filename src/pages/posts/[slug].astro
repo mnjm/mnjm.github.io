@@ -1,0 +1,28 @@
+---
+import { getCollection, getEntry, render } from "astro:content";
+import MarkdownLayout from "../../layouts/MarkdownLayout.astro";
+import TableOfContents from "../../components/TableOfContents.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+
+  return posts.map((post) => ({
+    params: { slug: post.id },
+  }));
+}
+
+const { slug } = Astro.params;
+
+const entry = await getEntry("posts", slug);
+if (!entry) {
+  throw new Error(`Could not find blog post with slug: ${slug}`);
+}
+
+const { Content, headings, remarkPluginFrontmatter } = await render(entry);
+entry.data.readingTime = remarkPluginFrontmatter.minutesRead;
+---
+
+<MarkdownLayout frontmatter={entry.data}>
+  <TableOfContents headings={headings} />
+  <Content />
+</MarkdownLayout>

@@ -1,0 +1,22 @@
+---
+import "../styles/global.css";
+import { siteConfig } from "../config/siteConfig.ts";
+const { pageTitle } = Astro.props;
+var actualPageTitle = pageTitle
+if (pageTitle != siteConfig.author) {
+  actualPageTitle = pageTitle + " | " + siteConfig.author;
+}
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{actualPageTitle}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

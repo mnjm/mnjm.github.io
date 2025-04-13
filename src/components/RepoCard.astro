@@ -1,0 +1,85 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  github?: string;
+  demo?: string;
+}
+
+const { title, description, github, demo } = Astro.props;
+const primaryLink = github || demo;
+---
+
+<div class="repo-card group relative flex flex-col h-full rounded-xl border border-neutral-800/60 p-5 transition-all duration-300 hover:border-neutral-600 hover:bg-neutral-800/40 hover:shadow-2xl hover:shadow-black/40">
+  <div class="flex flex-1 flex-col gap-3">
+    <div class="flex items-start justify-between">
+      <div class="relative inline-block pb-2">
+        <a href={primaryLink} target="_blank" rel="noopener noreferrer" class="no-underline! outline-none">
+          <h3 class="m-0 text-[1.1rem] font-bold tracking-tight text-neutral-200 group-hover:text-white transition-colors duration-300">
+            {title}
+          </h3>
+          <!-- Small red dot that grows into underline -->
+          <div class="absolute bottom-0 left-0 h-[3px] w-1.5 rounded-full bg-red-600 transition-all duration-500 ease-in-out group-hover:w-full"></div>
+        </a>
+      </div>
+
+      <div class="flex items-center gap-3 relative z-10">
+        {github && (
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-neutral-500 hover:text-red-500 transition-all duration-300 hover:scale-110"
+            title="View on GitHub"
+          >
+            <Icon name="github" class="h-5 w-5" />
+          </a>
+        )}
+        {demo && (
+          <a
+            href={demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-neutral-500 hover:text-red-500 transition-all duration-300 hover:scale-110"
+            title="View Live Demo"
+          >
+            <Icon name="link" class="h-5 w-5" />
+          </a>
+        )}
+      </div>
+    </div>
+
+    <p class="m-0 text-sm leading-relaxed text-neutral-400 group-hover:text-neutral-300 transition-colors duration-300">
+      {description}
+    </p>
+  </div>
+
+  {/* Absolute overlay link to make whole card clickable to primary link */}
+  {primaryLink && (
+    <a
+      href={primaryLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="absolute inset-0 z-0"
+      aria-label={title}
+    ></a>
+  )}
+</div>
+
+<style>
+  .repo-card {
+    text-decoration: none !important;
+  }
+
+  /* Reset prose overrides */
+  .repo-card h3 {
+    margin: 0 !important;
+    text-decoration: none !important;
+  }
+
+  .repo-card p {
+    margin: 0 !important;
+  }
+</style>

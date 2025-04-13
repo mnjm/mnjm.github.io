@@ -1,0 +1,150 @@
+---
+import "../styles/global.css";
+import { siteConfig } from "../config/siteConfig";
+import Icon from "./Icon.astro";
+const logo = siteConfig.logo;
+const title = siteConfig.title;
+const menu = siteConfig.menu;
+
+const { pathname } = Astro.url;
+
+function normalizePath(p: string) {
+  return p.replace(/\/$/, "") || "/";
+}
+
+function isActive(href: string) {
+  const normalizedPathname = normalizePath(pathname);
+  // Remove hash for path comparison
+  const hrefWithoutHash = href.split("#")[0];
+  const normalizedHref = normalizePath(hrefWithoutHash);
+
+  // For SSR, we only highlight if paths match and the link doesn't have a hash
+  // (links with hashes are handled by the client-side script)
+  return normalizedPathname === normalizedHref && !href.includes("#") ? "active-link" : "";
+}
+---
+
+<header class="fixed top-0 left-0 z-50 w-full bg-neutral-900/50 drop-shadow-lg backdrop-blur">
+  <div class="mx-auto flex items-center justify-between p-3 px-4 md:px-6 lg:px-8">
+    <!-- Logo and Title -->
+    <a
+      href="/"
+      class="text-inherit no-underline hover:text-inherit hover:no-underline focus:no-underline active:no-underline"
+    >
+      <div class="flex items-center space-x-3">
+        {logo && <img src={logo} alt="Site Logo" width="24" height="24" class="rounded" />}
+        <!-- <span class="text-accent text-2xl font-bold">{title}</span> -->
+      </div>
+    </a>
+
+    {/* Desktop Menu */}
+    <nav class="hidden items-center space-x-6 md:flex">
+      {
+        menu?.map((item) => (
+          <a
+            href={item.href}
+            class={`nav-link flex items-center font-semibold transition hover:text-blue-400 ${isActive(item.href)}`}
+          >
+            {item.icon && <Icon name={item.icon} class="h-5 w-5" />}
+            {item.title}
+          </a>
+        ))
+      }
+    </nav>
+
+    {/* Mobile Menu Button */}
+    <button
+      id="menu-button"
+      class={`text-primary block h-4 w-4 md:hidden`}
+      aria-label="Hamburger Menu"
+    >
+      <Icon name="bars" />
+    </button>
+  </div>
+
+  {/* Mobile Menu */}
+  <nav id="mobile-menu" class="hidden flex flex-col items-end space-y-4 bg-black/60 backdrop-blur-lg border-t border-white/5 p-6 md:hidden">
+    {
+      menu?.map((item) => (
+        <a
+          href={item.href}
+          class={`nav-link text-lg font-medium tracking-tight no-underline transition-colors hover:text-blue-400 ${isActive(item.href)}`}
+        >
+          {item.title}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+
+    const normalize = (p) => p.replace(/\/$/, "") || "/";
+
+    const updateActiveLink = () => {
+      const currentPath = normalize(window.location.pathname);
+      const currentHash = window.location.hash;
+      const links = document.querySelectorAll('.nav-link');
+
+      links.forEach(link => {
+        // Use the link's properties for reliable resolution
+        const linkPathname = normalize(link.pathname);
+        const linkHash = link.hash;
+
+        const isPathMatch = currentPath === linkPathname;
+        const isHashMatch = currentHash === linkHash;
+
+        if (isPathMatch && isHashMatch) {
+          link.classList.add('active-link');
+        } else {
+          link.classList.remove('active-link');
+        }
+      });
+    };
+
+    window.addEventListener('hashchange', updateActiveLink);
+    // Observe scroll to update active section if needed (future enhancement)
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        // Minimal delay to let URL catch up
+        setTimeout(updateActiveLink, 0);
+      });
+    });
+
+    updateActiveLink();
+  });
+  let lastScrollY = window.scrollY;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (header) {
+      if (currentScrollY < lastScrollY) {
+        // Scrolling up
+        header.classList.remove("hide-header");
+      } else {
+        // Scrolling down
+        header.classList.add("hide-header");
+      }
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>
+
+<style>
+  .nav-link.active-link {
+    border-bottom: 1px solid #dc2626; /* red-600 */
+  }
+</style>

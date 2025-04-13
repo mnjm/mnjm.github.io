@@ -1,0 +1,17 @@
+---
+import Icon from "./Icon.astro";
+
+const { icon = "triangle-exclamation", cardColor, iconColor, textColor } = Astro.props;
+---
+
+<div
+  class="flex items-center rounded bg-neutral-600 p-2 shadow"
+  style={cardColor ? `background-color: ${cardColor}` : undefined}
+>
+  <span style={iconColor ? `color: ${iconColor}` : undefined}>
+    <Icon name={icon} class="h-4 w-4" />
+  </span>
+  <span style={textColor ? `color: ${textColor}` : undefined} class="not-prose pl-2">
+    <slot />
+  </span>
+</div>

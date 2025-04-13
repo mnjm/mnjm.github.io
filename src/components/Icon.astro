@@ -1,0 +1,36 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"span"> {
+  name: string;
+}
+
+const { name, class: className, ...rest } = Astro.props;
+
+const icons = import.meta.glob("/src/assets/icons/*.svg", { as: "raw" });
+const iconPath = `/src/assets/icons/${name}.svg`;
+let svgContent: string | null = null;
+
+if (iconPath in icons) {
+  try {
+    svgContent = await icons[iconPath]();
+    svgContent = svgContent?.replace(/ width="[^"]*"/g, "").replace(/ height="[^"]*"/g, "");
+  } catch (e) {
+    throw new Error(
+      `Error loading icon "${name}" at path: ${iconPath}. Original error: ${e instanceof Error ? e.message : String(e)}`
+    );
+  }
+} else {
+  throw new Error(`Icon "${name}" not found. Looked for: ${iconPath}`);
+}
+
+const baseClasses = "inline-block leading-none";
+---
+
+<span
+  class:list={[baseClasses, className]}
+  {...rest}
+  aria-hidden={!rest["aria-label"] && !rest["aria-labelledby"]}
+>
+  <Fragment set:html={svgContent!.replace("<svg", '<svg class="w-full h-full block"')} />
+</span>

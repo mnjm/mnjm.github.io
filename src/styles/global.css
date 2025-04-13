@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+
+body {
+  background-color: var(--color-neutral-900);
+  color: var(--color-neutral-100);
+}
+
+[id] {
+  scroll-margin-top: 80px;
+}
+
+.anchor-link {
+  display: none;
+  @apply text-neutral-400;
+}
+
+.anchor-link:hover {
+  display: inline;
+}

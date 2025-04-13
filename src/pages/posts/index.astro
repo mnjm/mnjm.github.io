@@ -1,0 +1,66 @@
+---
+import Card from "../../components/Card.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const pageTitle = "Posts";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("posts");
+
+const preferredCategoryOrder = ["AI / Computer Vision", "Linux"];
+
+const postsByCategory = posts.reduce<Record<string, Record<number, typeof posts>>>((acc, post) => {
+  const category = post.data.category || "Uncategorized";
+  const year = new Date(post.data.pubDate).getFullYear();
+
+  if (!acc[category]) acc[category] = {};
+  if (!acc[category][year]) acc[category][year] = [];
+
+  acc[category][year].push(post);
+  return acc;
+}, {});
+
+const sortedCategories = [
+  ...preferredCategoryOrder,
+  ...Object.keys(postsByCategory)
+    .filter((cat) => !preferredCategoryOrder.includes(cat))
+    .sort(),
+];
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <Header />
+  <div class="mx-auto max-w-2xl px-2 py-12 lg:max-w-3xl">
+    <h1 class="mb-6 text-4xl font-bold">{pageTitle}<span class="pl-1 text-red-600">.</span></h1>
+
+    <div class="grid grid-rows-1 gap-10">
+      {
+        sortedCategories.map((category) => {
+          const years = postsByCategory[category];
+          if (!years) return null;
+
+          return (
+            <section>
+              <h2 class="mb-4 text-3xl font-bold text-neutral-400">{category}</h2>
+              {Object.entries(years)
+                .sort(([a], [b]) => Number(b) - Number(a)) // sort years descending
+                .map(([year, posts]) => (
+                  <div class="mb-6">
+                    <h3 class="mb-2 text-xl font-semibold text-neutral-500">{year}</h3>
+                    <div class="space-y-6">
+                      {posts.map((post) => (
+                        <Card href={`/posts/${post.id}`} frontmatter={post.data} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+            </section>
+          );
+        })
+      }
+    </div>
+  </div>
+  <Footer />
+</BaseLayout>

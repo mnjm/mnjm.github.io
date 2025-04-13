@@ -1,0 +1,54 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import ArticleMeta from "../components/ArticleMeta.astro";
+import Footer from "../components/Footer.astro";
+const { frontmatter } = Astro.props;
+---
+
+<link rel="stylesheet" href="../../node_modules/katex/dist/katex.min.css" />
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <Header />
+  <div
+    class="prose dark:prose-invert prose-h1:font-bold prose-h1:text-4xl prose-h1:no-underline prose-h2:no-underline prose-h3:no-underline prose-h4:no-underline prose-h5:no-underline prose-a:no-underline prose-a:text-blue-400 prose-a:hover:text-blue-600 prose-img:mx-auto prose-img:rounded-xl prose-headings:underline prose-a:transition-colors prose-th:no-underline m-15 mx-auto max-w-3xl p-2"
+  >
+    <h1 class="mb-1">{frontmatter.title}<span class="pl-1 text-red-600">.</span></h1>
+    {frontmatter.showMeta && <ArticleMeta frontmatter={frontmatter} />}
+    <slot />
+  </div>
+
+  <!-- Scroll To Top Button -->
+  <button
+    id="scrollToTopButton"
+    class="fixed right-6 bottom-6 hidden rounded-full bg-neutral-500 p-3 text-white shadow-lg transition-opacity duration-300 hover:bg-red-600"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+    aria-label="Scroll to top"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"
+      ></path>
+    </svg>
+  </button>
+
+  <script>
+    const scrollButton = document.getElementById("scrollToTopButton");
+    window.addEventListener("scroll", () => {
+      if (scrollButton) {
+        if (window.scrollY > 300) {
+          scrollButton.classList.remove("hidden");
+        } else {
+          scrollButton.classList.add("hidden");
+        }
+      }
+    });
+  </script>
+  <Footer />
+</BaseLayout>
