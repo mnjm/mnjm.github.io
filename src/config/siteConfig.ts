@@ -26,12 +26,11 @@ export const siteConfig: SiteConfig = {
   logo: "/favicon.svg",
   menu: [
     { name: "about", title: "About", href: "/about", icon: undefined },
-    { name: "projects", title: "Projects", href: "/about#projects", icon: undefined },
+    { name: "projects", title: "Projects", href: "/projects", icon: undefined },
   ],
   social: [
     { name: "email", href: "mailto:manjunat.mohan@gmail.com" },
     { name: "github", href: "https://github.com/mnjm" },
     { name: "linkedin", href: "https://linkedin.com/in/mnjm" },
-    { name: "twitter", href: "https://twitter.com/_mnjm_" },
   ],
 };

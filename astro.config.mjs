@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig, fontProviders } from "astro/config";
+import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
@@ -15,6 +15,9 @@ import preact from "@astrojs/preact";
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      tsconfigPaths: true,
+    },
   },
 
   markdown: {
@@ -51,15 +54,5 @@ export default defineConfig({
       ],
     ],
   },
-
   integrations: [mdx(), preact()],
-  experimental: {
-    fonts: [
-      {
-        provider: fontProviders.google(),
-        name: "EB Garamond",
-        cssVariable: "--font-eb-garamond",
-      },
-    ],
-  },
 });

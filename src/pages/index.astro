@@ -2,7 +2,7 @@
 import { siteConfig } from "../config/siteConfig.ts";
 import Icon from "../components/Icon.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Font } from "astro:assets";
+import "@fontsource/eb-garamond/700.css";
 
 const accentColor = "text-red-700";
 const author = siteConfig.author + ".";
@@ -13,11 +13,9 @@ const socials = siteConfig.social;
 const menus = siteConfig.menu;
 ---
 
-<Font cssVariable="--font-eb-garamond" preload />
-
 <style>
   h1.author {
-    font-family: var(--font-eb-garamond);
+    font-family: "EB Garamond", serif;
   }
 </style>
 

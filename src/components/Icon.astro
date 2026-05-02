@@ -7,7 +7,10 @@ interface Props extends HTMLAttributes<"span"> {
 
 const { name, class: className, ...rest } = Astro.props;
 
-const icons = import.meta.glob("/src/assets/icons/*.svg", { as: "raw" });
+const icons = import.meta.glob("/src/assets/icons/*.svg", {
+  query: "?raw",
+  import: "default",
+});
 const iconPath = `/src/assets/icons/${name}.svg`;
 let svgContent: string | null = null;
 
