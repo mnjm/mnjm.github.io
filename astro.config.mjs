@@ -44,7 +44,7 @@ export default defineConfig({
               "not-prose",
               "ml-2",
               "text-neutral-600",
-              "hover:text-neutral-400",
+              "hover:text-red-500",
               "group-hover:opacity-100",
               "opacity-0",
               "transition-opacity",

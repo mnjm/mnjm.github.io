@@ -43,7 +43,7 @@ function isActive(href: string) {
         menu?.map((item) => (
           <a
             href={item.href}
-            class={`nav-link flex items-center font-semibold transition hover:text-blue-400 ${isActive(item.href)}`}
+            class={`nav-link flex items-center font-semibold transition hover:text-red-500 ${isActive(item.href)}`}
           >
             {item.icon && <Icon name={item.icon} class="h-5 w-5" />}
             {item.title}
@@ -68,7 +68,7 @@ function isActive(href: string) {
       menu?.map((item) => (
         <a
           href={item.href}
-          class={`nav-link text-lg font-medium tracking-tight no-underline transition-colors hover:text-blue-400 ${isActive(item.href)}`}
+          class={`nav-link text-lg font-medium tracking-tight no-underline transition-colors hover:text-red-500 ${isActive(item.href)}`}
         >
           {item.title}
         </a>

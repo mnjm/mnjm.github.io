@@ -29,7 +29,7 @@ const menus = siteConfig.menu;
       <ul class="mb-3">
         {
           socials.map((item) => (
-            <a href={item.href} class="mx-2 text-neutral-400 hover:text-blue-400 inline-block">
+            <a href={item.href} class="mx-2 inline-block text-neutral-400 hover:text-red-500">
               <Icon name={item.name} class="h-8 w-8 md:h-10 md:w-10" />
             </a>
           ))
@@ -42,7 +42,7 @@ const menus = siteConfig.menu;
               <li class="flex items-center">
                 <a
                   href={item.href}
-                  class="transition-colors hover:text-blue-400 focus:outline-none focus-visible:text-blue-400"
+                  class="transition-colors hover:text-red-500 focus:outline-none focus-visible:text-red-500"
                 >
                   {item.title}
                 </a>
