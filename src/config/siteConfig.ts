@@ -32,5 +32,6 @@ export const siteConfig: SiteConfig = {
     { name: "email", href: "mailto:manjunat.mohan@gmail.com" },
     { name: "github", href: "https://github.com/mnjm" },
     { name: "linkedin", href: "https://linkedin.com/in/mnjm" },
+    { name: "huggingface", href: "https://huggingface.co/mnjm" },
   ],
 };
