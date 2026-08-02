@@ -9,6 +9,11 @@ export const sections = [
     title: "Reproductions",
     items: [
       {
+        name: "dino",
+        href: "https://github.com/mnjm/dino",
+        description: "Reproduction of DINOv1.",
+      },
+      {
         name: "segformer",
         href: "https://github.com/mnjm/segformer",
         description: "Reproduction of SegFormer.",
@@ -46,7 +51,7 @@ export const sections = [
       {
         name: "yolo11.cpp",
         href: "https://github.com/mnjm/yolo11.cpp",
-        description: "Minimal YOLOv11 inference wrapper using OpenCV DNN with efficient class filtering NMS.",
+        description: "Minimal YOLOv11 inference wrapper using OpenCV DNN with optimized NMS.",
       },
       {
         name: "facial-landmarks-cnn",
@@ -91,25 +96,23 @@ What I cannot create, I do not understand. - <span class="font-bold"> Richard Fe
 
 <div class="not-prose mt-10">
   <div class="space-y-10">
-    {
-      sections.map((section) => (
-        <section>
-          <h2 class="mb-4 text-lg font-semibold text-neutral-100">{section.title}</h2>
-          <ul class="space-y-3">
-            {section.items.map((item) => (
-              <li class="grid gap-x-4 gap-y-1 md:grid-cols-[180px_1fr]">
-                <a
-                  href={item.href}
-                  class="text-base font-medium text-neutral-300 no-underline transition-colors hover:text-red-500"
-                >
-                  {item.name}
-                </a>
-                <p class="m-0 text-sm leading-6 text-neutral-400">{item.description}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))
-    }
+    {sections.map((section) => (
+      <section>
+        <h2 class="mb-4 text-lg font-semibold text-neutral-100">{section.title}</h2>
+        <ul class="space-y-3">
+          {section.items.map((item) => (
+            <li class="grid gap-x-4 gap-y-1 md:grid-cols-[180px_1fr]">
+              <a
+                href={item.href}
+                class="text-base font-medium text-neutral-300 no-underline transition-colors hover:text-red-500"
+              >
+                {item.name}
+              </a>
+              <p class="m-0 text-sm leading-6 text-neutral-400">{item.description}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
   </div>
 </div>
