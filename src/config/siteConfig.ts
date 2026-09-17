@@ -23,7 +23,7 @@ export const siteConfig: SiteConfig = {
   title: "mnjm",
   author: "Manjunath Mohan",
   description: "Blazing fast site built with Astro",
-  logo: "/favicon.svg",
+  logo: "/logo.svg",
   menu: [
     { name: "about", title: "About", href: "/about", icon: undefined },
     { name: "projects", title: "Projects", href: "/projects", icon: undefined },

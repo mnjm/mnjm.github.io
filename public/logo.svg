@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Manjunath Mohan</title>
+  <path
+    fill="#b91c1c"
+    stroke="#0a0a0a"
+    stroke-width="0.8"
+    stroke-linejoin="round"
+    paint-order="stroke fill"
+    d="M8 52v-4h5l3-32h-5v-4h15l7 24 7-24h14v4h-5l3 32h4v4H38v-4h5l-2-25-8 29h-4l-9-29-2 25h5v4H8Z"
+  />
+</svg>

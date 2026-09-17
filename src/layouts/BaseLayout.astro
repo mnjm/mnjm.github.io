@@ -1,7 +1,9 @@
 ---
 import "../styles/global.css";
 import { siteConfig } from "../config/siteConfig.ts";
+import Icon from "../components/Icon.astro";
 const { pageTitle } = Astro.props;
+const isDev = import.meta.env.DEV;
 var actualPageTitle = pageTitle
 if (pageTitle != siteConfig.author) {
   actualPageTitle = pageTitle + " | " + siteConfig.author;
@@ -11,12 +13,57 @@ if (pageTitle != siteConfig.author) {
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link id="site-favicon" rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="color-scheme" content="light dark" />
     <meta name="generator" content={Astro.generator} />
     <title>{actualPageTitle}</title>
+    <script is:inline define:vars={{ isDev }}>
+      const colorScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      const storedTheme = isDev ? sessionStorage.getItem("themeOverride") : null;
+      const favicon = document.getElementById("site-favicon");
+
+      const useTheme = (theme) => {
+        document.documentElement.dataset.theme = theme;
+        favicon?.setAttribute("href", `/favicon-${theme}.svg`);
+      };
+
+      useTheme(storedTheme || (colorScheme.matches ? "dark" : "light"));
+
+      colorScheme.addEventListener("change", (event) => {
+        if (!isDev || !sessionStorage.getItem("themeOverride")) {
+          useTheme(event.matches ? "dark" : "light");
+        }
+      });
+
+      if (isDev) {
+        document.addEventListener("DOMContentLoaded", () => {
+          const button = document.getElementById("theme-test-button");
+
+          button?.addEventListener("click", () => {
+            const theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+            sessionStorage.setItem("themeOverride", theme);
+            useTheme(theme);
+            button.setAttribute("aria-label", `Switch to ${theme === "dark" ? "light" : "dark"} mode`);
+          });
+        });
+      }
+    </script>
   </head>
   <body>
     <slot />
+    {
+      isDev && (
+        <button
+          id="theme-test-button"
+          type="button"
+          class="fixed bottom-4 left-4 z-50 flex h-9 w-9 items-center justify-center rounded-full border border-neutral-300 bg-neutral-100 text-neutral-700 shadow-md transition-colors hover:text-red-600 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200"
+          aria-label="Toggle light and dark mode"
+          title="Toggle light and dark mode (development only)"
+        >
+          <Icon name="sun" class="h-4 w-4" />
+        </button>
+      )
+    }
   </body>
 </html>

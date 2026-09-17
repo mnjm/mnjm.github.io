@@ -7,17 +7,17 @@ const { title, pubDate, summary } = frontmatter;
 
 <a href={href} class="block w-full no-underline">
   <article
-    class="group w-full rounded border-l-2 border-red-700 p-4 transition duration-200 hover:border-red-500 hover:bg-neutral-600 hover:shadow hover:shadow-neutral-600/30"
+    class="group w-full rounded border-l-2 border-red-700 p-4 transition duration-200 hover:border-red-500 hover:bg-neutral-200/60 hover:shadow hover:shadow-neutral-400/20 dark:hover:bg-neutral-600 dark:hover:shadow-neutral-600/30"
   >
     <h2
-      class="text-xl font-semibold text-neutral-300 transition-colors duration-200 group-hover:text-neutral-100"
+      class="text-xl font-semibold text-neutral-700 transition-colors duration-200 group-hover:text-red-500 dark:text-neutral-300 dark:group-hover:text-red-500"
     >
       {title}
     </h2>
     <ArticleMeta frontmatter={frontmatter} />
     {
       summary && (
-        <p class="line-clamp-3 text-sm text-neutral-500 group-hover:text-neutral-400">{summary}</p>
+        <p class="line-clamp-3 text-sm text-neutral-600 group-hover:text-neutral-700 dark:text-neutral-500 dark:group-hover:text-neutral-400">{summary}</p>
       )
     }
   </article>

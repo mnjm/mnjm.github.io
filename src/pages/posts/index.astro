@@ -43,7 +43,7 @@ const sortedCategories = [
 
           return (
             <section>
-              <h2 class="mb-4 text-3xl font-bold text-neutral-400">{category}</h2>
+              <h2 class="mb-4 text-3xl font-bold text-neutral-600 dark:text-neutral-400">{category}</h2>
               {Object.entries(years)
                 .sort(([a], [b]) => Number(b) - Number(a)) // sort years descending
                 .map(([year, posts]) => (

@@ -23,19 +23,19 @@ const menus = siteConfig.menu;
   <div class="flex h-screen items-center justify-center">
     <div class="text-center">
       <h1
-        class="author mb-3 text-4xl font-bold text-neutral-100 md:text-5xl"
+        class="author mb-3 text-4xl font-bold text-neutral-900 dark:text-neutral-100 md:text-5xl"
         set:html={highlightedAuthor}
       />
       <ul class="mb-3">
         {
           socials.map((item) => (
-            <a href={item.href} class="mx-2 inline-block text-neutral-400 hover:text-red-500">
+            <a href={item.href} class="mx-2 inline-block text-neutral-600 hover:text-red-500 dark:text-neutral-400">
               <Icon name={item.name} class="h-8 w-8 md:h-10 md:w-10" />
             </a>
           ))
         }
       </ul>
-      <ul class="flex items-center justify-center gap-4 text-neutral-400 md:text-xl">
+      <ul class="flex items-center justify-center gap-4 text-neutral-600 dark:text-neutral-400 md:text-xl">
         {
           menus?.flatMap((item, index) => {
             const elements = [

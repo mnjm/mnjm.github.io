@@ -1,18 +1,43 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
 
 body {
+  background-color: var(--color-neutral-50);
+  color: var(--color-neutral-900);
+}
+
+:root[data-theme="dark"] body {
   background-color: var(--color-neutral-900);
   color: var(--color-neutral-100);
+}
+
+:root[data-theme="light"] .prose {
+  --tw-prose-body: var(--color-neutral-950);
+  --tw-prose-headings: var(--color-black);
+  --tw-prose-bold: var(--color-black);
+  --tw-prose-quotes: var(--color-neutral-950);
 }
 
 [id] {
   scroll-margin-top: 80px;
 }
 
+a:hover {
+  color: var(--color-red-500);
+}
+
 .anchor-link {
   display: none;
-  @apply text-neutral-400;
+  @apply text-neutral-600 dark:text-neutral-400;
 }
 
 .anchor-link:hover {

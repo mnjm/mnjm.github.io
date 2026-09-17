@@ -98,17 +98,21 @@ What I cannot create, I do not understand. - <span class="font-bold"> Richard Fe
   <div class="space-y-10">
     {sections.map((section) => (
       <section>
-        <h2 class="mb-4 text-lg font-semibold text-neutral-100">{section.title}</h2>
+        <h2 class="mb-4 text-lg font-semibold text-neutral-900 dark:text-neutral-100">{section.title}</h2>
         <ul class="space-y-3">
           {section.items.map((item) => (
-            <li class="grid gap-x-4 gap-y-1 md:grid-cols-[180px_1fr]">
+            <li>
               <a
                 href={item.href}
-                class="text-base font-medium text-neutral-300 no-underline transition-colors hover:text-red-500"
+                class="group grid gap-x-4 gap-y-1 no-underline md:grid-cols-[180px_1fr]"
               >
-                {item.name}
+                <span class="text-base font-medium text-neutral-700 transition-colors group-hover:text-red-500 dark:text-neutral-300 dark:group-hover:text-red-500">
+                  {item.name}
+                </span>
+                <span class="text-sm leading-6 text-neutral-600 dark:text-neutral-400">
+                  {item.description}
+                </span>
               </a>
-              <p class="m-0 text-sm leading-6 text-neutral-400">{item.description}</p>
             </li>
           ))}
         </ul>
